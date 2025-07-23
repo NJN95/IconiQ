@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tour hassounds="0" apprev="20986" start="node9" appversion="7.1.8">
   <panorama id="node1">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="150.594" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="150.594" customnodeid="" nodeid="node1" title="Bedroom 2" latitude="" longitude="" altitude="-3048.00" source="" author=""/>
     <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
@@ -29,18 +26,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node2">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="70.9047" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="70.9047" customnodeid="" nodeid="node2" title="Master Bedroom" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.829468" x_floorplan_percent="28.8615" mapid="FloorPlan01" x="0.54657" y_floorplan_percent="60.2193"/>
@@ -58,18 +52,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node3">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="106.798" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="106.798" customnodeid="" nodeid="node3" title="Dining Room view 1" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.670166" x_floorplan_percent="72.0087" mapid="FloorPlan01" x="1.36368" y_floorplan_percent="48.654"/>
@@ -89,18 +80,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node4">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="88.8051" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="88.8051" customnodeid="" nodeid="node4" title="Entry" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.497131" x_floorplan_percent="73.314" mapid="FloorPlan01" x="1.3884" y_floorplan_percent="36.0917"/>
@@ -120,18 +108,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node5">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="0" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="0" customnodeid="" nodeid="node5" title="Corridor with Foyer view" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.280151" x_floorplan_percent="82.4511" mapid="FloorPlan01" x="1.56143" y_floorplan_percent="20.339"/>
@@ -149,18 +134,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node6">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="90.2675" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="90.2675" customnodeid="" nodeid="node6" title="Foyer" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.480652" x_floorplan_percent="82.161" mapid="FloorPlan01" x="1.55594" y_floorplan_percent="34.8953"/>
@@ -178,18 +160,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node7">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="172.344" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="172.344" customnodeid="" nodeid="node7" title="Kitchen" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.32959" x_floorplan_percent="62.5816" mapid="FloorPlan01" x="1.18515" y_floorplan_percent="23.9282"/>
@@ -208,18 +187,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node8">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="267.404" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="267.404" customnodeid="" nodeid="node8" title="Work Area" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.31311" x_floorplan_percent="53.4445" mapid="FloorPlan01" x="1.01212" y_floorplan_percent="22.7318"/>
@@ -237,18 +213,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node9">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="-87.7897" fovmode="2">
-      <start projection="4" pan="-88.2413" tilt="2.02542" fov="100"/>
+      <start projection="4" pan="-88.2413" tilt="2.02542" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="-87.7897" customnodeid="" nodeid="node9" title="Lift Corridor View" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.0521851" x_floorplan_percent="80.4206" mapid="FloorPlan01" x="1.52298" y_floorplan_percent="3.78863"/>
@@ -265,18 +238,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node10">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="0" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="0" customnodeid="" nodeid="node10" title="Corridor to Apartment" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.131836" x_floorplan_percent="81.4358" mapid="FloorPlan01" x="1.54221" y_floorplan_percent="9.57129"/>
@@ -294,18 +264,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node11">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="0" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="0" customnodeid="" nodeid="node11" title="Living Room view 1" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.667419" x_floorplan_percent="81.4358" mapid="FloorPlan01" x="1.54221" y_floorplan_percent="48.4546"/>
@@ -323,18 +290,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node12">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="172.986" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="172.986" customnodeid="" nodeid="node12" title="Living room view 2" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.823975" x_floorplan_percent="81.7984" mapid="FloorPlan01" x="1.54907" y_floorplan_percent="59.8205"/>
@@ -354,18 +318,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node13">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="88.4624" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="88.4624" customnodeid="" nodeid="node13" title="Dining Room view 2" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.723724" x_floorplan_percent="59.4634" mapid="FloorPlan01" x="1.1261" y_floorplan_percent="52.5424"/>
@@ -389,18 +350,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node14">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="0" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="PANAROMASAMPLEAPARTMENT" datetime="" comment="" info="" copyright="" heading="0" customnodeid="" nodeid="node14" title="" latitude="" longitude="" source="" author=""/>
     <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
@@ -416,18 +374,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node15">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="137.156" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="pool" datetime="" comment="" info="" copyright="" heading="137.156" customnodeid="" nodeid="node15" title="near the pool" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-1.03409" x_floorplan_percent="52.901" mapid="FloorPlan02" x="0.85144" y_floorplan_percent="90.8323"/>
@@ -445,18 +400,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node16">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="-84.9661" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="Downloads|pool" datetime="" comment="" info="" copyright="" heading="-84.9661" customnodeid="" nodeid="node16" title="Facing the pool" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.708618" x_floorplan_percent="30.3754" mapid="FloorPlan02" x="0.488892" y_floorplan_percent="62.2437"/>
@@ -475,18 +427,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node17">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="0" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="Downloads|pool" datetime="" comment="" info="" copyright="" heading="0" customnodeid="" nodeid="node17" title="Pool Party Entrance" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.181274" x_floorplan_percent="24.5734" mapid="FloorPlan02" x="0.395508" y_floorplan_percent="15.9228"/>
@@ -503,18 +452,15 @@
     <vr skinbuttonposition="1" defaulthsscale="50" toggleskinbutton="1"/>
   </panorama>
   <panorama id="node18">
-    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg">
-      <level width="2048" predecode="0" preload="0" height="2048"/>
-      <level width="1024" predecode="0" preload="0" height="1024"/>
-      <level width="512" predecode="0" preload="0" height="512"/>
-      <level width="256" predecode="1" preload="1" height="256"/>
+    <input levelingroll="0" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="4096" levelingpitch="0" width="2048" overlap="1" height="2048" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level width="2048" predecode="1" preload="1" height="2048"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view pannorth="0" fovmode="2">
-      <start projection="4" pan="0" tilt="0" fov="100"/>
+      <start projection="4" pan="0" tilt="0" fov="90"/>
       <flyin projection="9" pan="0" tilt="-90" fov="170"/>
-      <min pan="0" tilt="-90" fovpixel="2"/>
-      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="140" scaletofit="1"/>
+      <min pan="0" tilt="-90" fov="30"/>
+      <max fovfisheye="360" pan="360" tilt="90" fovstereographic="330" fov="100" scaletofit="1"/>
     </view>
     <userdata description="" tags="Downloads|pool" datetime="" comment="" info="" copyright="" heading="0" customnodeid="" nodeid="node18" title="Pool Party Area" latitude="" longitude="" altitude="-3048.00" source="" author="">
       <mapcoords y="-0.483398" x_floorplan_percent="28.3276" mapid="FloorPlan02" x="0.455933" y_floorplan_percent="42.4608"/>

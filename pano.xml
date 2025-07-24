@@ -6,7 +6,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="150.594" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -31,7 +31,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="70.9047" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -57,7 +57,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="106.798" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -85,7 +85,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="88.8051" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -113,7 +113,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="0" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -139,7 +139,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="90.2675" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -165,7 +165,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="172.344" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -192,7 +192,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="267.404" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -218,7 +218,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="-87.7897" fovmode="1">
-      <start pan="-88.2413" tilt="2.02542" projection="4" fov="50"/>
+      <start pan="-88.2413" tilt="2.02542" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -243,7 +243,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="0" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -269,7 +269,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="0" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -295,7 +295,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="172.986" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -323,7 +323,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="88.4624" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -355,7 +355,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="0" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -379,7 +379,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="137.156" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -405,7 +405,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="-84.9661" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -432,7 +432,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="0" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -457,7 +457,7 @@
       <preview strip="1" color="0x808080"/>
     </input>
     <view pannorth="0" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="50"/>
+      <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>

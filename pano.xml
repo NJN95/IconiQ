@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tour appversion="7.1.8" apprev="20986" start="node9" hassounds="0">
   <panorama id="node1">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="150.594" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="150.594" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -26,12 +26,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node2">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="70.9047" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="70.9047" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -52,12 +52,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node3">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="106.798" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="106.798" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -80,12 +80,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node4">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="88.8051" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="88.8051" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -108,12 +108,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node5">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="0" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -134,12 +134,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node6">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="90.2675" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="90.2675" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -160,12 +160,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node7">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="172.344" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="172.344" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -187,12 +187,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node8">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="267.404" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="267.404" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -213,12 +213,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node9">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="-87.7897" fovmode="2">
-      <start pan="-88.2413" tilt="2.02542" projection="9" fov="90"/>
+    <view pannorth="-87.7897" fovmode="1">
+      <start pan="-88.2413" tilt="2.02542" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -238,12 +238,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node10">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="0" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -264,12 +264,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node11">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="0" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -290,12 +290,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node12">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="172.986" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="172.986" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -318,12 +318,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node13">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="88.4624" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="88.4624" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -350,12 +350,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node14">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="0" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -374,12 +374,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node15">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="137.156" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="137.156" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -400,12 +400,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node16">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="-84.9661" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="-84.9661" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -427,12 +427,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node17">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="0" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -452,12 +452,12 @@
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node18">
-    <input leveltilesize="4096" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
+    <input leveltilesize="2048" levelingroll="0" levelbias="0.400" overlap="1" width="2048" height="2048" levelbiashidpi="1.000" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0">
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="2">
-      <start pan="0" tilt="0" projection="9" fov="90"/>
+    <view pannorth="0" fovmode="1">
+      <start pan="0" tilt="0" projection="4" fov="50"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>

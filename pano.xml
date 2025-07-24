@@ -5,8 +5,8 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="150.594" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="30"/>
+    <view pannorth="150.594" fovmode="0">
+      <start pan="-17.11" tilt="2.02" projection="4" fov="70"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -22,7 +22,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node2">
@@ -30,11 +30,11 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="70.9047" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="30"/>
-      <flyin pan="0" tilt="-90" projection="9" fov="170"/>
+    <view pannorth="70.9047" fovmode="0">
+      <start pan="0" tilt="0" projection="9" fov="30"/>
+      <flyin pan="0" tilt="-90" projection="4" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
-      <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
+      <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="70"/>
     </view>
     <userdata nodeid="node2" source="" author="" customnodeid="" altitude="-3048.00" latitude="" comment="" tags="PANAROMASAMPLEAPARTMENT" heading="70.9047" title="Master Bedroom" longitude="" info="" datetime="" copyright="" description="">
       <mapcoords x="0.54657" y="-0.829468" mapid="FloorPlan01" x_floorplan_percent="28.8615" y_floorplan_percent="60.2193"/>
@@ -48,7 +48,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node3">
@@ -56,8 +56,8 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="106.798" fovmode="1">
-      <start pan="0" tilt="0" projection="4" fov="30"/>
+    <view pannorth="106.798" fovmode="0">
+      <start pan="-6" tilt="4" projection="4" fov="70"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
       <max pan="360" fovstereographic="330" tilt="90" fovfisheye="360" scaletofit="1" fov="100"/>
@@ -76,7 +76,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node4">
@@ -84,7 +84,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="88.8051" fovmode="1">
+    <view pannorth="88.8051" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -104,7 +104,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node5">
@@ -112,7 +112,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="1">
+    <view pannorth="0" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -130,7 +130,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node6">
@@ -138,7 +138,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="90.2675" fovmode="1">
+    <view pannorth="90.2675" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -156,7 +156,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node7">
@@ -164,7 +164,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="172.344" fovmode="1">
+    <view pannorth="172.344" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -183,7 +183,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node8">
@@ -191,7 +191,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="267.404" fovmode="1">
+    <view pannorth="267.404" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -209,7 +209,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node9">
@@ -217,7 +217,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="-87.7897" fovmode="1">
+    <view pannorth="-87.7897" fovmode="0">
       <start pan="-88.2413" tilt="2.02542" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -234,7 +234,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node10">
@@ -242,7 +242,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="1">
+    <view pannorth="0" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -260,7 +260,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node11">
@@ -268,7 +268,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="1">
+    <view pannorth="0" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -286,7 +286,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node12">
@@ -294,7 +294,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="172.986" fovmode="1">
+    <view pannorth="172.986" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -314,7 +314,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node13">
@@ -322,7 +322,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="88.4624" fovmode="1">
+    <view pannorth="88.4624" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -346,7 +346,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node14">
@@ -354,7 +354,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="1">
+    <view pannorth="0" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -370,7 +370,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node15">
@@ -378,7 +378,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="137.156" fovmode="1">
+    <view pannorth="137.156" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -396,7 +396,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node16">
@@ -404,7 +404,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="-84.9661" fovmode="1">
+    <view pannorth="-84.9661" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -423,7 +423,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node17">
@@ -431,7 +431,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="1">
+    <view pannorth="0" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -448,7 +448,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node18">
@@ -456,7 +456,7 @@
       <level width="2048" height="2048" predecode="1" preload="1"/>
       <preview strip="1" color="0x808080"/>
     </input>
-    <view pannorth="0" fovmode="1">
+    <view pannorth="0" fovmode="0">
       <start pan="0" tilt="0" projection="4" fov="30"/>
       <flyin pan="0" tilt="-90" projection="9" fov="170"/>
       <min pan="0" tilt="-90" fov="30"/>
@@ -475,7 +475,7 @@
     <media/>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="8" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <masternode>

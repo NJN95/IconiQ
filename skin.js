@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: Custom_feather_box.ggsk
-// Generated 2025-07-25T17:48:17
+// Generated 2025-07-25T17:58:23
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
@@ -57,6 +57,9 @@ function pano2vrSkin(player,base) {
 	player.addVariable('node_cloner_hasUp', 2, true, { ignoreInState: 0  });
 	player.addVariable('node_cloner_hasDown', 2, true, { ignoreInState: 0  });
 	player.addVariable('vis_thumbnails_phone', 2, false, { ignoreInState: 0  });
+	player.addVariable('vis_thumbnails_1', 2, false, { ignoreInState: 0  });
+	player.addVariable('vis_thumbnails_phone_1', 2, false, { ignoreInState: 0  });
+	player.addVariable('resp_phone_1', 2, false, { ignoreInState: 1  });
 	var me=this;
 	var skin=this;
 	var flag=false;
@@ -482,6 +485,29 @@ function pano2vrSkin(player,base) {
 				}
 			}
 		}
+		me._variable_resp_phone_1 = {};
+		me._variable_resp_phone_1.ggCurrentLogicState = -1;
+		me._variable_resp_phone_1.logicBlock = function() {
+			var newLogicState_resp_phone_1;
+			if (
+				((player.getViewerSize(true).width <= 1024))
+			)
+			{
+				newLogicState_resp_phone_1 = 0;
+			}
+			else {
+				newLogicState_resp_phone_1 = -1;
+			}
+			if (me._variable_resp_phone_1.ggCurrentLogicState != newLogicState_resp_phone_1) {
+				me._variable_resp_phone_1.ggCurrentLogicState = newLogicState_resp_phone_1;
+				if (me._variable_resp_phone_1.ggCurrentLogicState == 0) {
+					player.setVariableValue('resp_phone_1', true);
+				}
+				else {
+					player.setVariableValue('resp_phone_1', false);
+				}
+			}
+		}
 		el=me._button_container=document.createElement('div');
 		el.ggId="button_container";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -634,8 +660,8 @@ function pano2vrSkin(player,base) {
 					((player.getVariableValue('resp_phone') == true))
 				)
 			) {
-				me._node_cloner_phone1.ggText="";
-				me._node_cloner_phone1.ggUpdate([]);
+				me._node_cloner_phone0.ggText="";
+				me._node_cloner_phone0.ggUpdate([]);
 				skin.updateSize(skin.divSkin);
 			}
 		}
@@ -649,13 +675,13 @@ function pano2vrSkin(player,base) {
 		}
 		me._btn_thumbnails.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._btn_thumbnails_icon=document.createElement('div');
-		els=me._btn_thumbnails_icon__img=document.createElement('img');
+		el=me._btn_thumbnails_icon0=document.createElement('div');
+		els=me._btn_thumbnails_icon0__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
 		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGJhc2VQcm9maWxlPSJ0aW55IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzYgMzYiIGlkPSJMYXllcl8xIiB5PSIwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KIDxjaXJjbGUgc3Ryb2tlLW'+
 			'xpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjEiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3k9IjE4IiBzdHJva2U9IiMwMGRhZGEiIHI9IjEuNSIgY3g9IjE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KIDxjaXJjbGUgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjEiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3k9IjE4IiBzdHJva2U9IiMwMGRhZGEiIHI9IjEuNSIgY3g9IjI4LjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogPGNpcmNsZSBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMSIg'+
 			'c3Ryb2tlLXdpZHRoPSIxLjI1IiBjeT0iMTgiIHN0cm9rZT0iIzAwZGFkYSIgcj0iMS41IiBjeD0iNy41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==';
-		me._btn_thumbnails_icon__img.setAttribute('src',hs);
+		me._btn_thumbnails_icon0__img.setAttribute('src',hs);
 		hs ='';
 		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
 		els.setAttribute('style', hs);
@@ -679,7 +705,7 @@ function pano2vrSkin(player,base) {
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._btn_thumbnails_icon.ggIsActive=function() {
+		me._btn_thumbnails_icon0.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -691,9 +717,9 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._btn_thumbnails_icon.ggUpdatePosition=function (useTransition) {
+		me._btn_thumbnails_icon0.ggUpdatePosition=function (useTransition) {
 		}
-		me._btn_thumbnails.appendChild(me._btn_thumbnails_icon);
+		me._btn_thumbnails.appendChild(me._btn_thumbnails_icon0);
 		me._button_container.appendChild(me._btn_thumbnails);
 		el=me._btn_fullscreen=document.createElement('div');
 		el.ggId="btn_fullscreen";
@@ -4087,8 +4113,8 @@ navigator.share({ url: shareUrl });
 		me._btn_thumbnails_phone.logicBlock_backgroundcolor();
 		me._btn_thumbnails_phone.onclick=function (e) {
 			player.setVariableValue('vis_phone_thumbs', true);
-			me._node_cloner_phone1.ggText="";
-			me._node_cloner_phone1.ggUpdate([]);
+			me._node_cloner_phone0.ggText="";
+			me._node_cloner_phone0.ggUpdate([]);
 			skin.updateSize(skin.divSkin);
 		}
 		me._btn_thumbnails_phone.onmouseenter=function (e) {
@@ -10560,7 +10586,7 @@ alert("The current view has been copied.");
 		}
 		me._safe_area_phone.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._close_popup_phone2=document.createElement('div');
+		el=me._close_popup_phone1=document.createElement('div');
 		el.ggPermeable=false;
 		el.ggId="close_popup_phone";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -10577,7 +10603,7 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._close_popup_phone2.ggIsActive=function() {
+		me._close_popup_phone1.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -10589,7 +10615,7 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._close_popup_phone2.onclick=function (e) {
+		me._close_popup_phone1.onclick=function (e) {
 			player.setVariableValue('vis_phone_thumbs', false);
 			player.setVariableValue('vis_phone_info', false);
 			player.setVariableValue('vis_phone_floorplan', false);
@@ -10601,25 +10627,25 @@ alert("The current view has been copied.");
 			player.setVariableValue('vis_phone_video_file', false);
 			player.setVariableValue('vis_phone_video_url', false);
 		}
-		me._close_popup_phone2.ggUpdatePosition=function (useTransition) {
+		me._close_popup_phone1.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._btn_close_popup_phone2=document.createElement('div');
-		els=me._btn_close_popup_phone2__img=document.createElement('img');
+		el=me._btn_close_popup_phone1=document.createElement('div');
+		els=me._btn_close_popup_phone1__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
 		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
 			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzAwZGFkYTtzdHJva2Utd2lkdGg6MS4zMzMzO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo1LjMzMzM7fSYjeGQ7Cjwvc3R5bGU+CiA8bGluZSBjbGFzcz0ic3QwIiB4MT0iMjQiIHkyPSIyNCIgeTE9IjgiIHgyPSI4Ii8+CiA8bGluZSBjbGFzcz0ic3QwIiB4MT0iOCIgeTI9IjI0IiB5MT0iOCIgeDI9IjI0Ii8+Cjwvc3ZnPgo=';
-		me._btn_close_popup_phone2__img.setAttribute('src',hs);
+		me._btn_close_popup_phone1__img.setAttribute('src',hs);
 		hs ='';
 		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
 		els.setAttribute('style', hs);
 		els['ondragstart']=function() { return false; };
 		el.appendChild(els);
 		el.ggSubElement = els;
-		elo=me._btn_close_popup_phone2__imgo=document.createElement('img');
+		elo=me._btn_close_popup_phone1__imgo=document.createElement('img');
 		elo.className='ggskin ggskin_svg';
 		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzYgMzY7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDM2IDM2IiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
 			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I0ZGRkZGRjtzdHJva2Utd2lkdGg6MS4yNTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7fSYjeGQ7Cjwvc3R5bGU+CiA8bGluZSBjbGFzcz0ic3QwIiB4MT0iMjciIHkyPSIyNyIgeTE9IjkiIHgyPSI5Ii8+CiA8bGluZSBjbGFzcz0ic3QwIiB4MT0iOSIgeTI9IjI3IiB5MT0iOSIgeDI9IjI3Ii8+Cjwvc3ZnPgo=';
-		me._btn_close_popup_phone2__imgo.setAttribute('src',hs);
+		me._btn_close_popup_phone1__imgo.setAttribute('src',hs);
 		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
@@ -10639,7 +10665,7 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._btn_close_popup_phone2.ggIsActive=function() {
+		me._btn_close_popup_phone1.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -10651,20 +10677,20 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._btn_close_popup_phone2.onmouseenter=function (e) {
-			me._btn_close_popup_phone2__img.style.visibility='hidden';
-			me._btn_close_popup_phone2__imgo.style.visibility='inherit';
-			me.elementMouseOver['btn_close_popup_phone2']=true;
+		me._btn_close_popup_phone1.onmouseenter=function (e) {
+			me._btn_close_popup_phone1__img.style.visibility='hidden';
+			me._btn_close_popup_phone1__imgo.style.visibility='inherit';
+			me.elementMouseOver['btn_close_popup_phone1']=true;
 		}
-		me._btn_close_popup_phone2.onmouseleave=function (e) {
-			me._btn_close_popup_phone2__img.style.visibility='inherit';
-			me._btn_close_popup_phone2__imgo.style.visibility='hidden';
-			me.elementMouseOver['btn_close_popup_phone2']=false;
+		me._btn_close_popup_phone1.onmouseleave=function (e) {
+			me._btn_close_popup_phone1__img.style.visibility='inherit';
+			me._btn_close_popup_phone1__imgo.style.visibility='hidden';
+			me.elementMouseOver['btn_close_popup_phone1']=false;
 		}
-		me._btn_close_popup_phone2.ggUpdatePosition=function (useTransition) {
+		me._btn_close_popup_phone1.ggUpdatePosition=function (useTransition) {
 		}
-		me._close_popup_phone2.appendChild(me._btn_close_popup_phone2);
-		me._safe_area_phone.appendChild(me._close_popup_phone2);
+		me._close_popup_phone1.appendChild(me._btn_close_popup_phone1);
+		me._safe_area_phone.appendChild(me._close_popup_phone1);
 		el=me._info_popup_phone0=document.createElement('div');
 		el.ggId="info_popup_phone";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -10844,8 +10870,8 @@ alert("The current view has been copied.");
 		}
 		me._info_popup_phone0.appendChild(me._info_popup_title_phone0);
 		me._safe_area_phone.appendChild(me._info_popup_phone0);
-		el=me._thumbnail_scroller_phone1=document.createElement('div');
-		els=me._thumbnail_scroller_phone1__content=document.createElement('div');
+		el=me._thumbnail_scroller_phone0=document.createElement('div');
+		els=me._thumbnail_scroller_phone0__content=document.createElement('div');
 		els.className='ggskin ggskin_subelement ggskin_scrollarea';
 		el.ggContent=els;
 		el.appendChild(els);
@@ -10871,162 +10897,162 @@ alert("The current view has been copied.");
 		hs+='width : 174px;';
 		hs+="";
 		els.setAttribute('style',hs);
-		me._thumbnail_scroller_phone1.ggScrollByX = function(diffX) {
-			if(!me._thumbnail_scroller_phone1.ggHorScrollVisible || diffX == 0 || me._thumbnail_scroller_phone1.ggHPercentVisible >= 1.0) return;
-			me._thumbnail_scroller_phone1.ggScrollPosX = (me._thumbnail_scroller_phone1__horScrollFg.offsetLeft + diffX);
-			me._thumbnail_scroller_phone1.ggScrollPosX = Math.max(me._thumbnail_scroller_phone1.ggScrollPosX, 0);
-			me._thumbnail_scroller_phone1.ggScrollPosX = Math.min(me._thumbnail_scroller_phone1.ggScrollPosX, me._thumbnail_scroller_phone1__horScrollBg.offsetWidth - me._thumbnail_scroller_phone1__horScrollFg.offsetWidth);
-			me._thumbnail_scroller_phone1__horScrollFg.style.left = me._thumbnail_scroller_phone1.ggScrollPosX + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone1.ggScrollPosX / (me._thumbnail_scroller_phone1__horScrollBg.offsetWidth - me._thumbnail_scroller_phone1__horScrollFg.offsetWidth);
-			me._thumbnail_scroller_phone1__content.style.left = -(Math.round((me._thumbnail_scroller_phone1.ggContentWidth * (1.0 - me._thumbnail_scroller_phone1.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone1.ggContentLeftOffset + 'px';
-			me._thumbnail_scroller_phone1.ggScrollPosXPercent = (me._thumbnail_scroller_phone1__horScrollFg.offsetLeft / me._thumbnail_scroller_phone1__horScrollBg.offsetWidth);
+		me._thumbnail_scroller_phone0.ggScrollByX = function(diffX) {
+			if(!me._thumbnail_scroller_phone0.ggHorScrollVisible || diffX == 0 || me._thumbnail_scroller_phone0.ggHPercentVisible >= 1.0) return;
+			me._thumbnail_scroller_phone0.ggScrollPosX = (me._thumbnail_scroller_phone0__horScrollFg.offsetLeft + diffX);
+			me._thumbnail_scroller_phone0.ggScrollPosX = Math.max(me._thumbnail_scroller_phone0.ggScrollPosX, 0);
+			me._thumbnail_scroller_phone0.ggScrollPosX = Math.min(me._thumbnail_scroller_phone0.ggScrollPosX, me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
+			me._thumbnail_scroller_phone0__horScrollFg.style.left = me._thumbnail_scroller_phone0.ggScrollPosX + 'px';
+			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosX / (me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
+			me._thumbnail_scroller_phone0__content.style.left = -(Math.round((me._thumbnail_scroller_phone0.ggContentWidth * (1.0 - me._thumbnail_scroller_phone0.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentLeftOffset + 'px';
+			me._thumbnail_scroller_phone0.ggScrollPosXPercent = (me._thumbnail_scroller_phone0__horScrollFg.offsetLeft / me._thumbnail_scroller_phone0__horScrollBg.offsetWidth);
 		}
-		me._thumbnail_scroller_phone1.ggScrollByXSmooth = function(diffX) {
-			if(!me._thumbnail_scroller_phone1.ggHorScrollVisible || diffX == 0 || me._thumbnail_scroller_phone1.ggHPercentVisible >= 1.0) return;
+		me._thumbnail_scroller_phone0.ggScrollByXSmooth = function(diffX) {
+			if(!me._thumbnail_scroller_phone0.ggHorScrollVisible || diffX == 0 || me._thumbnail_scroller_phone0.ggHPercentVisible >= 1.0) return;
 			var scrollPerInterval = diffX / 25;
 			var scrollCurrX = 0;
 			var id = setInterval(function() {
 				scrollCurrX += scrollPerInterval;
-				me._thumbnail_scroller_phone1.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._thumbnail_scroller_phone1.ggScrollPosX >= me._thumbnail_scroller_phone1__horScrollBg.offsetWidth - me._thumbnail_scroller_phone1__horScrollFg.offsetWidth)) {
-					me._thumbnail_scroller_phone1.ggScrollPosX = Math.min(me._thumbnail_scroller_phone1.ggScrollPosX, me._thumbnail_scroller_phone1__horScrollBg.offsetWidth - me._thumbnail_scroller_phone1__horScrollFg.offsetWidth);
+				me._thumbnail_scroller_phone0.ggScrollPosX += scrollPerInterval;
+				if (diffX > 0 && (scrollCurrX >= diffX || me._thumbnail_scroller_phone0.ggScrollPosX >= me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth)) {
+					me._thumbnail_scroller_phone0.ggScrollPosX = Math.min(me._thumbnail_scroller_phone0.ggScrollPosX, me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
 					clearInterval(id);
 				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._thumbnail_scroller_phone1.ggScrollPosX <= 0)) {
-					me._thumbnail_scroller_phone1.ggScrollPosX = Math.max(me._thumbnail_scroller_phone1.ggScrollPosX, 0);
+				if (diffX < 0 && (scrollCurrX <= diffX || me._thumbnail_scroller_phone0.ggScrollPosX <= 0)) {
+					me._thumbnail_scroller_phone0.ggScrollPosX = Math.max(me._thumbnail_scroller_phone0.ggScrollPosX, 0);
 					clearInterval(id);
 				}
-			me._thumbnail_scroller_phone1__horScrollFg.style.left = me._thumbnail_scroller_phone1.ggScrollPosX + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone1.ggScrollPosX / (me._thumbnail_scroller_phone1__horScrollBg.offsetWidth - me._thumbnail_scroller_phone1__horScrollFg.offsetWidth);
-			me._thumbnail_scroller_phone1__content.style.left = -(Math.round((me._thumbnail_scroller_phone1.ggContentWidth * (1.0 - me._thumbnail_scroller_phone1.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone1.ggContentLeftOffset + 'px';
-			me._thumbnail_scroller_phone1.ggScrollPosXPercent = (me._thumbnail_scroller_phone1__horScrollFg.offsetLeft / me._thumbnail_scroller_phone1__horScrollBg.offsetWidth);
+			me._thumbnail_scroller_phone0__horScrollFg.style.left = me._thumbnail_scroller_phone0.ggScrollPosX + 'px';
+			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosX / (me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
+			me._thumbnail_scroller_phone0__content.style.left = -(Math.round((me._thumbnail_scroller_phone0.ggContentWidth * (1.0 - me._thumbnail_scroller_phone0.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentLeftOffset + 'px';
+			me._thumbnail_scroller_phone0.ggScrollPosXPercent = (me._thumbnail_scroller_phone0__horScrollFg.offsetLeft / me._thumbnail_scroller_phone0__horScrollBg.offsetWidth);
 			}, 10);
 		}
-		me._thumbnail_scroller_phone1.ggScrollByY = function(diffY) {
-			if(!me._thumbnail_scroller_phone1.ggVertScrollVisible || diffY == 0 || me._thumbnail_scroller_phone1.ggVPercentVisible >= 1.0) return;
-			me._thumbnail_scroller_phone1.ggScrollPosY = (me._thumbnail_scroller_phone1__vertScrollFg.offsetTop + diffY);
-			me._thumbnail_scroller_phone1.ggScrollPosY = Math.max(me._thumbnail_scroller_phone1.ggScrollPosY, 0);
-			me._thumbnail_scroller_phone1.ggScrollPosY = Math.min(me._thumbnail_scroller_phone1.ggScrollPosY, me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight);
-			me._thumbnail_scroller_phone1__vertScrollFg.style.top = me._thumbnail_scroller_phone1.ggScrollPosY + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone1.ggScrollPosY / (me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight);
-			me._thumbnail_scroller_phone1__content.style.top = -(Math.round((me._thumbnail_scroller_phone1.ggContentHeight * (1.0 - me._thumbnail_scroller_phone1.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone1.ggContentTopOffset + 'px';
-			me._thumbnail_scroller_phone1.ggScrollPosYPercent = (me._thumbnail_scroller_phone1__vertScrollFg.offsetTop / me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight);
+		me._thumbnail_scroller_phone0.ggScrollByY = function(diffY) {
+			if(!me._thumbnail_scroller_phone0.ggVertScrollVisible || diffY == 0 || me._thumbnail_scroller_phone0.ggVPercentVisible >= 1.0) return;
+			me._thumbnail_scroller_phone0.ggScrollPosY = (me._thumbnail_scroller_phone0__vertScrollFg.offsetTop + diffY);
+			me._thumbnail_scroller_phone0.ggScrollPosY = Math.max(me._thumbnail_scroller_phone0.ggScrollPosY, 0);
+			me._thumbnail_scroller_phone0.ggScrollPosY = Math.min(me._thumbnail_scroller_phone0.ggScrollPosY, me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
+			me._thumbnail_scroller_phone0__vertScrollFg.style.top = me._thumbnail_scroller_phone0.ggScrollPosY + 'px';
+			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosY / (me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
+			me._thumbnail_scroller_phone0__content.style.top = -(Math.round((me._thumbnail_scroller_phone0.ggContentHeight * (1.0 - me._thumbnail_scroller_phone0.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentTopOffset + 'px';
+			me._thumbnail_scroller_phone0.ggScrollPosYPercent = (me._thumbnail_scroller_phone0__vertScrollFg.offsetTop / me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight);
 		}
-		me._thumbnail_scroller_phone1.ggScrollByYSmooth = function(diffY) {
-			if(!me._thumbnail_scroller_phone1.ggVertScrollVisible || diffY == 0 || me._thumbnail_scroller_phone1.ggVPercentVisible >= 1.0) return;
+		me._thumbnail_scroller_phone0.ggScrollByYSmooth = function(diffY) {
+			if(!me._thumbnail_scroller_phone0.ggVertScrollVisible || diffY == 0 || me._thumbnail_scroller_phone0.ggVPercentVisible >= 1.0) return;
 			var scrollPerInterval = diffY / 25;
 			var scrollCurrY = 0;
 			var id = setInterval(function() {
 				scrollCurrY += scrollPerInterval;
-				me._thumbnail_scroller_phone1.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._thumbnail_scroller_phone1.ggScrollPosY >= me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight)) {
-					me._thumbnail_scroller_phone1.ggScrollPosY = Math.min(me._thumbnail_scroller_phone1.ggScrollPosY, me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight);
+				me._thumbnail_scroller_phone0.ggScrollPosY += scrollPerInterval;
+				if (diffY > 0 && (scrollCurrY >= diffY || me._thumbnail_scroller_phone0.ggScrollPosY >= me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight)) {
+					me._thumbnail_scroller_phone0.ggScrollPosY = Math.min(me._thumbnail_scroller_phone0.ggScrollPosY, me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
 					clearInterval(id);
 				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._thumbnail_scroller_phone1.ggScrollPosY <= 0)) {
-					me._thumbnail_scroller_phone1.ggScrollPosY = Math.max(me._thumbnail_scroller_phone1.ggScrollPosY, 0);
+				if (diffY < 0 && (scrollCurrY <= diffY || me._thumbnail_scroller_phone0.ggScrollPosY <= 0)) {
+					me._thumbnail_scroller_phone0.ggScrollPosY = Math.max(me._thumbnail_scroller_phone0.ggScrollPosY, 0);
 					clearInterval(id);
 				}
-			me._thumbnail_scroller_phone1__vertScrollFg.style.top = me._thumbnail_scroller_phone1.ggScrollPosY + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone1.ggScrollPosY / (me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight);
-			me._thumbnail_scroller_phone1__content.style.top = -(Math.round((me._thumbnail_scroller_phone1.ggContentHeight * (1.0 - me._thumbnail_scroller_phone1.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone1.ggContentTopOffset + 'px';
-			me._thumbnail_scroller_phone1.ggScrollPosYPercent = (me._thumbnail_scroller_phone1__vertScrollFg.offsetTop / me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight);
+			me._thumbnail_scroller_phone0__vertScrollFg.style.top = me._thumbnail_scroller_phone0.ggScrollPosY + 'px';
+			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosY / (me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
+			me._thumbnail_scroller_phone0__content.style.top = -(Math.round((me._thumbnail_scroller_phone0.ggContentHeight * (1.0 - me._thumbnail_scroller_phone0.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentTopOffset + 'px';
+			me._thumbnail_scroller_phone0.ggScrollPosYPercent = (me._thumbnail_scroller_phone0__vertScrollFg.offsetTop / me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight);
 			}, 10);
 		}
-		me._thumbnail_scroller_phone1.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._thumbnail_scroller_phone1.ggHorScrollVisible) {
+		me._thumbnail_scroller_phone0.ggScrollIntoView = function(posX, posY, width, height) {
+			if (me._thumbnail_scroller_phone0.ggHorScrollVisible) {
 				if (posX < 0) {
-					var diffX = Math.floor(posX * me._thumbnail_scroller_phone1.ggHPercentVisible);
-					me._thumbnail_scroller_phone1.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._thumbnail_scroller_phone1.clientWidth - (me._thumbnail_scroller_phone1.ggVertScrollVisible ? 8 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._thumbnail_scroller_phone1.clientWidth - (me._thumbnail_scroller_phone1.ggVertScrollVisible ? 8 : 0))) * me._thumbnail_scroller_phone1.ggHPercentVisible);
-					me._thumbnail_scroller_phone1.ggScrollByXSmooth(diffX);
+					var diffX = Math.floor(posX * me._thumbnail_scroller_phone0.ggHPercentVisible);
+					me._thumbnail_scroller_phone0.ggScrollByXSmooth(diffX);
+				} else if (posX + width > me._thumbnail_scroller_phone0.clientWidth - (me._thumbnail_scroller_phone0.ggVertScrollVisible ? 8 : 0)) {
+					var diffX = Math.ceil(((posX + width) - (me._thumbnail_scroller_phone0.clientWidth - (me._thumbnail_scroller_phone0.ggVertScrollVisible ? 8 : 0))) * me._thumbnail_scroller_phone0.ggHPercentVisible);
+					me._thumbnail_scroller_phone0.ggScrollByXSmooth(diffX);
 				}
 			}
-			if (me._thumbnail_scroller_phone1.ggVertScrollVisible) {
+			if (me._thumbnail_scroller_phone0.ggVertScrollVisible) {
 				if (posY < 0) {
-					var diffY = Math.floor(posY * me._thumbnail_scroller_phone1.ggVPercentVisible);
-					me._thumbnail_scroller_phone1.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._thumbnail_scroller_phone1.clientHeight - (me._thumbnail_scroller_phone1.ggHorScrollVisible ? 8 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._thumbnail_scroller_phone1.clientHeight - (me._thumbnail_scroller_phone1.ggHorScrollVisible ? 8 : 0))) * me._thumbnail_scroller_phone1.ggVPercentVisible);
-					me._thumbnail_scroller_phone1.ggScrollByYSmooth(diffY);
+					var diffY = Math.floor(posY * me._thumbnail_scroller_phone0.ggVPercentVisible);
+					me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
+				} else if (posY + height > me._thumbnail_scroller_phone0.clientHeight - (me._thumbnail_scroller_phone0.ggHorScrollVisible ? 8 : 0)) {
+					var diffY = Math.ceil(((posY + height) - (me._thumbnail_scroller_phone0.clientHeight - (me._thumbnail_scroller_phone0.ggHorScrollVisible ? 8 : 0))) * me._thumbnail_scroller_phone0.ggVPercentVisible);
+					me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
 				}
 			}
 		}
-		me._thumbnail_scroller_phone1__content.mousetouchend = e => {
+		me._thumbnail_scroller_phone0__content.mousetouchend = e => {
 			let inertiaInterval = setInterval(function() {
-				me._thumbnail_scroller_phone1.ggDragInertiaX *= 0.96;
-				me._thumbnail_scroller_phone1.ggDragInertiaY *= 0.96;
-				me._thumbnail_scroller_phone1.ggScrollByX(me._thumbnail_scroller_phone1.ggDragInertiaX);
-				me._thumbnail_scroller_phone1.ggScrollByY(me._thumbnail_scroller_phone1.ggDragInertiaY);
-				if (Math.abs(me._thumbnail_scroller_phone1.ggDragInertiaX) < 1.0 && Math.abs(me._thumbnail_scroller_phone1.ggDragInertiaY) < 1.0) {
+				me._thumbnail_scroller_phone0.ggDragInertiaX *= 0.96;
+				me._thumbnail_scroller_phone0.ggDragInertiaY *= 0.96;
+				me._thumbnail_scroller_phone0.ggScrollByX(me._thumbnail_scroller_phone0.ggDragInertiaX);
+				me._thumbnail_scroller_phone0.ggScrollByY(me._thumbnail_scroller_phone0.ggDragInertiaY);
+				if (Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaX) < 1.0 && Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaY) < 1.0) {
 					clearInterval(inertiaInterval);
 				}
 				}, 10);
-			me._thumbnail_scroller_phone1__content.onmouseup = null;
-			me._thumbnail_scroller_phone1__content.onmousemove = null;
-			me._thumbnail_scroller_phone1__content.ontouchend = null;
-			me._thumbnail_scroller_phone1__content.ontouchmove = null;
-			me._thumbnail_scroller_phone1__content.onpointerup = null;
-			me._thumbnail_scroller_phone1__content.onpointermove = null;
-			setTimeout(function() { me._thumbnail_scroller_phone1.ggIsDragging = false; }, 100);
+			me._thumbnail_scroller_phone0__content.onmouseup = null;
+			me._thumbnail_scroller_phone0__content.onmousemove = null;
+			me._thumbnail_scroller_phone0__content.ontouchend = null;
+			me._thumbnail_scroller_phone0__content.ontouchmove = null;
+			me._thumbnail_scroller_phone0__content.onpointerup = null;
+			me._thumbnail_scroller_phone0__content.onpointermove = null;
+			setTimeout(function() { me._thumbnail_scroller_phone0.ggIsDragging = false; }, 100);
 		}
-		me._thumbnail_scroller_phone1__content.mousetouchmove = e => {
+		me._thumbnail_scroller_phone0__content.mousetouchmove = e => {
 			e = e || window.event;
 			e.preventDefault();
 			var t = e.touches;
 			var eventX = t ? t[0].clientX : e.clientX;
 			var eventY = t ? t[0].clientY : e.clientY;
-			if (Math.abs(eventX - me._thumbnail_scroller_phone1.ggDragStartX) > 10 || Math.abs(eventY - me._thumbnail_scroller_phone1.ggDragStartY) > 10) me._thumbnail_scroller_phone1.ggIsDragging = true;
-			var diffX = (eventX - me._thumbnail_scroller_phone1.ggDragLastX) * me._thumbnail_scroller_phone1.ggHPercentVisible;
-			var diffY = (eventY - me._thumbnail_scroller_phone1.ggDragLastY) * me._thumbnail_scroller_phone1.ggVPercentVisible;
-			me._thumbnail_scroller_phone1.ggDragInertiaX = -diffX;
-			me._thumbnail_scroller_phone1.ggDragInertiaY = -diffY;
-			me._thumbnail_scroller_phone1.ggDragLastX = eventX;
-			me._thumbnail_scroller_phone1.ggDragLastY = eventY;
-			me._thumbnail_scroller_phone1.ggScrollByX(-diffX);
-			me._thumbnail_scroller_phone1.ggScrollByY(-diffY);
+			if (Math.abs(eventX - me._thumbnail_scroller_phone0.ggDragStartX) > 10 || Math.abs(eventY - me._thumbnail_scroller_phone0.ggDragStartY) > 10) me._thumbnail_scroller_phone0.ggIsDragging = true;
+			var diffX = (eventX - me._thumbnail_scroller_phone0.ggDragLastX) * me._thumbnail_scroller_phone0.ggHPercentVisible;
+			var diffY = (eventY - me._thumbnail_scroller_phone0.ggDragLastY) * me._thumbnail_scroller_phone0.ggVPercentVisible;
+			me._thumbnail_scroller_phone0.ggDragInertiaX = -diffX;
+			me._thumbnail_scroller_phone0.ggDragInertiaY = -diffY;
+			me._thumbnail_scroller_phone0.ggDragLastX = eventX;
+			me._thumbnail_scroller_phone0.ggDragLastY = eventY;
+			me._thumbnail_scroller_phone0.ggScrollByX(-diffX);
+			me._thumbnail_scroller_phone0.ggScrollByY(-diffY);
 		}
-		me._thumbnail_scroller_phone1__content.mousetouchstart = e => {
+		me._thumbnail_scroller_phone0__content.mousetouchstart = e => {
 			e = e || window.event;
 			var t = e.touches;
-			me._thumbnail_scroller_phone1.ggDragLastX = me._thumbnail_scroller_phone1.ggDragStartX = t ? t[0].clientX : e.clientX;
-			me._thumbnail_scroller_phone1.ggDragLastY = me._thumbnail_scroller_phone1.ggDragStartY = t ? t[0].clientY : e.clientY;
-			me._thumbnail_scroller_phone1__content.onmouseup = me._thumbnail_scroller_phone1__content.mousetouchend;
-			me._thumbnail_scroller_phone1__content.ontouchend = me._thumbnail_scroller_phone1__content.mousetouchend;
-			me._thumbnail_scroller_phone1__content.onmousemove = me._thumbnail_scroller_phone1__content.mousetouchmove;
-			me._thumbnail_scroller_phone1__content.ontouchmove = me._thumbnail_scroller_phone1__content.mousetouchmove;
+			me._thumbnail_scroller_phone0.ggDragLastX = me._thumbnail_scroller_phone0.ggDragStartX = t ? t[0].clientX : e.clientX;
+			me._thumbnail_scroller_phone0.ggDragLastY = me._thumbnail_scroller_phone0.ggDragStartY = t ? t[0].clientY : e.clientY;
+			me._thumbnail_scroller_phone0__content.onmouseup = me._thumbnail_scroller_phone0__content.mousetouchend;
+			me._thumbnail_scroller_phone0__content.ontouchend = me._thumbnail_scroller_phone0__content.mousetouchend;
+			me._thumbnail_scroller_phone0__content.onmousemove = me._thumbnail_scroller_phone0__content.mousetouchmove;
+			me._thumbnail_scroller_phone0__content.ontouchmove = me._thumbnail_scroller_phone0__content.mousetouchmove;
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				me._thumbnail_scroller_phone1__content.onpointerup = me._thumbnail_scroller_phone1__content.ontouchend;
-				me._thumbnail_scroller_phone1__content.onpointermove = me._thumbnail_scroller_phone1__content.ontouchmove;
+				me._thumbnail_scroller_phone0__content.onpointerup = me._thumbnail_scroller_phone0__content.ontouchend;
+				me._thumbnail_scroller_phone0__content.onpointermove = me._thumbnail_scroller_phone0__content.ontouchmove;
 			}
 		}
-		els.onmousedown = me._thumbnail_scroller_phone1__content.mousetouchstart;
-		els.ontouchstart = me._thumbnail_scroller_phone1__content.mousetouchstart;
+		els.onmousedown = me._thumbnail_scroller_phone0__content.mousetouchstart;
+		els.ontouchstart = me._thumbnail_scroller_phone0__content.mousetouchstart;
 		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			els.onpointerdown = me._thumbnail_scroller_phone1__content.mousetouchstart;
+			els.onpointerdown = me._thumbnail_scroller_phone0__content.mousetouchstart;
 		}
-		elVertScrollBg = me._thumbnail_scroller_phone1__vertScrollBg = document.createElement('div');
+		elVertScrollBg = me._thumbnail_scroller_phone0__vertScrollBg = document.createElement('div');
 		el.appendChild(elVertScrollBg);
 		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 8px; height: 717px; background-color: rgba(128,128,128,1); pointer-events: auto;');
 		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._thumbnail_scroller_phone1__vertScrollFg = document.createElement('div');
+		elVertScrollFg = me._thumbnail_scroller_phone0__vertScrollFg = document.createElement('div');
 		elVertScrollBg.appendChild(elVertScrollFg);
 		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 8px; height: 717px; background-color: rgba(192,192,192,1); pointer-events: auto;');
 		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._thumbnail_scroller_phone1.ggScrollPosY = 0;
-		me._thumbnail_scroller_phone1.ggScrollPosYPercent = 0.0;
+		me._thumbnail_scroller_phone0.ggScrollPosY = 0;
+		me._thumbnail_scroller_phone0.ggScrollPosYPercent = 0.0;
 		elVertScrollFg.onmousedown = function(e) {
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
 			e = e || window.event;
 			e.preventDefault();
 			e.stopPropagation();
-			me._thumbnail_scroller_phone1.ggDragLastY = e.clientY;
+			me._thumbnail_scroller_phone0.ggDragLastY = e.clientY;
 			document.onmouseup = function() {
 				let inertiaInterval = setInterval(function() {
-					me._thumbnail_scroller_phone1.ggDragInertiaY *= 0.96;
-					me._thumbnail_scroller_phone1.ggScrollByY(me._thumbnail_scroller_phone1.ggDragInertiaY);
-					if (Math.abs(me._thumbnail_scroller_phone1.ggDragInertiaY) < 1.0) {
+					me._thumbnail_scroller_phone0.ggDragInertiaY *= 0.96;
+					me._thumbnail_scroller_phone0.ggScrollByY(me._thumbnail_scroller_phone0.ggDragInertiaY);
+					if (Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaY) < 1.0) {
 						clearInterval(inertiaInterval);
 					}
 					}, 10);
@@ -11036,10 +11062,10 @@ alert("The current view has been copied.");
 			document.onmousemove = function(e) {
 				e = e || window.event;
 				e.preventDefault();
-				var diffY = e.clientY - me._thumbnail_scroller_phone1.ggDragLastY;
-				me._thumbnail_scroller_phone1.ggDragInertiaY = diffY;
-				me._thumbnail_scroller_phone1.ggDragLastY = e.clientY;
-				me._thumbnail_scroller_phone1.ggScrollByY(diffY);
+				var diffY = e.clientY - me._thumbnail_scroller_phone0.ggDragLastY;
+				me._thumbnail_scroller_phone0.ggDragInertiaY = diffY;
+				me._thumbnail_scroller_phone0.ggDragLastY = e.clientY;
+				me._thumbnail_scroller_phone0.ggScrollByY(diffY);
 			}
 		}
 		elVertScrollFg.ontouchstart = function(e) {
@@ -11047,12 +11073,12 @@ alert("The current view has been copied.");
 			e.preventDefault();
 			e.stopPropagation();
 			var t = e.touches;
-			me._thumbnail_scroller_phone1.ggDragLastY = t ? t[0].clientY : e.clientY;
+			me._thumbnail_scroller_phone0.ggDragLastY = t ? t[0].clientY : e.clientY;
 			document.ontouchend = function() {
 				let inertiaInterval = setInterval(function() {
-					me._thumbnail_scroller_phone1.ggDragInertiaY *= 0.96;
-					me._thumbnail_scroller_phone1.ggScrollByY(me._thumbnail_scroller_phone1.ggDragInertiaY);
-					if (Math.abs(me._thumbnail_scroller_phone1.ggDragInertiaY) < 1.0) {
+					me._thumbnail_scroller_phone0.ggDragInertiaY *= 0.96;
+					me._thumbnail_scroller_phone0.ggScrollByY(me._thumbnail_scroller_phone0.ggDragInertiaY);
+					if (Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaY) < 1.0) {
 						clearInterval(inertiaInterval);
 					}
 					}, 10);
@@ -11068,10 +11094,10 @@ alert("The current view has been copied.");
 				e = e || window.event;
 				e.preventDefault();
 				var t = e.touches;
-				var diffY = (t ? t[0].clientY : e.clientY) - me._thumbnail_scroller_phone1.ggDragLastY;
-				me._thumbnail_scroller_phone1.ggDragInertiaY = diffY;
-				me._thumbnail_scroller_phone1.ggDragLastY = t ? t[0].clientY : e.clientY;
-				me._thumbnail_scroller_phone1.ggScrollByY(diffY);
+				var diffY = (t ? t[0].clientY : e.clientY) - me._thumbnail_scroller_phone0.ggDragLastY;
+				me._thumbnail_scroller_phone0.ggDragInertiaY = diffY;
+				me._thumbnail_scroller_phone0.ggDragLastY = t ? t[0].clientY : e.clientY;
+				me._thumbnail_scroller_phone0.ggScrollByY(diffY);
 			}
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
 				document.onpointermove = document.ontouchmove;
@@ -11083,30 +11109,30 @@ alert("The current view has been copied.");
 		elVertScrollBg.onmousedown = function(e) {
 			e = e || window.event;
 			e.preventDefault();
-			var diffY = me._thumbnail_scroller_phone1.ggScrollHeight;
-			if (e.offsetY < me._thumbnail_scroller_phone1.ggScrollPosY) {
+			var diffY = me._thumbnail_scroller_phone0.ggScrollHeight;
+			if (e.offsetY < me._thumbnail_scroller_phone0.ggScrollPosY) {
 				diffY = diffY * -1;
 			}
-			me._thumbnail_scroller_phone1.ggScrollByYSmooth(diffY);
+			me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
 		}
 		elVertScrollBg.ontouchstart = function(e) {
 			e = e || window.event;
 			e.preventDefault();
 			e.stopPropagation();
 			var t = e.touches;
-			var rect = me._thumbnail_scroller_phone1__vertScrollBg.getBoundingClientRect();
-			var diffY = me._thumbnail_scroller_phone1.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._thumbnail_scroller_phone1.ggScrollPosY) {
+			var rect = me._thumbnail_scroller_phone0__vertScrollBg.getBoundingClientRect();
+			var diffY = me._thumbnail_scroller_phone0.ggScrollHeight;
+			if ((t[0].clientY - rect.top) < me._thumbnail_scroller_phone0.ggScrollPosY) {
 				diffY = diffY * -1;
 			}
-			me._thumbnail_scroller_phone1.ggScrollByYSmooth(diffY);
+			me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
 		}
 		el.addEventListener('wheel', function(e) {
 			e.preventDefault();
 			var wheelDelta = Math.sign(e.deltaY);
-			me._thumbnail_scroller_phone1.ggScrollByYSmooth(30 * me._thumbnail_scroller_phone1.ggVPercentVisible * wheelDelta);
+			me._thumbnail_scroller_phone0.ggScrollByYSmooth(30 * me._thumbnail_scroller_phone0.ggVPercentVisible * wheelDelta);
 		});
-		elCornerBg = me._thumbnail_scroller_phone1__cornerBg = document.createElement('div');
+		elCornerBg = me._thumbnail_scroller_phone0__cornerBg = document.createElement('div');
 		el.appendChild(elCornerBg);
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 8px; height: 8px; background-color: rgba(255,255,255,1);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
@@ -11127,7 +11153,7 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._thumbnail_scroller_phone1.ggIsActive=function() {
+		me._thumbnail_scroller_phone0.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -11139,7 +11165,7 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._thumbnail_scroller_phone1.logicBlock_visible = function() {
+		me._thumbnail_scroller_phone0.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
 				((player.getVariableValue('vis_phone_thumbs') == true))
@@ -11150,21 +11176,21 @@ alert("The current view has been copied.");
 			else {
 				newLogicStateVisible = -1;
 			}
-			if (me._thumbnail_scroller_phone1.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._thumbnail_scroller_phone1.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._thumbnail_scroller_phone1.style.transition='';
-				if (me._thumbnail_scroller_phone1.ggCurrentLogicStateVisible == 0) {
-					me._thumbnail_scroller_phone1.style.visibility=(Number(me._thumbnail_scroller_phone1.style.opacity)>0||!me._thumbnail_scroller_phone1.style.opacity)?'inherit':'hidden';
-					me._thumbnail_scroller_phone1.ggVisible=true;
+			if (me._thumbnail_scroller_phone0.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._thumbnail_scroller_phone0.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._thumbnail_scroller_phone0.style.transition='';
+				if (me._thumbnail_scroller_phone0.ggCurrentLogicStateVisible == 0) {
+					me._thumbnail_scroller_phone0.style.visibility=(Number(me._thumbnail_scroller_phone0.style.opacity)>0||!me._thumbnail_scroller_phone0.style.opacity)?'inherit':'hidden';
+					me._thumbnail_scroller_phone0.ggVisible=true;
 				}
 				else {
-					me._thumbnail_scroller_phone1.style.visibility="hidden";
-					me._thumbnail_scroller_phone1.ggVisible=false;
+					me._thumbnail_scroller_phone0.style.visibility="hidden";
+					me._thumbnail_scroller_phone0.ggVisible=false;
 				}
 			}
 		}
-		me._thumbnail_scroller_phone1.logicBlock_visible();
-		me._thumbnail_scroller_phone1.ggUpdatePosition=function (useTransition) {
+		me._thumbnail_scroller_phone0.logicBlock_visible();
+		me._thumbnail_scroller_phone0.ggUpdatePosition=function (useTransition) {
 			{
 				var horScrollWasVisible = this.ggHorScrollVisible;
 				var vertScrollWasVisible = this.ggVertScrollVisible;
@@ -11220,56 +11246,56 @@ alert("The current view has been copied.");
 					this.ggContent.style.left = this.ggContentLeftOffset + 'px';
 					this.ggContent.style.marginLeft = '0px';
 				}
-				this.ggContent.style.top = -(Math.round(me._thumbnail_scroller_phone1.ggScrollPosY / me._thumbnail_scroller_phone1.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
+				this.ggContent.style.top = -(Math.round(me._thumbnail_scroller_phone0.ggScrollPosY / me._thumbnail_scroller_phone0.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
 				this.ggContent.style.marginTop = '0px';
-				if ((me._thumbnail_scroller_phone1.ggHorScrollVisible && contentHeight > this.clientHeight - 8) || (!me._thumbnail_scroller_phone1.ggHorScrollVisible && contentHeight > this.clientHeight)) {
-					me._thumbnail_scroller_phone1__vertScrollBg.style.visibility = 'inherit';
-					me._thumbnail_scroller_phone1__vertScrollFg.style.visibility = 'inherit';
-					me._thumbnail_scroller_phone1.ggVertScrollVisible = true;
+				if ((me._thumbnail_scroller_phone0.ggHorScrollVisible && contentHeight > this.clientHeight - 8) || (!me._thumbnail_scroller_phone0.ggHorScrollVisible && contentHeight > this.clientHeight)) {
+					me._thumbnail_scroller_phone0__vertScrollBg.style.visibility = 'inherit';
+					me._thumbnail_scroller_phone0__vertScrollFg.style.visibility = 'inherit';
+					me._thumbnail_scroller_phone0.ggVertScrollVisible = true;
 				} else {
-					me._thumbnail_scroller_phone1__vertScrollBg.style.visibility = 'hidden';
-					me._thumbnail_scroller_phone1__vertScrollFg.style.visibility = 'hidden';
-					me._thumbnail_scroller_phone1.ggVertScrollVisible = false;
+					me._thumbnail_scroller_phone0__vertScrollBg.style.visibility = 'hidden';
+					me._thumbnail_scroller_phone0__vertScrollFg.style.visibility = 'hidden';
+					me._thumbnail_scroller_phone0.ggVertScrollVisible = false;
 				}
-				if(me._thumbnail_scroller_phone1.ggVertScrollVisible) {
-					me._thumbnail_scroller_phone1.ggAvailableWidth = me._thumbnail_scroller_phone1.clientWidth - 8;
-					if (me._thumbnail_scroller_phone1.ggHorScrollVisible) {
-						me._thumbnail_scroller_phone1.ggAvailableHeight = me._thumbnail_scroller_phone1.clientHeight - 8;
-						me._thumbnail_scroller_phone1.ggAvailableHeightWithScale = me._thumbnail_scroller_phone1.getBoundingClientRect().height - me._thumbnail_scroller_phone1__vertScrollBg.getBoundingClientRect().width;
-						me._thumbnail_scroller_phone1__cornerBg.style.visibility = 'inherit';
+				if(me._thumbnail_scroller_phone0.ggVertScrollVisible) {
+					me._thumbnail_scroller_phone0.ggAvailableWidth = me._thumbnail_scroller_phone0.clientWidth - 8;
+					if (me._thumbnail_scroller_phone0.ggHorScrollVisible) {
+						me._thumbnail_scroller_phone0.ggAvailableHeight = me._thumbnail_scroller_phone0.clientHeight - 8;
+						me._thumbnail_scroller_phone0.ggAvailableHeightWithScale = me._thumbnail_scroller_phone0.getBoundingClientRect().height - me._thumbnail_scroller_phone0__vertScrollBg.getBoundingClientRect().width;
+						me._thumbnail_scroller_phone0__cornerBg.style.visibility = 'inherit';
 					} else {
-						me._thumbnail_scroller_phone1.ggAvailableHeight = me._thumbnail_scroller_phone1.clientHeight;
-						me._thumbnail_scroller_phone1.ggAvailableHeightWithScale = me._thumbnail_scroller_phone1.getBoundingClientRect().height;
-						me._thumbnail_scroller_phone1__cornerBg.style.visibility = 'hidden';
+						me._thumbnail_scroller_phone0.ggAvailableHeight = me._thumbnail_scroller_phone0.clientHeight;
+						me._thumbnail_scroller_phone0.ggAvailableHeightWithScale = me._thumbnail_scroller_phone0.getBoundingClientRect().height;
+						me._thumbnail_scroller_phone0__cornerBg.style.visibility = 'hidden';
 					}
-					me._thumbnail_scroller_phone1__vertScrollBg.style.height = me._thumbnail_scroller_phone1.ggAvailableHeight + 'px';
-					me._thumbnail_scroller_phone1.ggVPercentVisible = contentHeight != 0 ? me._thumbnail_scroller_phone1.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._thumbnail_scroller_phone1.ggVPercentVisible > 1.0) me._thumbnail_scroller_phone1.ggVPercentVisible = 1.0;
-					me._thumbnail_scroller_phone1.ggScrollHeight =  Math.round(me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight * me._thumbnail_scroller_phone1.ggVPercentVisible);
-					me._thumbnail_scroller_phone1__vertScrollFg.style.height = me._thumbnail_scroller_phone1.ggScrollHeight + 'px';
-					me._thumbnail_scroller_phone1.ggScrollPosY = me._thumbnail_scroller_phone1.ggScrollPosYPercent * me._thumbnail_scroller_phone1.ggAvailableHeight;
-					me._thumbnail_scroller_phone1.ggScrollPosY = Math.min(me._thumbnail_scroller_phone1.ggScrollPosY, me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight);
-					me._thumbnail_scroller_phone1__vertScrollFg.style.top = me._thumbnail_scroller_phone1.ggScrollPosY + 'px';
-					if (me._thumbnail_scroller_phone1.ggVPercentVisible < 1.0) {
-						let percentScrolled = me._thumbnail_scroller_phone1.ggScrollPosY / (me._thumbnail_scroller_phone1__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone1__vertScrollFg.offsetHeight);
-						me._thumbnail_scroller_phone1__content.style.top = -(Math.round((me._thumbnail_scroller_phone1.ggContentHeight * (1.0 - me._thumbnail_scroller_phone1.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone1.ggContentTopOffset + 'px';
+					me._thumbnail_scroller_phone0__vertScrollBg.style.height = me._thumbnail_scroller_phone0.ggAvailableHeight + 'px';
+					me._thumbnail_scroller_phone0.ggVPercentVisible = contentHeight != 0 ? me._thumbnail_scroller_phone0.ggAvailableHeightWithScale / contentHeight : 0.0;
+					if (me._thumbnail_scroller_phone0.ggVPercentVisible > 1.0) me._thumbnail_scroller_phone0.ggVPercentVisible = 1.0;
+					me._thumbnail_scroller_phone0.ggScrollHeight =  Math.round(me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight * me._thumbnail_scroller_phone0.ggVPercentVisible);
+					me._thumbnail_scroller_phone0__vertScrollFg.style.height = me._thumbnail_scroller_phone0.ggScrollHeight + 'px';
+					me._thumbnail_scroller_phone0.ggScrollPosY = me._thumbnail_scroller_phone0.ggScrollPosYPercent * me._thumbnail_scroller_phone0.ggAvailableHeight;
+					me._thumbnail_scroller_phone0.ggScrollPosY = Math.min(me._thumbnail_scroller_phone0.ggScrollPosY, me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
+					me._thumbnail_scroller_phone0__vertScrollFg.style.top = me._thumbnail_scroller_phone0.ggScrollPosY + 'px';
+					if (me._thumbnail_scroller_phone0.ggVPercentVisible < 1.0) {
+						let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosY / (me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
+						me._thumbnail_scroller_phone0__content.style.top = -(Math.round((me._thumbnail_scroller_phone0.ggContentHeight * (1.0 - me._thumbnail_scroller_phone0.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentTopOffset + 'px';
 					}
 				} else {
-					me._thumbnail_scroller_phone1.ggAvailableWidth = me._thumbnail_scroller_phone1.clientWidth;
-					me._thumbnail_scroller_phone1.ggScrollPosY = 0;
-					me._thumbnail_scroller_phone1.ggScrollPosYPercent = 0.0;
-					me._thumbnail_scroller_phone1__content.style.top = this.ggContentTopOffset + 'px';
-					me._thumbnail_scroller_phone1__cornerBg.style.visibility = 'hidden';
+					me._thumbnail_scroller_phone0.ggAvailableWidth = me._thumbnail_scroller_phone0.clientWidth;
+					me._thumbnail_scroller_phone0.ggScrollPosY = 0;
+					me._thumbnail_scroller_phone0.ggScrollPosYPercent = 0.0;
+					me._thumbnail_scroller_phone0__content.style.top = this.ggContentTopOffset + 'px';
+					me._thumbnail_scroller_phone0__cornerBg.style.visibility = 'hidden';
 				}
-				if(horScrollWasVisible != me._thumbnail_scroller_phone1.ggHorScrollVisible || vertScrollWasVisible != me._thumbnail_scroller_phone1.ggVertScrollVisible) {
-					skin.updateSize(me._thumbnail_scroller_phone1);
-					me._thumbnail_scroller_phone1.ggUpdatePosition();
+				if(horScrollWasVisible != me._thumbnail_scroller_phone0.ggHorScrollVisible || vertScrollWasVisible != me._thumbnail_scroller_phone0.ggVertScrollVisible) {
+					skin.updateSize(me._thumbnail_scroller_phone0);
+					me._thumbnail_scroller_phone0.ggUpdatePosition();
 				}
 			}
 		}
-		el=me._node_cloner_phone1=document.createElement('div');
+		el=me._node_cloner_phone0=document.createElement('div');
 		el.isDragging = function() {
-			let scrollerParent = me._node_cloner_phone1;
+			let scrollerParent = me._node_cloner_phone0;
 			while ((scrollerParent = scrollerParent.parentNode) != null) {
 				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
 			}
@@ -11305,13 +11331,13 @@ alert("The current view has been copied.");
 			return filteredNodes;
 		}
 		el.ggUpdate = function(filter) {
-			if(me._node_cloner_phone1.ggUpdating == true) return;
-			me._node_cloner_phone1.ggUpdating = true;
-			var el=me._node_cloner_phone1;
+			if(me._node_cloner_phone0.ggUpdating == true) return;
+			me._node_cloner_phone0.ggUpdating = true;
+			var el=me._node_cloner_phone0;
 			var curNumCols = 0;
-			var parentWidth = me._node_cloner_phone1.parentNode.classList.contains('ggskin_subelement') ? (me._node_cloner_phone1.parentNode.parentNode.classList.contains('ggskin_scrollarea') ? me._node_cloner_phone1.parentNode.parentNode.ggAvailableWidth : me._node_cloner_phone1.parentNode.parentNode.clientWidth) : me._node_cloner_phone1.parentNode.clientWidth;
-			if (parentWidth == 0) parentWidth = me._node_cloner_phone1.parentNode.parentNode.clientWidth;
-			curNumCols = Math.floor(((parentWidth - me._node_cloner_phone1.offsetLeft) * me._node_cloner_phone1.ggNumRepeat / 100.0) / me._node_cloner_phone1.offsetWidth);
+			var parentWidth = me._node_cloner_phone0.parentNode.classList.contains('ggskin_subelement') ? (me._node_cloner_phone0.parentNode.parentNode.classList.contains('ggskin_scrollarea') ? me._node_cloner_phone0.parentNode.parentNode.ggAvailableWidth : me._node_cloner_phone0.parentNode.parentNode.clientWidth) : me._node_cloner_phone0.parentNode.clientWidth;
+			if (parentWidth == 0) parentWidth = me._node_cloner_phone0.parentNode.parentNode.clientWidth;
+			curNumCols = Math.floor(((parentWidth - me._node_cloner_phone0.offsetLeft) * me._node_cloner_phone0.ggNumRepeat / 100.0) / me._node_cloner_phone0.offsetWidth);
 			if (curNumCols < 1) curNumCols = 1;
 			if (typeof filter=='object') {
 				el.ggFilter = filter;
@@ -11321,14 +11347,14 @@ alert("The current view has been copied.");
 			if (me.ggTag) filter.push(me.ggTag);
 			filter=filter.sort();
 			if ((el.ggNumCols == curNumCols) && (el.ggInstances.length > 0) && (filter.length === el.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.ggCurrentFilter[index] }) )) {
-				me._node_cloner_phone1.ggUpdating = false;
+				me._node_cloner_phone0.ggUpdating = false;
 				return;
 			} else {
 				el.ggNumRows = 1;
 				el.ggNumCols = curNumCols;
 			var centerOffsetHor = 0;
 			var centerOffsetVert = 0;
-				me._node_cloner_phone1.ggCloneOffsetChanged = false;
+				me._node_cloner_phone0.ggCloneOffsetChanged = false;
 			}
 			el.ggCurrentFilter = filter;
 			el.ggInstances = [];
@@ -11339,27 +11365,27 @@ alert("The current view has been copied.");
 			}
 			var tourNodes = player.getNodeIds();
 			if (tourNodes.length == 0) {
-				me._node_cloner_phone1.ggUpdating = false;
+				me._node_cloner_phone0.ggUpdating = false;
 				return;
 			}
 			var row = 0;
 			var column = 0;
 			var currentIndex = 0;
 			var keepCloning = true;
-			tourNodes = me._node_cloner_phone1.getFilteredNodes(tourNodes, filter);
-			me._node_cloner_phone1.ggNumFilterPassed = tourNodes.length;
+			tourNodes = me._node_cloner_phone0.getFilteredNodes(tourNodes, filter);
+			me._node_cloner_phone0.ggNumFilterPassed = tourNodes.length;
 			for (var i = 0; i < tourNodes.length; i++) {
 				var nodeId = tourNodes[i];
 				var nodeData = player.getNodeUserdata(nodeId);
-				if (!keepCloning || i < me._node_cloner_phone1.ggCloneOffset) continue;
+				if (!keepCloning || i < me._node_cloner_phone0.ggCloneOffset) continue;
 				var parameter={};
-				parameter.top = centerOffsetVert + (row * me._node_cloner_phone1.ggHeight) + 'px';
-				parameter.left = centerOffsetHor + (column * me._node_cloner_phone1.ggWidth) + 'px';
-				parameter.width=me._node_cloner_phone1.ggWidth + 'px';
-				parameter.height=me._node_cloner_phone1.ggHeight + 'px';
+				parameter.top = centerOffsetVert + (row * me._node_cloner_phone0.ggHeight) + 'px';
+				parameter.left = centerOffsetHor + (column * me._node_cloner_phone0.ggWidth) + 'px';
+				parameter.width=me._node_cloner_phone0.ggWidth + 'px';
+				parameter.height=me._node_cloner_phone0.ggHeight + 'px';
 				parameter.index=currentIndex;
 				parameter.title=nodeData['title'];
-				var inst = new SkinCloner_node_cloner_phone1_Class(nodeId, me, el, parameter);
+				var inst = new SkinCloner_node_cloner_phone0_Class(nodeId, me, el, parameter);
 				currentIndex++;
 				el.ggInstances.push(inst);
 				el.appendChild(inst.__div);
@@ -11372,10 +11398,10 @@ alert("The current view has been copied.");
 					el.ggNumRows++;
 				}
 			}
-			me._node_cloner_phone1.ggNodeCount = me._node_cloner_phone1.ggNumFilterPassed;
-			me._node_cloner_phone1.ggUpdating = false;
+			me._node_cloner_phone0.ggNodeCount = me._node_cloner_phone0.ggNumFilterPassed;
+			me._node_cloner_phone0.ggUpdating = false;
 			player.triggerEvent('clonerchanged');
-			if (me._node_cloner_phone1.parentNode && me._node_cloner_phone1.parentNode.classList.contains('ggskin_subelement') && me._node_cloner_phone1.parentNode.parentNode.classList.contains('ggskin_scrollarea')) me._node_cloner_phone1.parentNode.parentNode.ggUpdatePosition();
+			if (me._node_cloner_phone0.parentNode && me._node_cloner_phone0.parentNode.classList.contains('ggskin_subelement') && me._node_cloner_phone0.parentNode.parentNode.classList.contains('ggskin_scrollarea')) me._node_cloner_phone0.parentNode.parentNode.ggUpdatePosition();
 		}
 		el.ggFilter = [];
 		el.ggFilter[0] = "_nope";
@@ -11395,7 +11421,7 @@ alert("The current view has been copied.");
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._node_cloner_phone1.ggIsActive=function() {
+		me._node_cloner_phone0.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -11407,10 +11433,10 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._node_cloner_phone1.ggUpdateConditionNodeChange=function () {
+		me._node_cloner_phone0.ggUpdateConditionNodeChange=function () {
 			var cnode=player.getCurrentNode();
-			for(var i=0; i<me._node_cloner_phone1.childNodes.length; i++) {
-				var child=me._node_cloner_phone1.childNodes[i];
+			for(var i=0; i<me._node_cloner_phone0.childNodes.length; i++) {
+				var child=me._node_cloner_phone0.childNodes[i];
 				if (child.ggObj && child.ggObj.ggNodeId==cnode) {
 			        var childOffX = child.offsetLeft;
 			        var childOffY = child.offsetTop;
@@ -11426,11 +11452,11 @@ alert("The current view has been copied.");
 				}
 			}
 		}
-		me._node_cloner_phone1.ggUpdatePosition=function (useTransition) {
-			me._node_cloner_phone1.ggUpdate();
+		me._node_cloner_phone0.ggUpdatePosition=function (useTransition) {
+			me._node_cloner_phone0.ggUpdate();
 		}
-		me._thumbnail_scroller_phone1__content.appendChild(me._node_cloner_phone1);
-		me._safe_area_phone.appendChild(me._thumbnail_scroller_phone1);
+		me._thumbnail_scroller_phone0__content.appendChild(me._node_cloner_phone0);
+		me._safe_area_phone.appendChild(me._thumbnail_scroller_phone0);
 		el=me._map_el_phone=document.createElement('div');
 		el.ggFilter = '';
 		el.ggFilteredIds = [];
@@ -14962,7 +14988,7 @@ alert("The current view has been copied.");
 		me._screentint_phone_1.logicBlock_alpha();
 		me._screentint_phone_1.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._close_popup_phone1=document.createElement('div');
+		el=me._close_popup_phone0=document.createElement('div');
 		el.ggPermeable=false;
 		el.ggId="close_popup_phone";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -14980,7 +15006,7 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._close_popup_phone1.ggIsActive=function() {
+		me._close_popup_phone0.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14992,7 +15018,7 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._close_popup_phone1.onclick=function (e) {
+		me._close_popup_phone0.onclick=function (e) {
 			player.setVariableValue('vis_phone_info', false);
 			player.setVariableValue('vis_phone_image', false);
 			player.setVariableValue('vis_phone_pdf', false);
@@ -15001,33 +15027,33 @@ alert("The current view has been copied.");
 			player.setVariableValue('vis_phone_video_file', false);
 			player.setVariableValue('vis_phone_video_url', false);
 		}
-		me._close_popup_phone1.onmouseenter=function (e) {
-			me.elementMouseOver['close_popup_phone1']=true;
-			me._btn_close_popup_phone1.logicBlock_visible();
+		me._close_popup_phone0.onmouseenter=function (e) {
+			me.elementMouseOver['close_popup_phone0']=true;
+			me._btn_close_popup_phone0.logicBlock_visible();
 		}
-		me._close_popup_phone1.onmouseleave=function (e) {
-			me.elementMouseOver['close_popup_phone1']=false;
-			me._btn_close_popup_phone1.logicBlock_visible();
+		me._close_popup_phone0.onmouseleave=function (e) {
+			me.elementMouseOver['close_popup_phone0']=false;
+			me._btn_close_popup_phone0.logicBlock_visible();
 		}
-		me._close_popup_phone1.ggUpdatePosition=function (useTransition) {
+		me._close_popup_phone0.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._btn_close_popup_phone1=document.createElement('div');
-		els=me._btn_close_popup_phone1__img=document.createElement('img');
+		el=me._btn_close_popup_phone0=document.createElement('div');
+		els=me._btn_close_popup_phone0__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
 		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
 			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzAwZGFkYTtzdHJva2Utd2lkdGg6MS4zMzMzO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo1LjMzMzM7fSYjeGQ7Cjwvc3R5bGU+CiA8bGluZSB5Mj0iMjQiIHgxPSIyNCIgY2xhc3M9InN0MCIgeTE9IjgiIHgyPSI4Ii8+CiA8bGluZSB5Mj0iMjQiIHgxPSI4IiBjbGFzcz0ic3QwIiB5MT0iOCIgeDI9IjI0Ii8+Cjwvc3ZnPgo=';
-		me._btn_close_popup_phone1__img.setAttribute('src',hs);
+		me._btn_close_popup_phone0__img.setAttribute('src',hs);
 		hs ='';
 		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
 		els.setAttribute('style', hs);
 		els['ondragstart']=function() { return false; };
 		el.appendChild(els);
 		el.ggSubElement = els;
-		elo=me._btn_close_popup_phone1__imgo=document.createElement('img');
+		elo=me._btn_close_popup_phone0__imgo=document.createElement('img');
 		elo.className='ggskin ggskin_svg';
 		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzYgMzY7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDM2IDM2IiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
 			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I0ZGRkZGRjtzdHJva2Utd2lkdGg6MS4yNTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7fSYjeGQ7Cjwvc3R5bGU+CiA8bGluZSB5Mj0iMjciIHgxPSIyNyIgY2xhc3M9InN0MCIgeTE9IjkiIHgyPSI5Ii8+CiA8bGluZSB5Mj0iMjciIHgxPSI5IiBjbGFzcz0ic3QwIiB5MT0iOSIgeDI9IjI3Ii8+Cjwvc3ZnPgo=';
-		me._btn_close_popup_phone1__imgo.setAttribute('src',hs);
+		me._btn_close_popup_phone0__imgo.setAttribute('src',hs);
 		elo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;;');
 		elo['ondragstart']=function() { return false; };
 		el.appendChild(elo);
@@ -15047,7 +15073,7 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._btn_close_popup_phone1.ggIsActive=function() {
+		me._btn_close_popup_phone0.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -15059,10 +15085,10 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._btn_close_popup_phone1.logicBlock_visible = function() {
+		me._btn_close_popup_phone0.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
-				((me.elementMouseOver['close_popup_phone1'] == true))
+				((me.elementMouseOver['close_popup_phone0'] == true))
 			)
 			{
 				newLogicStateVisible = 0;
@@ -15070,34 +15096,34 @@ alert("The current view has been copied.");
 			else {
 				newLogicStateVisible = -1;
 			}
-			if (me._btn_close_popup_phone1.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._btn_close_popup_phone1.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._btn_close_popup_phone1.style.transition='';
-				if (me._btn_close_popup_phone1.ggCurrentLogicStateVisible == 0) {
-					me._btn_close_popup_phone1.style.visibility="hidden";
-					me._btn_close_popup_phone1.ggVisible=false;
+			if (me._btn_close_popup_phone0.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._btn_close_popup_phone0.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._btn_close_popup_phone0.style.transition='';
+				if (me._btn_close_popup_phone0.ggCurrentLogicStateVisible == 0) {
+					me._btn_close_popup_phone0.style.visibility="hidden";
+					me._btn_close_popup_phone0.ggVisible=false;
 				}
 				else {
-					me._btn_close_popup_phone1.style.visibility=(Number(me._btn_close_popup_phone1.style.opacity)>0||!me._btn_close_popup_phone1.style.opacity)?'inherit':'hidden';
-					me._btn_close_popup_phone1.ggVisible=true;
+					me._btn_close_popup_phone0.style.visibility=(Number(me._btn_close_popup_phone0.style.opacity)>0||!me._btn_close_popup_phone0.style.opacity)?'inherit':'hidden';
+					me._btn_close_popup_phone0.ggVisible=true;
 				}
 			}
 		}
-		me._btn_close_popup_phone1.logicBlock_visible();
-		me._btn_close_popup_phone1.onmouseenter=function (e) {
-			me._btn_close_popup_phone1__img.style.visibility='hidden';
-			me._btn_close_popup_phone1__imgo.style.visibility='inherit';
-			me.elementMouseOver['btn_close_popup_phone1']=true;
+		me._btn_close_popup_phone0.logicBlock_visible();
+		me._btn_close_popup_phone0.onmouseenter=function (e) {
+			me._btn_close_popup_phone0__img.style.visibility='hidden';
+			me._btn_close_popup_phone0__imgo.style.visibility='inherit';
+			me.elementMouseOver['btn_close_popup_phone0']=true;
 		}
-		me._btn_close_popup_phone1.onmouseleave=function (e) {
-			me._btn_close_popup_phone1__img.style.visibility='inherit';
-			me._btn_close_popup_phone1__imgo.style.visibility='hidden';
-			me.elementMouseOver['btn_close_popup_phone1']=false;
+		me._btn_close_popup_phone0.onmouseleave=function (e) {
+			me._btn_close_popup_phone0__img.style.visibility='inherit';
+			me._btn_close_popup_phone0__imgo.style.visibility='hidden';
+			me.elementMouseOver['btn_close_popup_phone0']=false;
 		}
-		me._btn_close_popup_phone1.ggUpdatePosition=function (useTransition) {
+		me._btn_close_popup_phone0.ggUpdatePosition=function (useTransition) {
 		}
-		me._close_popup_phone1.appendChild(me._btn_close_popup_phone1);
-		me._screentint_phone_1.appendChild(me._close_popup_phone1);
+		me._close_popup_phone0.appendChild(me._btn_close_popup_phone0);
+		me._screentint_phone_1.appendChild(me._close_popup_phone0);
 		el=me._info_popup_phone=document.createElement('div');
 		el.ggId="info_popup_phone";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -16896,99 +16922,121 @@ alert("The current view has been copied.");
 		me._image_1.ggUpdatePosition=function (useTransition) {
 		}
 		me.divSkin.appendChild(me._image_1);
-		el=me._thumbnail_menu_toggle=document.createElement('div');
-		el.ggId="thumbnail_menu_toggle";
+		el=me._thumbnails_toggle=document.createElement('div');
+		el.ggId="thumbnails_toggle";
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
 		el.ggType='rectangle';
 		hs ='';
-		hs+='background : #4fb5c2;';
-		hs+='border : 0px solid #000000;';
-		hs+='border-radius : 25px;';
-		hs+='bottom : 20px;';
+		hs+='background : rgba(80,80,80,0.392157);';
+		hs+='border : 1px solid #ffffff;';
+		hs+='border-radius : 18px;';
+		hs+='bottom : 14px;';
 		hs+='cursor : pointer;';
-		hs+='height : 52px;';
-		hs+='left : calc(50% - ((52px + 0px) / 2) + 0px);';
+		hs+='height : 50px;';
+		hs+='left : calc(50% - ((50px + 2px) / 2) + 0px);';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 52px;';
+		hs+='width : 50px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._thumbnail_menu_toggle.ggIsActive=function() {
+		me._thumbnails_toggle.ggIsActive=function() {
 			return false;
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
-		me._thumbnail_menu_toggle.logicBlock_alpha = function() {
-			var newLogicStateAlpha;
+		me._thumbnails_toggle.logicBlock_visible = function() {
+			var newLogicStateVisible;
 			if (
-				((player.getVariableValue('vis_thumbnail_menu_phone') == true))
+				((player.getVariableValue('vis_thumbnails_phone_1') == true))
 			)
 			{
-				newLogicStateAlpha = 0;
+				newLogicStateVisible = 0;
 			}
 			else {
-				newLogicStateAlpha = -1;
+				newLogicStateVisible = -1;
 			}
-			if (me._thumbnail_menu_toggle.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
-				me._thumbnail_menu_toggle.ggCurrentLogicStateAlpha = newLogicStateAlpha;
-				me._thumbnail_menu_toggle.style.transition='opacity 300ms ease 0ms';
-				if (me._thumbnail_menu_toggle.ggCurrentLogicStateAlpha == 0) {
-					setTimeout(function() { if (me._thumbnail_menu_toggle.style.opacity == 0.0) { me._thumbnail_menu_toggle.style.visibility="hidden"; } }, 305);
-					me._thumbnail_menu_toggle.style.opacity=0;
+			if (me._thumbnails_toggle.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._thumbnails_toggle.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._thumbnails_toggle.style.transition='background-color 100ms ease 0ms';
+				if (me._thumbnails_toggle.ggCurrentLogicStateVisible == 0) {
+					me._thumbnails_toggle.style.visibility="hidden";
+					me._thumbnails_toggle.ggVisible=false;
 				}
 				else {
-					me._thumbnail_menu_toggle.style.visibility=me._thumbnail_menu_toggle.ggVisible?'inherit':'hidden';
-					me._thumbnail_menu_toggle.style.opacity=1;
+					me._thumbnails_toggle.style.visibility=(Number(me._thumbnails_toggle.style.opacity)>0||!me._thumbnails_toggle.style.opacity)?'inherit':'hidden';
+					me._thumbnails_toggle.ggVisible=true;
 				}
 			}
 		}
-		me._thumbnail_menu_toggle.logicBlock_alpha();
-		me._thumbnail_menu_toggle.onclick=function (e) {
+		me._thumbnails_toggle.logicBlock_visible();
+		me._thumbnails_toggle.logicBlock_backgroundcolor = function() {
+			var newLogicStateBackgroundColor;
+			if (
+				((me.elementMouseOver['thumbnails_toggle'] == true))
+			)
+			{
+				newLogicStateBackgroundColor = 0;
+			}
+			else {
+				newLogicStateBackgroundColor = -1;
+			}
+			if (me._thumbnails_toggle.ggCurrentLogicStateBackgroundColor != newLogicStateBackgroundColor) {
+				me._thumbnails_toggle.ggCurrentLogicStateBackgroundColor = newLogicStateBackgroundColor;
+				me._thumbnails_toggle.style.transition='background-color 100ms ease 0ms';
+				if (me._thumbnails_toggle.ggCurrentLogicStateBackgroundColor == 0) {
+					me._thumbnails_toggle.style.backgroundColor="rgba(0,0,0,0.470588)";
+				}
+				else {
+					me._thumbnails_toggle.style.backgroundColor="rgba(80,80,80,0.392157)";
+				}
+			}
+		}
+		me._thumbnails_toggle.logicBlock_backgroundcolor();
+		me._thumbnails_toggle.onclick=function (e) {
 			if (
 				(
-					((player.getVariableValue('resp_phone') == false))
+					((player.getVariableValue('resp_phone_1') == false))
 				)
 			) {
-				player.setVariableValue('vis_thumbnail_menu', !player.getVariableValue('vis_thumbnail_menu'));
+				player.setVariableValue('vis_thumbnails_1', !player.getVariableValue('vis_thumbnails_1'));
 			}
 			if (
 				(
-					((player.getVariableValue('resp_phone') == true))
+					((player.getVariableValue('resp_phone_1') == true))
 				)
 			) {
-				player.setVariableValue('vis_thumbnail_menu_phone', !player.getVariableValue('vis_thumbnail_menu_phone'));
+				player.setVariableValue('vis_thumbnails_phone_1', true);
 			}
 		}
-		me._thumbnail_menu_toggle.onmouseenter=function (e) {
-			me.elementMouseOver['thumbnail_menu_toggle']=true;
-			me._menu_icon.logicBlock_visible();
-			me._menu_icon_active.logicBlock_visible();
+		me._thumbnails_toggle.onmouseenter=function (e) {
+			me.elementMouseOver['thumbnails_toggle']=true;
+			me._thumbnails_toggle.logicBlock_backgroundcolor();
 		}
-		me._thumbnail_menu_toggle.onmouseleave=function (e) {
-			me.elementMouseOver['thumbnail_menu_toggle']=false;
-			me._menu_icon.logicBlock_visible();
-			me._menu_icon_active.logicBlock_visible();
+		me._thumbnails_toggle.onmouseleave=function (e) {
+			me.elementMouseOver['thumbnails_toggle']=false;
+			me._thumbnails_toggle.logicBlock_backgroundcolor();
 		}
-		me._thumbnail_menu_toggle.ggUpdatePosition=function (useTransition) {
+		me._thumbnails_toggle.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._menu_icon=document.createElement('div');
-		els=me._menu_icon__img=document.createElement('img');
+		el=me._btn_thumbnails_icon=document.createElement('div');
+		els=me._btn_thumbnails_icon__img=document.createElement('img');
 		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDAgNDA7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQwIDQwIiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
-			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS4yNTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6Ni42NjY3O30mI3hkOwo8L3N0eWxlPgogPGNpcmNsZSBjbGFzcz0ic3QwIiByPSIxLjciIGN4PSIyMCIgY3k9IjIwIi8+CiA8Y2lyY2xlIGNsYXNzPSJzdDAiIHI9IjEuNyIgY3g9IjMxLjciIGN5PSIyMCIvPgogPGNpcmNsZSBjbGFzcz0ic3QwIiByPSIxLjciIGN4PSI4LjMiIGN5PSIyMCIvPgo8L3N2Zz4K';
-		me._menu_icon__img.setAttribute('src',hs);
+		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIGJhc2VQcm9maWxlPSJ0aW55IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzYgMzYiIGlkPSJMYXllcl8xIiB5PSIwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KIDxjaXJjbGUgc3Ryb2tlLW'+
+			'xpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjEiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3k9IjE4IiBzdHJva2U9IiMwMGRhZGEiIHI9IjEuNSIgY3g9IjE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KIDxjaXJjbGUgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjEiIHN0cm9rZS13aWR0aD0iMS4yNSIgY3k9IjE4IiBzdHJva2U9IiMwMGRhZGEiIHI9IjEuNSIgY3g9IjI4LjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogPGNpcmNsZSBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMSIg'+
+			'c3Ryb2tlLXdpZHRoPSIxLjI1IiBjeT0iMTgiIHN0cm9rZT0iIzAwZGFkYSIgcj0iMS41IiBjeD0iNy41IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==';
+		me._btn_thumbnails_icon__img.setAttribute('src',hs);
 		hs ='';
 		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
 		els.setAttribute('style', hs);
 		els['ondragstart']=function() { return false; };
 		el.appendChild(els);
 		el.ggSubElement = els;
-		el.ggId="menu_icon";
+		el.ggId="btn_thumbnails_icon";
 		el.ggDx=0;
 		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -16996,16 +17044,16 @@ alert("The current view has been copied.");
 		el.className="ggskin ggskin_svg ";
 		el.ggType='svg';
 		hs ='';
-		hs+='height : 48px;';
-		hs+='left : calc(50% - ((48px + 0px) / 2) + 0px);';
+		hs+='height : 38px;';
+		hs+='left : calc(50% - ((38px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((48px + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((38px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 48px;';
+		hs+='width : 38px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._menu_icon.ggIsActive=function() {
+		me._btn_thumbnails_icon.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -17017,926 +17065,12 @@ alert("The current view has been copied.");
 			}
 			return player.getCurrentNode();
 		}
-		me._menu_icon.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((me.elementMouseOver['thumbnail_menu_toggle'] == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._menu_icon.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._menu_icon.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._menu_icon.style.transition='';
-				if (me._menu_icon.ggCurrentLogicStateVisible == 0) {
-					me._menu_icon.style.visibility="hidden";
-					me._menu_icon.ggVisible=false;
-				}
-				else {
-					me._menu_icon.style.visibility=(Number(me._menu_icon.style.opacity)>0||!me._menu_icon.style.opacity)?'inherit':'hidden';
-					me._menu_icon.ggVisible=true;
-				}
-			}
+		me._btn_thumbnails_icon.ggUpdatePosition=function (useTransition) {
 		}
-		me._menu_icon.logicBlock_visible();
-		me._menu_icon.ggUpdatePosition=function (useTransition) {
-		}
-		me._thumbnail_menu_toggle.appendChild(me._menu_icon);
-		el=me._menu_icon_active=document.createElement('div');
-		els=me._menu_icon_active__img=document.createElement('img');
-		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDAgNDA7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQwIDQwIiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
-			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I0ZGRkZGRjtzdHJva2Utd2lkdGg6MS4yNTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6Ni42NjY3O30mI3hkOwo8L3N0eWxlPgogPGNpcmNsZSBjbGFzcz0ic3QwIiByPSIxLjciIGN4PSIyMCIgY3k9IjIwIi8+CiA8Y2lyY2xlIGNsYXNzPSJzdDAiIHI9IjEuNyIgY3g9IjMxLjciIGN5PSIyMCIvPgogPGNpcmNsZSBjbGFzcz0ic3QwIiByPSIxLjciIGN4PSI4LjMiIGN5PSIyMCIvPgo8L3N2Zz4K';
-		me._menu_icon_active__img.setAttribute('src',hs);
-		hs ='';
-		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
-		els.setAttribute('style', hs);
-		els['ondragstart']=function() { return false; };
-		el.appendChild(els);
-		el.ggSubElement = els;
-		el.ggId="menu_icon_active";
-		el.ggDx=0;
-		el.ggDy=0;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=false;
-		el.className="ggskin ggskin_svg ";
-		el.ggType='svg';
-		hs ='';
-		hs+='height : 48px;';
-		hs+='left : calc(50% - ((48px + 0px) / 2) + 0px);';
-		hs+='position : absolute;';
-		hs+='top : calc(50% - ((48px + 0px) / 2) + 0px);';
-		hs+='visibility : hidden;';
-		hs+='width : 48px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._menu_icon_active.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._menu_icon_active.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((me.elementMouseOver['thumbnail_menu_toggle'] == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._menu_icon_active.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._menu_icon_active.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._menu_icon_active.style.transition='';
-				if (me._menu_icon_active.ggCurrentLogicStateVisible == 0) {
-					me._menu_icon_active.style.visibility=(Number(me._menu_icon_active.style.opacity)>0||!me._menu_icon_active.style.opacity)?'inherit':'hidden';
-					me._menu_icon_active.ggVisible=true;
-				}
-				else {
-					me._menu_icon_active.style.visibility="hidden";
-					me._menu_icon_active.ggVisible=false;
-				}
-			}
-		}
-		me._menu_icon_active.logicBlock_visible();
-		me._menu_icon_active.ggUpdatePosition=function (useTransition) {
-		}
-		me._thumbnail_menu_toggle.appendChild(me._menu_icon_active);
-		me.divSkin.appendChild(me._thumbnail_menu_toggle);
-		el=me._thumbnail_menu_phone=document.createElement('div');
-		el.ggId="thumbnail_menu_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_rectangle ";
-		el.ggType='rectangle';
-		hs ='';
-		hs+='background : rgba(0,0,0,0.705882);';
-		hs+='border : 0px solid #000000;';
-		hs+='cursor : default;';
-		hs+='height : 100%;';
-		hs+='left : 0px;';
-		hs+='opacity : 0;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='visibility : hidden;';
-		hs+='width : 100%;';
-		hs+='pointer-events:auto;';
-		hs+='backdrop-filter: blur(3px);';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._thumbnail_menu_phone.ggIsActive=function() {
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			return player.getCurrentNode();
-		}
-		me._thumbnail_menu_phone.logicBlock_alpha = function() {
-			var newLogicStateAlpha;
-			if (
-				((player.getVariableValue('vis_thumbnail_menu_phone') == true))
-			)
-			{
-				newLogicStateAlpha = 0;
-			}
-			else {
-				newLogicStateAlpha = -1;
-			}
-			if (me._thumbnail_menu_phone.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
-				me._thumbnail_menu_phone.ggCurrentLogicStateAlpha = newLogicStateAlpha;
-				me._thumbnail_menu_phone.style.transition='opacity 300ms ease 0ms';
-				if (me._thumbnail_menu_phone.ggCurrentLogicStateAlpha == 0) {
-					me._thumbnail_menu_phone.style.visibility=me._thumbnail_menu_phone.ggVisible?'inherit':'hidden';
-					me._thumbnail_menu_phone.style.opacity=1;
-				}
-				else {
-					setTimeout(function() { if (me._thumbnail_menu_phone.style.opacity == 0.0) { me._thumbnail_menu_phone.style.visibility="hidden"; } }, 305);
-					me._thumbnail_menu_phone.style.opacity=0;
-				}
-			}
-		}
-		me._thumbnail_menu_phone.logicBlock_alpha();
-		me._thumbnail_menu_phone.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._close_popup_phone0=document.createElement('div');
-		el.ggPermeable=false;
-		el.ggId="close_popup_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_container ";
-		el.ggType='container';
-		hs ='';
-		hs+='height : 80px;';
-		hs+='left : 0px;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='visibility : inherit;';
-		hs+='width : 100%;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._close_popup_phone0.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._close_popup_phone0.onclick=function (e) {
-			player.setVariableValue('vis_thumbnail_menu_phone', false);
-		}
-		me._close_popup_phone0.onmouseenter=function (e) {
-			me.elementMouseOver['close_popup_phone0']=true;
-			me._btn_close_popup_phone0.logicBlock_visible();
-			me._btn_close_popup_phone_active.logicBlock_visible();
-		}
-		me._close_popup_phone0.onmouseleave=function (e) {
-			me.elementMouseOver['close_popup_phone0']=false;
-			me._btn_close_popup_phone0.logicBlock_visible();
-			me._btn_close_popup_phone_active.logicBlock_visible();
-		}
-		me._close_popup_phone0.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._btn_close_popup_phone0=document.createElement('div');
-		els=me._btn_close_popup_phone0__img=document.createElement('img');
-		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
-			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzRGQjVDMjtzdHJva2Utd2lkdGg6MS4zMzMzO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo1LjMzMzM7fSYjeGQ7Cjwvc3R5bGU+CiA8bGluZSB5Mj0iMjQiIHgxPSIyNCIgY2xhc3M9InN0MCIgeTE9IjgiIHgyPSI4Ii8+CiA8bGluZSB5Mj0iMjQiIHgxPSI4IiBjbGFzcz0ic3QwIiB5MT0iOCIgeDI9IjI0Ii8+Cjwvc3ZnPgo=';
-		me._btn_close_popup_phone0__img.setAttribute('src',hs);
-		hs ='';
-		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
-		els.setAttribute('style', hs);
-		els['ondragstart']=function() { return false; };
-		el.appendChild(els);
-		el.ggSubElement = els;
-		el.ggId="btn_close_popup_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_svg ";
-		el.ggType='svg';
-		hs ='';
-		hs+='height : 40px;';
-		hs+='position : absolute;';
-		hs+='right : 20px;';
-		hs+='top : 20px;';
-		hs+='visibility : inherit;';
-		hs+='width : 40px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._btn_close_popup_phone0.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._btn_close_popup_phone0.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((me.elementMouseOver['close_popup_phone0'] == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._btn_close_popup_phone0.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._btn_close_popup_phone0.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._btn_close_popup_phone0.style.transition='';
-				if (me._btn_close_popup_phone0.ggCurrentLogicStateVisible == 0) {
-					me._btn_close_popup_phone0.style.visibility="hidden";
-					me._btn_close_popup_phone0.ggVisible=false;
-				}
-				else {
-					me._btn_close_popup_phone0.style.visibility=(Number(me._btn_close_popup_phone0.style.opacity)>0||!me._btn_close_popup_phone0.style.opacity)?'inherit':'hidden';
-					me._btn_close_popup_phone0.ggVisible=true;
-				}
-			}
-		}
-		me._btn_close_popup_phone0.logicBlock_visible();
-		me._btn_close_popup_phone0.ggUpdatePosition=function (useTransition) {
-		}
-		me._close_popup_phone0.appendChild(me._btn_close_popup_phone0);
-		el=me._btn_close_popup_phone_active=document.createElement('div');
-		els=me._btn_close_popup_phone_active__img=document.createElement('img');
-		els.className='ggskin ggskin_svg';
-		hs='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4PSIwcHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiBpZD0iTGF5ZXJfMSIgeT0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bG'+
-			'luayI+CiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGQ7Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZmZmZjtzdHJva2Utd2lkdGg6MS4zMzMzO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo1LjMzMzM7fSYjeGQ7Cjwvc3R5bGU+CiA8bGluZSB5Mj0iMjQiIGNsYXNzPSJzdDAiIHgxPSIyNCIgeTE9IjgiIHgyPSI4Ii8+CiA8bGluZSB5Mj0iMjQiIGNsYXNzPSJzdDAiIHgxPSI4IiB5MT0iOCIgeDI9IjI0Ii8+Cjwvc3ZnPgo=';
-		me._btn_close_popup_phone_active__img.setAttribute('src',hs);
-		hs ='';
-		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
-		els.setAttribute('style', hs);
-		els['ondragstart']=function() { return false; };
-		el.appendChild(els);
-		el.ggSubElement = els;
-		el.ggId="btn_close_popup_phone_active";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=false;
-		el.className="ggskin ggskin_svg ";
-		el.ggType='svg';
-		hs ='';
-		hs+='height : 40px;';
-		hs+='position : absolute;';
-		hs+='right : 20px;';
-		hs+='top : 20px;';
-		hs+='visibility : hidden;';
-		hs+='width : 40px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._btn_close_popup_phone_active.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._btn_close_popup_phone_active.logicBlock_visible = function() {
-			var newLogicStateVisible;
-			if (
-				((me.elementMouseOver['close_popup_phone0'] == true))
-			)
-			{
-				newLogicStateVisible = 0;
-			}
-			else {
-				newLogicStateVisible = -1;
-			}
-			if (me._btn_close_popup_phone_active.ggCurrentLogicStateVisible != newLogicStateVisible) {
-				me._btn_close_popup_phone_active.ggCurrentLogicStateVisible = newLogicStateVisible;
-				me._btn_close_popup_phone_active.style.transition='';
-				if (me._btn_close_popup_phone_active.ggCurrentLogicStateVisible == 0) {
-					me._btn_close_popup_phone_active.style.visibility=(Number(me._btn_close_popup_phone_active.style.opacity)>0||!me._btn_close_popup_phone_active.style.opacity)?'inherit':'hidden';
-					me._btn_close_popup_phone_active.ggVisible=true;
-				}
-				else {
-					me._btn_close_popup_phone_active.style.visibility="hidden";
-					me._btn_close_popup_phone_active.ggVisible=false;
-				}
-			}
-		}
-		me._btn_close_popup_phone_active.logicBlock_visible();
-		me._btn_close_popup_phone_active.ggUpdatePosition=function (useTransition) {
-		}
-		me._close_popup_phone0.appendChild(me._btn_close_popup_phone_active);
-		me._thumbnail_menu_phone.appendChild(me._close_popup_phone0);
-		el=me._thumbnail_scroller_phone0=document.createElement('div');
-		els=me._thumbnail_scroller_phone0__content=document.createElement('div');
-		els.className='ggskin ggskin_subelement ggskin_scrollarea';
-		el.ggContent=els;
-		el.appendChild(els);
-		el.ggHorScrollVisible = false;
-		el.ggVertScrollVisible = false;
-		el.ggContentLeftOffset = 0;
-		el.ggContentTopOffset = 0;
-		el.ggContentWidth = 0;
-		el.ggContentHeight = 0;
-		el.ggDragInertiaX = 0;
-		el.ggDragInertiaY = 0;
-		el.ggVPercentVisible = 1.0;
-		el.ggHPercentVisible = 1.0;
-		el.ggIsDragging = false;
-		hs ='';
-		hs+='height : 129px;';
-		hs+='left : 50%;';
-		hs+='margin-left : -59.5px;';
-		hs+='overflow-x : visible;';
-		hs+='overflow-y : visible;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='width : 119px;';
-		hs+="";
-		els.setAttribute('style',hs);
-		me._thumbnail_scroller_phone0.ggScrollByX = function(diffX) {
-			if(!me._thumbnail_scroller_phone0.ggHorScrollVisible || diffX == 0 || me._thumbnail_scroller_phone0.ggHPercentVisible >= 1.0) return;
-			me._thumbnail_scroller_phone0.ggScrollPosX = (me._thumbnail_scroller_phone0__horScrollFg.offsetLeft + diffX);
-			me._thumbnail_scroller_phone0.ggScrollPosX = Math.max(me._thumbnail_scroller_phone0.ggScrollPosX, 0);
-			me._thumbnail_scroller_phone0.ggScrollPosX = Math.min(me._thumbnail_scroller_phone0.ggScrollPosX, me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
-			me._thumbnail_scroller_phone0__horScrollFg.style.left = me._thumbnail_scroller_phone0.ggScrollPosX + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosX / (me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
-			me._thumbnail_scroller_phone0__content.style.left = -(Math.round((me._thumbnail_scroller_phone0.ggContentWidth * (1.0 - me._thumbnail_scroller_phone0.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentLeftOffset + 'px';
-			me._thumbnail_scroller_phone0.ggScrollPosXPercent = (me._thumbnail_scroller_phone0__horScrollFg.offsetLeft / me._thumbnail_scroller_phone0__horScrollBg.offsetWidth);
-		}
-		me._thumbnail_scroller_phone0.ggScrollByXSmooth = function(diffX) {
-			if(!me._thumbnail_scroller_phone0.ggHorScrollVisible || diffX == 0 || me._thumbnail_scroller_phone0.ggHPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffX / 25;
-			var scrollCurrX = 0;
-			var id = setInterval(function() {
-				scrollCurrX += scrollPerInterval;
-				me._thumbnail_scroller_phone0.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._thumbnail_scroller_phone0.ggScrollPosX >= me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth)) {
-					me._thumbnail_scroller_phone0.ggScrollPosX = Math.min(me._thumbnail_scroller_phone0.ggScrollPosX, me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
-					clearInterval(id);
-				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._thumbnail_scroller_phone0.ggScrollPosX <= 0)) {
-					me._thumbnail_scroller_phone0.ggScrollPosX = Math.max(me._thumbnail_scroller_phone0.ggScrollPosX, 0);
-					clearInterval(id);
-				}
-			me._thumbnail_scroller_phone0__horScrollFg.style.left = me._thumbnail_scroller_phone0.ggScrollPosX + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosX / (me._thumbnail_scroller_phone0__horScrollBg.offsetWidth - me._thumbnail_scroller_phone0__horScrollFg.offsetWidth);
-			me._thumbnail_scroller_phone0__content.style.left = -(Math.round((me._thumbnail_scroller_phone0.ggContentWidth * (1.0 - me._thumbnail_scroller_phone0.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentLeftOffset + 'px';
-			me._thumbnail_scroller_phone0.ggScrollPosXPercent = (me._thumbnail_scroller_phone0__horScrollFg.offsetLeft / me._thumbnail_scroller_phone0__horScrollBg.offsetWidth);
-			}, 10);
-		}
-		me._thumbnail_scroller_phone0.ggScrollByY = function(diffY) {
-			if(!me._thumbnail_scroller_phone0.ggVertScrollVisible || diffY == 0 || me._thumbnail_scroller_phone0.ggVPercentVisible >= 1.0) return;
-			me._thumbnail_scroller_phone0.ggScrollPosY = (me._thumbnail_scroller_phone0__vertScrollFg.offsetTop + diffY);
-			me._thumbnail_scroller_phone0.ggScrollPosY = Math.max(me._thumbnail_scroller_phone0.ggScrollPosY, 0);
-			me._thumbnail_scroller_phone0.ggScrollPosY = Math.min(me._thumbnail_scroller_phone0.ggScrollPosY, me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
-			me._thumbnail_scroller_phone0__vertScrollFg.style.top = me._thumbnail_scroller_phone0.ggScrollPosY + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosY / (me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
-			me._thumbnail_scroller_phone0__content.style.top = -(Math.round((me._thumbnail_scroller_phone0.ggContentHeight * (1.0 - me._thumbnail_scroller_phone0.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentTopOffset + 'px';
-			me._thumbnail_scroller_phone0.ggScrollPosYPercent = (me._thumbnail_scroller_phone0__vertScrollFg.offsetTop / me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight);
-		}
-		me._thumbnail_scroller_phone0.ggScrollByYSmooth = function(diffY) {
-			if(!me._thumbnail_scroller_phone0.ggVertScrollVisible || diffY == 0 || me._thumbnail_scroller_phone0.ggVPercentVisible >= 1.0) return;
-			var scrollPerInterval = diffY / 25;
-			var scrollCurrY = 0;
-			var id = setInterval(function() {
-				scrollCurrY += scrollPerInterval;
-				me._thumbnail_scroller_phone0.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._thumbnail_scroller_phone0.ggScrollPosY >= me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight)) {
-					me._thumbnail_scroller_phone0.ggScrollPosY = Math.min(me._thumbnail_scroller_phone0.ggScrollPosY, me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
-					clearInterval(id);
-				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._thumbnail_scroller_phone0.ggScrollPosY <= 0)) {
-					me._thumbnail_scroller_phone0.ggScrollPosY = Math.max(me._thumbnail_scroller_phone0.ggScrollPosY, 0);
-					clearInterval(id);
-				}
-			me._thumbnail_scroller_phone0__vertScrollFg.style.top = me._thumbnail_scroller_phone0.ggScrollPosY + 'px';
-			let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosY / (me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
-			me._thumbnail_scroller_phone0__content.style.top = -(Math.round((me._thumbnail_scroller_phone0.ggContentHeight * (1.0 - me._thumbnail_scroller_phone0.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentTopOffset + 'px';
-			me._thumbnail_scroller_phone0.ggScrollPosYPercent = (me._thumbnail_scroller_phone0__vertScrollFg.offsetTop / me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight);
-			}, 10);
-		}
-		me._thumbnail_scroller_phone0.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._thumbnail_scroller_phone0.ggHorScrollVisible) {
-				if (posX < 0) {
-					var diffX = Math.floor(posX * me._thumbnail_scroller_phone0.ggHPercentVisible);
-					me._thumbnail_scroller_phone0.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._thumbnail_scroller_phone0.clientWidth - (me._thumbnail_scroller_phone0.ggVertScrollVisible ? 8 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._thumbnail_scroller_phone0.clientWidth - (me._thumbnail_scroller_phone0.ggVertScrollVisible ? 8 : 0))) * me._thumbnail_scroller_phone0.ggHPercentVisible);
-					me._thumbnail_scroller_phone0.ggScrollByXSmooth(diffX);
-				}
-			}
-			if (me._thumbnail_scroller_phone0.ggVertScrollVisible) {
-				if (posY < 0) {
-					var diffY = Math.floor(posY * me._thumbnail_scroller_phone0.ggVPercentVisible);
-					me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._thumbnail_scroller_phone0.clientHeight - (me._thumbnail_scroller_phone0.ggHorScrollVisible ? 8 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._thumbnail_scroller_phone0.clientHeight - (me._thumbnail_scroller_phone0.ggHorScrollVisible ? 8 : 0))) * me._thumbnail_scroller_phone0.ggVPercentVisible);
-					me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
-				}
-			}
-		}
-		me._thumbnail_scroller_phone0__content.mousetouchend = e => {
-			let inertiaInterval = setInterval(function() {
-				me._thumbnail_scroller_phone0.ggDragInertiaX *= 0.96;
-				me._thumbnail_scroller_phone0.ggDragInertiaY *= 0.96;
-				me._thumbnail_scroller_phone0.ggScrollByX(me._thumbnail_scroller_phone0.ggDragInertiaX);
-				me._thumbnail_scroller_phone0.ggScrollByY(me._thumbnail_scroller_phone0.ggDragInertiaY);
-				if (Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaX) < 1.0 && Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaY) < 1.0) {
-					clearInterval(inertiaInterval);
-				}
-				}, 10);
-			me._thumbnail_scroller_phone0__content.onmouseup = null;
-			me._thumbnail_scroller_phone0__content.onmousemove = null;
-			me._thumbnail_scroller_phone0__content.ontouchend = null;
-			me._thumbnail_scroller_phone0__content.ontouchmove = null;
-			me._thumbnail_scroller_phone0__content.onpointerup = null;
-			me._thumbnail_scroller_phone0__content.onpointermove = null;
-			setTimeout(function() { me._thumbnail_scroller_phone0.ggIsDragging = false; }, 100);
-		}
-		me._thumbnail_scroller_phone0__content.mousetouchmove = e => {
-			e = e || window.event;
-			e.preventDefault();
-			var t = e.touches;
-			var eventX = t ? t[0].clientX : e.clientX;
-			var eventY = t ? t[0].clientY : e.clientY;
-			if (Math.abs(eventX - me._thumbnail_scroller_phone0.ggDragStartX) > 10 || Math.abs(eventY - me._thumbnail_scroller_phone0.ggDragStartY) > 10) me._thumbnail_scroller_phone0.ggIsDragging = true;
-			var diffX = (eventX - me._thumbnail_scroller_phone0.ggDragLastX) * me._thumbnail_scroller_phone0.ggHPercentVisible;
-			var diffY = (eventY - me._thumbnail_scroller_phone0.ggDragLastY) * me._thumbnail_scroller_phone0.ggVPercentVisible;
-			me._thumbnail_scroller_phone0.ggDragInertiaX = -diffX;
-			me._thumbnail_scroller_phone0.ggDragInertiaY = -diffY;
-			me._thumbnail_scroller_phone0.ggDragLastX = eventX;
-			me._thumbnail_scroller_phone0.ggDragLastY = eventY;
-			me._thumbnail_scroller_phone0.ggScrollByX(-diffX);
-			me._thumbnail_scroller_phone0.ggScrollByY(-diffY);
-		}
-		me._thumbnail_scroller_phone0__content.mousetouchstart = e => {
-			e = e || window.event;
-			var t = e.touches;
-			me._thumbnail_scroller_phone0.ggDragLastX = me._thumbnail_scroller_phone0.ggDragStartX = t ? t[0].clientX : e.clientX;
-			me._thumbnail_scroller_phone0.ggDragLastY = me._thumbnail_scroller_phone0.ggDragStartY = t ? t[0].clientY : e.clientY;
-			me._thumbnail_scroller_phone0__content.onmouseup = me._thumbnail_scroller_phone0__content.mousetouchend;
-			me._thumbnail_scroller_phone0__content.ontouchend = me._thumbnail_scroller_phone0__content.mousetouchend;
-			me._thumbnail_scroller_phone0__content.onmousemove = me._thumbnail_scroller_phone0__content.mousetouchmove;
-			me._thumbnail_scroller_phone0__content.ontouchmove = me._thumbnail_scroller_phone0__content.mousetouchmove;
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				me._thumbnail_scroller_phone0__content.onpointerup = me._thumbnail_scroller_phone0__content.ontouchend;
-				me._thumbnail_scroller_phone0__content.onpointermove = me._thumbnail_scroller_phone0__content.ontouchmove;
-			}
-		}
-		els.onmousedown = me._thumbnail_scroller_phone0__content.mousetouchstart;
-		els.ontouchstart = me._thumbnail_scroller_phone0__content.mousetouchstart;
-		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			els.onpointerdown = me._thumbnail_scroller_phone0__content.mousetouchstart;
-		}
-		elVertScrollBg = me._thumbnail_scroller_phone0__vertScrollBg = document.createElement('div');
-		el.appendChild(elVertScrollBg);
-		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 8px; height: 597px; background-color: rgba(128,128,128,1); pointer-events: auto;');
-		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._thumbnail_scroller_phone0__vertScrollFg = document.createElement('div');
-		elVertScrollBg.appendChild(elVertScrollFg);
-		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 8px; height: 597px; background-color: rgba(192,192,192,1); pointer-events: auto;');
-		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._thumbnail_scroller_phone0.ggScrollPosY = 0;
-		me._thumbnail_scroller_phone0.ggScrollPosYPercent = 0.0;
-		elVertScrollFg.onmousedown = function(e) {
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			me._thumbnail_scroller_phone0.ggDragLastY = e.clientY;
-			document.onmouseup = function() {
-				let inertiaInterval = setInterval(function() {
-					me._thumbnail_scroller_phone0.ggDragInertiaY *= 0.96;
-					me._thumbnail_scroller_phone0.ggScrollByY(me._thumbnail_scroller_phone0.ggDragInertiaY);
-					if (Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 10);
-				document.onmouseup = null;
-				document.onmousemove = null;
-			}
-			document.onmousemove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var diffY = e.clientY - me._thumbnail_scroller_phone0.ggDragLastY;
-				me._thumbnail_scroller_phone0.ggDragInertiaY = diffY;
-				me._thumbnail_scroller_phone0.ggDragLastY = e.clientY;
-				me._thumbnail_scroller_phone0.ggScrollByY(diffY);
-			}
-		}
-		elVertScrollFg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			me._thumbnail_scroller_phone0.ggDragLastY = t ? t[0].clientY : e.clientY;
-			document.ontouchend = function() {
-				let inertiaInterval = setInterval(function() {
-					me._thumbnail_scroller_phone0.ggDragInertiaY *= 0.96;
-					me._thumbnail_scroller_phone0.ggScrollByY(me._thumbnail_scroller_phone0.ggDragInertiaY);
-					if (Math.abs(me._thumbnail_scroller_phone0.ggDragInertiaY) < 1.0) {
-						clearInterval(inertiaInterval);
-					}
-					}, 10);
-				document.ontouchend = null;
-				document.ontouchmove = null;
-				document.onpointerup = null;
-				document.onpointermove = null;
-			}
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				document.onpointerup = document.ontouchend;
-			}
-			document.ontouchmove = function(e) {
-				e = e || window.event;
-				e.preventDefault();
-				var t = e.touches;
-				var diffY = (t ? t[0].clientY : e.clientY) - me._thumbnail_scroller_phone0.ggDragLastY;
-				me._thumbnail_scroller_phone0.ggDragInertiaY = diffY;
-				me._thumbnail_scroller_phone0.ggDragLastY = t ? t[0].clientY : e.clientY;
-				me._thumbnail_scroller_phone0.ggScrollByY(diffY);
-			}
-			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				document.onpointermove = document.ontouchmove;
-			}
-		}
-		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			elVertScrollFg.onpointerdown = elVertScrollFg.ontouchstart;
-		}
-		elVertScrollBg.onmousedown = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			var diffY = me._thumbnail_scroller_phone0.ggScrollHeight;
-			if (e.offsetY < me._thumbnail_scroller_phone0.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
-		}
-		elVertScrollBg.ontouchstart = function(e) {
-			e = e || window.event;
-			e.preventDefault();
-			e.stopPropagation();
-			var t = e.touches;
-			var rect = me._thumbnail_scroller_phone0__vertScrollBg.getBoundingClientRect();
-			var diffY = me._thumbnail_scroller_phone0.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._thumbnail_scroller_phone0.ggScrollPosY) {
-				diffY = diffY * -1;
-			}
-			me._thumbnail_scroller_phone0.ggScrollByYSmooth(diffY);
-		}
-		el.addEventListener('wheel', function(e) {
-			e.preventDefault();
-			var wheelDelta = Math.sign(e.deltaY);
-			me._thumbnail_scroller_phone0.ggScrollByYSmooth(30 * me._thumbnail_scroller_phone0.ggVPercentVisible * wheelDelta);
-		});
-		elCornerBg = me._thumbnail_scroller_phone0__cornerBg = document.createElement('div');
-		el.appendChild(elCornerBg);
-		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 8px; height: 8px; background-color: rgba(255,255,255,1);');
-		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
-		el.ggId="thumbnail_scroller_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_scrollarea ";
-		el.ggType='scrollarea';
-		hs ='';
-		hs+='border : 0px solid #000000;';
-		hs+='height : 82.9167%;';
-		hs+='left : 0px;';
-		hs+='overflow : hidden;';
-		hs+='position : absolute;';
-		hs+='top : 80px;';
-		hs+='visibility : inherit;';
-		hs+='width : 100%;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._thumbnail_scroller_phone0.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._thumbnail_scroller_phone0.ggUpdatePosition=function (useTransition) {
-			{
-				var horScrollWasVisible = this.ggHorScrollVisible;
-				var vertScrollWasVisible = this.ggVertScrollVisible;
-				this.ggContent.style.left = '0px';
-				this.ggContent.style.top = '0px';
-				this.ggContentLeftOffset = 0;
-				this.ggContentTopOffset = 0;
-				var offsetWidthWithScale = this.getBoundingClientRect().width;
-				var offsetHeightWithScale = this.getBoundingClientRect().height;
-				var domRectContent = this.ggContent.getBoundingClientRect();
-				var minX = 0;
-				var minY = 0;
-				var maxX = 0;
-				var maxY = 0;
-				var stack=[];
-				stack.push(this.ggContent);
-				while(stack.length>0) {
-					var e=stack.pop();
-					if (e!=this.ggContent && e.getBoundingClientRect && e.style['display']!='none' && (e.offsetWidth != 0 || e.offsetHeight != 0)) {
-						var domRectChild = e.getBoundingClientRect();
-						var diffX = domRectChild.left - domRectContent.left;
-						minX = Math.min(minX, diffX);
-						maxX = Math.max(maxX, diffX + domRectChild.width);
-						var diffY = domRectChild.top - domRectContent.top;
-						minY = Math.min(minY, diffY);
-						maxY = Math.max(maxY, diffY + domRectChild.height);
-					}
-					if (e.hasChildNodes() && e.style['display']!='none' && e.style['overflow']!='hidden') {
-						for(var i=0;i<e.childNodes.length;i++) {
-							stack.push(e.childNodes[i]);
-						}
-					}
-				}
-				if (minX < 0) this.ggContentLeftOffset = -minX;
-				if (minY < 0) this.ggContentTopOffset = -minY;
-				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-				this.ggContent.style.top = this.ggContentTopOffset + 'px';
-				var contentWidth = maxX - minX;
-				this.ggContent.style.width = contentWidth + 'px';
-				var contentHeight = maxY - minY;
-				this.ggContent.style.height = contentHeight + 'px';
-			var scaleX = this.getBoundingClientRect().width / this.offsetWidth;
-				this.ggContentWidth = contentWidth / scaleX;
-			var scaleY = this.getBoundingClientRect().height / this.offsetHeight;
-				this.ggContentHeight = contentHeight / scaleY;
-				var containerWidth = offsetWidthWithScale;
-				if (this.ggVertScrollVisible) containerWidth -= 8;
-				if (contentWidth < containerWidth) {
-					this.ggContent.style.left = '50%';
-					this.ggContent.style.marginLeft = ((contentWidth/-2) - (this.ggVertScrollVisible ? (8/2) : 0)) + 'px';
-				}
-				else {
-					this.ggContent.style.left = this.ggContentLeftOffset + 'px';
-					this.ggContent.style.marginLeft = '0px';
-				}
-				this.ggContent.style.top = -(Math.round(me._thumbnail_scroller_phone0.ggScrollPosY / me._thumbnail_scroller_phone0.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
-				this.ggContent.style.marginTop = '0px';
-				if ((me._thumbnail_scroller_phone0.ggHorScrollVisible && contentHeight > this.clientHeight - 8) || (!me._thumbnail_scroller_phone0.ggHorScrollVisible && contentHeight > this.clientHeight)) {
-					me._thumbnail_scroller_phone0__vertScrollBg.style.visibility = 'inherit';
-					me._thumbnail_scroller_phone0__vertScrollFg.style.visibility = 'inherit';
-					me._thumbnail_scroller_phone0.ggVertScrollVisible = true;
-				} else {
-					me._thumbnail_scroller_phone0__vertScrollBg.style.visibility = 'hidden';
-					me._thumbnail_scroller_phone0__vertScrollFg.style.visibility = 'hidden';
-					me._thumbnail_scroller_phone0.ggVertScrollVisible = false;
-				}
-				if(me._thumbnail_scroller_phone0.ggVertScrollVisible) {
-					me._thumbnail_scroller_phone0.ggAvailableWidth = me._thumbnail_scroller_phone0.clientWidth - 8;
-					if (me._thumbnail_scroller_phone0.ggHorScrollVisible) {
-						me._thumbnail_scroller_phone0.ggAvailableHeight = me._thumbnail_scroller_phone0.clientHeight - 8;
-						me._thumbnail_scroller_phone0.ggAvailableHeightWithScale = me._thumbnail_scroller_phone0.getBoundingClientRect().height - me._thumbnail_scroller_phone0__vertScrollBg.getBoundingClientRect().width;
-						me._thumbnail_scroller_phone0__cornerBg.style.visibility = 'inherit';
-					} else {
-						me._thumbnail_scroller_phone0.ggAvailableHeight = me._thumbnail_scroller_phone0.clientHeight;
-						me._thumbnail_scroller_phone0.ggAvailableHeightWithScale = me._thumbnail_scroller_phone0.getBoundingClientRect().height;
-						me._thumbnail_scroller_phone0__cornerBg.style.visibility = 'hidden';
-					}
-					me._thumbnail_scroller_phone0__vertScrollBg.style.height = me._thumbnail_scroller_phone0.ggAvailableHeight + 'px';
-					me._thumbnail_scroller_phone0.ggVPercentVisible = contentHeight != 0 ? me._thumbnail_scroller_phone0.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._thumbnail_scroller_phone0.ggVPercentVisible > 1.0) me._thumbnail_scroller_phone0.ggVPercentVisible = 1.0;
-					me._thumbnail_scroller_phone0.ggScrollHeight =  Math.round(me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight * me._thumbnail_scroller_phone0.ggVPercentVisible);
-					me._thumbnail_scroller_phone0__vertScrollFg.style.height = me._thumbnail_scroller_phone0.ggScrollHeight + 'px';
-					me._thumbnail_scroller_phone0.ggScrollPosY = me._thumbnail_scroller_phone0.ggScrollPosYPercent * me._thumbnail_scroller_phone0.ggAvailableHeight;
-					me._thumbnail_scroller_phone0.ggScrollPosY = Math.min(me._thumbnail_scroller_phone0.ggScrollPosY, me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
-					me._thumbnail_scroller_phone0__vertScrollFg.style.top = me._thumbnail_scroller_phone0.ggScrollPosY + 'px';
-					if (me._thumbnail_scroller_phone0.ggVPercentVisible < 1.0) {
-						let percentScrolled = me._thumbnail_scroller_phone0.ggScrollPosY / (me._thumbnail_scroller_phone0__vertScrollBg.offsetHeight - me._thumbnail_scroller_phone0__vertScrollFg.offsetHeight);
-						me._thumbnail_scroller_phone0__content.style.top = -(Math.round((me._thumbnail_scroller_phone0.ggContentHeight * (1.0 - me._thumbnail_scroller_phone0.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_scroller_phone0.ggContentTopOffset + 'px';
-					}
-				} else {
-					me._thumbnail_scroller_phone0.ggAvailableWidth = me._thumbnail_scroller_phone0.clientWidth;
-					me._thumbnail_scroller_phone0.ggScrollPosY = 0;
-					me._thumbnail_scroller_phone0.ggScrollPosYPercent = 0.0;
-					me._thumbnail_scroller_phone0__content.style.top = this.ggContentTopOffset + 'px';
-					me._thumbnail_scroller_phone0__cornerBg.style.visibility = 'hidden';
-				}
-				if(horScrollWasVisible != me._thumbnail_scroller_phone0.ggHorScrollVisible || vertScrollWasVisible != me._thumbnail_scroller_phone0.ggVertScrollVisible) {
-					skin.updateSize(me._thumbnail_scroller_phone0);
-					me._thumbnail_scroller_phone0.ggUpdatePosition();
-				}
-			}
-		}
-		el=me._node_cloner_phone0=document.createElement('div');
-		el.isDragging = function() {
-			let scrollerParent = me._node_cloner_phone0;
-			while ((scrollerParent = scrollerParent.parentNode) != null) {
-				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
-			}
-			return false;
-		}
-		el.ggNumRepeat = 100;
-		el.ggNumRows = 0;
-		el.ggNumCols = 0;
-		el.ggCloneOffset = 0;
-		el.ggCloneOffsetChanged = false;
-		el.ggWidth = 120;
-		el.ggHeight = 130;
-		el.ggUpdating = false;
-		el.ggFilter = [];
-		el.ggFilterHsSkinId = '';
-		el.ggInstances = [];
-		el.ggNumFilterPassed = 0;
-		el.getFilteredNodes = function(tourNodes, filter) {
-			var filteredNodes = [];
-			for (var i = 0; i < tourNodes.length; i++) {
-				var nodeId = tourNodes[i];
-				var passed = true;
-				var nodeData = player.getNodeUserdata(nodeId);
-				if (filter.length > 0) {
-					for (var j=0; j < filter.length; j++) {
-						if (nodeData['tags'].indexOf(filter[j].trim()) == -1) passed = false;
-					}
-				}
-				if (passed) {
-					filteredNodes.push(nodeId);
-				}
-			}
-			return filteredNodes;
-		}
-		el.ggUpdate = function(filter) {
-			if(me._node_cloner_phone0.ggUpdating == true) return;
-			me._node_cloner_phone0.ggUpdating = true;
-			var el=me._node_cloner_phone0;
-			var curNumCols = 0;
-			var parentWidth = me._node_cloner_phone0.parentNode.classList.contains('ggskin_subelement') ? (me._node_cloner_phone0.parentNode.parentNode.classList.contains('ggskin_scrollarea') ? me._node_cloner_phone0.parentNode.parentNode.ggAvailableWidth : me._node_cloner_phone0.parentNode.parentNode.clientWidth) : me._node_cloner_phone0.parentNode.clientWidth;
-			if (parentWidth == 0) parentWidth = me._node_cloner_phone0.parentNode.parentNode.clientWidth;
-			curNumCols = Math.floor(((parentWidth - me._node_cloner_phone0.offsetLeft) * me._node_cloner_phone0.ggNumRepeat / 100.0) / me._node_cloner_phone0.offsetWidth);
-			if (curNumCols < 1) curNumCols = 1;
-			if (typeof filter=='object') {
-				el.ggFilter = filter;
-			} else {
-				filter = el.ggFilter;
-			};
-			if (me.ggTag) filter.push(me.ggTag);
-			filter=filter.sort();
-			if ((el.ggNumCols == curNumCols) && (el.ggInstances.length > 0) && (filter.length === el.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.ggCurrentFilter[index] }) )) {
-				me._node_cloner_phone0.ggUpdating = false;
-				return;
-			} else {
-				el.ggNumRows = 1;
-				el.ggNumCols = curNumCols;
-			var centerOffsetHor = 0;
-			var centerOffsetVert = 0;
-				me._node_cloner_phone0.ggCloneOffsetChanged = false;
-			}
-			el.ggCurrentFilter = filter;
-			el.ggInstances = [];
-			if (el.hasChildNodes() == true) {
-				while (el.firstChild) {
-					el.removeChild(el.firstChild);
-				}
-			}
-			var tourNodes = player.getNodeIds();
-			if (tourNodes.length == 0) {
-				me._node_cloner_phone0.ggUpdating = false;
-				return;
-			}
-			var row = 0;
-			var column = 0;
-			var currentIndex = 0;
-			var keepCloning = true;
-			tourNodes = me._node_cloner_phone0.getFilteredNodes(tourNodes, filter);
-			me._node_cloner_phone0.ggNumFilterPassed = tourNodes.length;
-			for (var i = 0; i < tourNodes.length; i++) {
-				var nodeId = tourNodes[i];
-				var nodeData = player.getNodeUserdata(nodeId);
-				if (!keepCloning || i < me._node_cloner_phone0.ggCloneOffset) continue;
-				var parameter={};
-				parameter.top = centerOffsetVert + (row * me._node_cloner_phone0.ggHeight) + 'px';
-				parameter.left = centerOffsetHor + (column * me._node_cloner_phone0.ggWidth) + 'px';
-				parameter.width=me._node_cloner_phone0.ggWidth + 'px';
-				parameter.height=me._node_cloner_phone0.ggHeight + 'px';
-				parameter.index=currentIndex;
-				parameter.title=nodeData['title'];
-				var inst = new SkinCloner_node_cloner_phone0_Class(nodeId, me, el, parameter);
-				currentIndex++;
-				el.ggInstances.push(inst);
-				el.appendChild(inst.__div);
-				inst.__div.ggObj=inst;
-				skin.updateSize(inst.__div);
-				column++;
-				if (column >= el.ggNumCols) {
-					column = 0;
-					row++;
-					el.ggNumRows++;
-				}
-			}
-			me._node_cloner_phone0.ggNodeCount = me._node_cloner_phone0.ggNumFilterPassed;
-			me._node_cloner_phone0.ggUpdating = false;
-			player.triggerEvent('clonerchanged');
-			if (me._node_cloner_phone0.parentNode && me._node_cloner_phone0.parentNode.classList.contains('ggskin_subelement') && me._node_cloner_phone0.parentNode.parentNode.classList.contains('ggskin_scrollarea')) me._node_cloner_phone0.parentNode.parentNode.ggUpdatePosition();
-		}
-		el.ggFilter = [];
-		el.ggId="node_cloner_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_cloner ";
-		el.ggType='cloner';
-		hs ='';
-		hs+='height : 130px;';
-		hs+='left : 0px;';
-		hs+='overflow : visible;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='visibility : inherit;';
-		hs+='width : 120px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._node_cloner_phone0.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._node_cloner_phone0.ggUpdateConditionNodeChange=function () {
-			var cnode=player.getCurrentNode();
-			for(var i=0; i<me._node_cloner_phone0.childNodes.length; i++) {
-				var child=me._node_cloner_phone0.childNodes[i];
-				if (child.ggObj && child.ggObj.ggNodeId==cnode) {
-			        var childOffX = child.offsetLeft;
-			        var childOffY = child.offsetTop;
-					var p = child.parentElement;
-			        while (p != null && p!==this.divSkin) {
-						if (p.ggType && p.ggType == 'scrollarea') {
-							p.ggScrollIntoView(childOffX, childOffY, child.clientWidth, child.clientHeight);
-						}
-						childOffX += p.offsetLeft;
-						childOffY += p.offsetTop;
-						p = p.parentElement;
-					}
-				}
-			}
-		}
-		me._node_cloner_phone0.ggUpdatePosition=function (useTransition) {
-			me._node_cloner_phone0.ggUpdate();
-		}
-		me._thumbnail_scroller_phone0__content.appendChild(me._node_cloner_phone0);
-		me._thumbnail_menu_phone.appendChild(me._thumbnail_scroller_phone0);
-		me.divSkin.appendChild(me._thumbnail_menu_phone);
-		el=me._thumbnail_menu_code=document.createElement('div');
-		el.ggId="thumbnail_menu_code";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=false;
-		el.className="ggskin ggskin_code ";
-		el.ggType='code';
-		hs ='';
-		hs+='height : 20px;';
-		hs+='left : 0px;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='visibility : hidden;';
-		hs+='width : 100px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._thumbnail_menu_code.ggIsActive=function() {
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			return player.getCurrentNode();
-		}
-		me._thumbnail_menu_code.ggUpdatePosition=function (useTransition) {
-		}
-		me.divSkin.appendChild(me._thumbnail_menu_code);
-		el=me._thumbnail_menu_1=document.createElement('div');
-		els=me._thumbnail_menu_1__content=document.createElement('div');
+		me._thumbnails_toggle.appendChild(me._btn_thumbnails_icon);
+		me.divSkin.appendChild(me._thumbnails_toggle);
+		el=me._thumbnail_menu=document.createElement('div');
+		els=me._thumbnail_menu__content=document.createElement('div');
 		els.className='ggskin ggskin_subelement ggskin_scrollarea';
 		el.ggContent=els;
 		el.appendChild(els);
@@ -17963,162 +17097,162 @@ alert("The current view has been copied.");
 		hs+='width : 183px;';
 		hs+="";
 		els.setAttribute('style',hs);
-		me._thumbnail_menu_1.ggScrollByX = function(diffX) {
-			if(!me._thumbnail_menu_1.ggHorScrollVisible || diffX == 0 || me._thumbnail_menu_1.ggHPercentVisible >= 1.0) return;
-			me._thumbnail_menu_1.ggScrollPosX = (me._thumbnail_menu_1__horScrollFg.offsetLeft + diffX);
-			me._thumbnail_menu_1.ggScrollPosX = Math.max(me._thumbnail_menu_1.ggScrollPosX, 0);
-			me._thumbnail_menu_1.ggScrollPosX = Math.min(me._thumbnail_menu_1.ggScrollPosX, me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth);
-			me._thumbnail_menu_1__horScrollFg.style.left = me._thumbnail_menu_1.ggScrollPosX + 'px';
-			let percentScrolled = me._thumbnail_menu_1.ggScrollPosX / (me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth);
-			me._thumbnail_menu_1__content.style.left = -(Math.round((me._thumbnail_menu_1.ggContentWidth * (1.0 - me._thumbnail_menu_1.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_menu_1.ggContentLeftOffset + 'px';
-			me._thumbnail_menu_1.ggScrollPosXPercent = (me._thumbnail_menu_1__horScrollFg.offsetLeft / me._thumbnail_menu_1__horScrollBg.offsetWidth);
+		me._thumbnail_menu.ggScrollByX = function(diffX) {
+			if(!me._thumbnail_menu.ggHorScrollVisible || diffX == 0 || me._thumbnail_menu.ggHPercentVisible >= 1.0) return;
+			me._thumbnail_menu.ggScrollPosX = (me._thumbnail_menu__horScrollFg.offsetLeft + diffX);
+			me._thumbnail_menu.ggScrollPosX = Math.max(me._thumbnail_menu.ggScrollPosX, 0);
+			me._thumbnail_menu.ggScrollPosX = Math.min(me._thumbnail_menu.ggScrollPosX, me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth);
+			me._thumbnail_menu__horScrollFg.style.left = me._thumbnail_menu.ggScrollPosX + 'px';
+			let percentScrolled = me._thumbnail_menu.ggScrollPosX / (me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth);
+			me._thumbnail_menu__content.style.left = -(Math.round((me._thumbnail_menu.ggContentWidth * (1.0 - me._thumbnail_menu.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_menu.ggContentLeftOffset + 'px';
+			me._thumbnail_menu.ggScrollPosXPercent = (me._thumbnail_menu__horScrollFg.offsetLeft / me._thumbnail_menu__horScrollBg.offsetWidth);
 		}
-		me._thumbnail_menu_1.ggScrollByXSmooth = function(diffX) {
-			if(!me._thumbnail_menu_1.ggHorScrollVisible || diffX == 0 || me._thumbnail_menu_1.ggHPercentVisible >= 1.0) return;
+		me._thumbnail_menu.ggScrollByXSmooth = function(diffX) {
+			if(!me._thumbnail_menu.ggHorScrollVisible || diffX == 0 || me._thumbnail_menu.ggHPercentVisible >= 1.0) return;
 			var scrollPerInterval = diffX / 25;
 			var scrollCurrX = 0;
 			var id = setInterval(function() {
 				scrollCurrX += scrollPerInterval;
-				me._thumbnail_menu_1.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._thumbnail_menu_1.ggScrollPosX >= me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth)) {
-					me._thumbnail_menu_1.ggScrollPosX = Math.min(me._thumbnail_menu_1.ggScrollPosX, me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth);
+				me._thumbnail_menu.ggScrollPosX += scrollPerInterval;
+				if (diffX > 0 && (scrollCurrX >= diffX || me._thumbnail_menu.ggScrollPosX >= me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth)) {
+					me._thumbnail_menu.ggScrollPosX = Math.min(me._thumbnail_menu.ggScrollPosX, me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth);
 					clearInterval(id);
 				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._thumbnail_menu_1.ggScrollPosX <= 0)) {
-					me._thumbnail_menu_1.ggScrollPosX = Math.max(me._thumbnail_menu_1.ggScrollPosX, 0);
+				if (diffX < 0 && (scrollCurrX <= diffX || me._thumbnail_menu.ggScrollPosX <= 0)) {
+					me._thumbnail_menu.ggScrollPosX = Math.max(me._thumbnail_menu.ggScrollPosX, 0);
 					clearInterval(id);
 				}
-			me._thumbnail_menu_1__horScrollFg.style.left = me._thumbnail_menu_1.ggScrollPosX + 'px';
-			let percentScrolled = me._thumbnail_menu_1.ggScrollPosX / (me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth);
-			me._thumbnail_menu_1__content.style.left = -(Math.round((me._thumbnail_menu_1.ggContentWidth * (1.0 - me._thumbnail_menu_1.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_menu_1.ggContentLeftOffset + 'px';
-			me._thumbnail_menu_1.ggScrollPosXPercent = (me._thumbnail_menu_1__horScrollFg.offsetLeft / me._thumbnail_menu_1__horScrollBg.offsetWidth);
+			me._thumbnail_menu__horScrollFg.style.left = me._thumbnail_menu.ggScrollPosX + 'px';
+			let percentScrolled = me._thumbnail_menu.ggScrollPosX / (me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth);
+			me._thumbnail_menu__content.style.left = -(Math.round((me._thumbnail_menu.ggContentWidth * (1.0 - me._thumbnail_menu.ggHPercentVisible)) * percentScrolled)) + me._thumbnail_menu.ggContentLeftOffset + 'px';
+			me._thumbnail_menu.ggScrollPosXPercent = (me._thumbnail_menu__horScrollFg.offsetLeft / me._thumbnail_menu__horScrollBg.offsetWidth);
 			}, 10);
 		}
-		me._thumbnail_menu_1.ggScrollByY = function(diffY) {
-			if(!me._thumbnail_menu_1.ggVertScrollVisible || diffY == 0 || me._thumbnail_menu_1.ggVPercentVisible >= 1.0) return;
-			me._thumbnail_menu_1.ggScrollPosY = (me._thumbnail_menu_1__vertScrollFg.offsetTop + diffY);
-			me._thumbnail_menu_1.ggScrollPosY = Math.max(me._thumbnail_menu_1.ggScrollPosY, 0);
-			me._thumbnail_menu_1.ggScrollPosY = Math.min(me._thumbnail_menu_1.ggScrollPosY, me._thumbnail_menu_1__vertScrollBg.offsetHeight - me._thumbnail_menu_1__vertScrollFg.offsetHeight);
-			me._thumbnail_menu_1__vertScrollFg.style.top = me._thumbnail_menu_1.ggScrollPosY + 'px';
-			let percentScrolled = me._thumbnail_menu_1.ggScrollPosY / (me._thumbnail_menu_1__vertScrollBg.offsetHeight - me._thumbnail_menu_1__vertScrollFg.offsetHeight);
-			me._thumbnail_menu_1__content.style.top = -(Math.round((me._thumbnail_menu_1.ggContentHeight * (1.0 - me._thumbnail_menu_1.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_menu_1.ggContentTopOffset + 'px';
-			me._thumbnail_menu_1.ggScrollPosYPercent = (me._thumbnail_menu_1__vertScrollFg.offsetTop / me._thumbnail_menu_1__vertScrollBg.offsetHeight);
+		me._thumbnail_menu.ggScrollByY = function(diffY) {
+			if(!me._thumbnail_menu.ggVertScrollVisible || diffY == 0 || me._thumbnail_menu.ggVPercentVisible >= 1.0) return;
+			me._thumbnail_menu.ggScrollPosY = (me._thumbnail_menu__vertScrollFg.offsetTop + diffY);
+			me._thumbnail_menu.ggScrollPosY = Math.max(me._thumbnail_menu.ggScrollPosY, 0);
+			me._thumbnail_menu.ggScrollPosY = Math.min(me._thumbnail_menu.ggScrollPosY, me._thumbnail_menu__vertScrollBg.offsetHeight - me._thumbnail_menu__vertScrollFg.offsetHeight);
+			me._thumbnail_menu__vertScrollFg.style.top = me._thumbnail_menu.ggScrollPosY + 'px';
+			let percentScrolled = me._thumbnail_menu.ggScrollPosY / (me._thumbnail_menu__vertScrollBg.offsetHeight - me._thumbnail_menu__vertScrollFg.offsetHeight);
+			me._thumbnail_menu__content.style.top = -(Math.round((me._thumbnail_menu.ggContentHeight * (1.0 - me._thumbnail_menu.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_menu.ggContentTopOffset + 'px';
+			me._thumbnail_menu.ggScrollPosYPercent = (me._thumbnail_menu__vertScrollFg.offsetTop / me._thumbnail_menu__vertScrollBg.offsetHeight);
 		}
-		me._thumbnail_menu_1.ggScrollByYSmooth = function(diffY) {
-			if(!me._thumbnail_menu_1.ggVertScrollVisible || diffY == 0 || me._thumbnail_menu_1.ggVPercentVisible >= 1.0) return;
+		me._thumbnail_menu.ggScrollByYSmooth = function(diffY) {
+			if(!me._thumbnail_menu.ggVertScrollVisible || diffY == 0 || me._thumbnail_menu.ggVPercentVisible >= 1.0) return;
 			var scrollPerInterval = diffY / 25;
 			var scrollCurrY = 0;
 			var id = setInterval(function() {
 				scrollCurrY += scrollPerInterval;
-				me._thumbnail_menu_1.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._thumbnail_menu_1.ggScrollPosY >= me._thumbnail_menu_1__vertScrollBg.offsetHeight - me._thumbnail_menu_1__vertScrollFg.offsetHeight)) {
-					me._thumbnail_menu_1.ggScrollPosY = Math.min(me._thumbnail_menu_1.ggScrollPosY, me._thumbnail_menu_1__vertScrollBg.offsetHeight - me._thumbnail_menu_1__vertScrollFg.offsetHeight);
+				me._thumbnail_menu.ggScrollPosY += scrollPerInterval;
+				if (diffY > 0 && (scrollCurrY >= diffY || me._thumbnail_menu.ggScrollPosY >= me._thumbnail_menu__vertScrollBg.offsetHeight - me._thumbnail_menu__vertScrollFg.offsetHeight)) {
+					me._thumbnail_menu.ggScrollPosY = Math.min(me._thumbnail_menu.ggScrollPosY, me._thumbnail_menu__vertScrollBg.offsetHeight - me._thumbnail_menu__vertScrollFg.offsetHeight);
 					clearInterval(id);
 				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._thumbnail_menu_1.ggScrollPosY <= 0)) {
-					me._thumbnail_menu_1.ggScrollPosY = Math.max(me._thumbnail_menu_1.ggScrollPosY, 0);
+				if (diffY < 0 && (scrollCurrY <= diffY || me._thumbnail_menu.ggScrollPosY <= 0)) {
+					me._thumbnail_menu.ggScrollPosY = Math.max(me._thumbnail_menu.ggScrollPosY, 0);
 					clearInterval(id);
 				}
-			me._thumbnail_menu_1__vertScrollFg.style.top = me._thumbnail_menu_1.ggScrollPosY + 'px';
-			let percentScrolled = me._thumbnail_menu_1.ggScrollPosY / (me._thumbnail_menu_1__vertScrollBg.offsetHeight - me._thumbnail_menu_1__vertScrollFg.offsetHeight);
-			me._thumbnail_menu_1__content.style.top = -(Math.round((me._thumbnail_menu_1.ggContentHeight * (1.0 - me._thumbnail_menu_1.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_menu_1.ggContentTopOffset + 'px';
-			me._thumbnail_menu_1.ggScrollPosYPercent = (me._thumbnail_menu_1__vertScrollFg.offsetTop / me._thumbnail_menu_1__vertScrollBg.offsetHeight);
+			me._thumbnail_menu__vertScrollFg.style.top = me._thumbnail_menu.ggScrollPosY + 'px';
+			let percentScrolled = me._thumbnail_menu.ggScrollPosY / (me._thumbnail_menu__vertScrollBg.offsetHeight - me._thumbnail_menu__vertScrollFg.offsetHeight);
+			me._thumbnail_menu__content.style.top = -(Math.round((me._thumbnail_menu.ggContentHeight * (1.0 - me._thumbnail_menu.ggVPercentVisible)) * percentScrolled)) + me._thumbnail_menu.ggContentTopOffset + 'px';
+			me._thumbnail_menu.ggScrollPosYPercent = (me._thumbnail_menu__vertScrollFg.offsetTop / me._thumbnail_menu__vertScrollBg.offsetHeight);
 			}, 10);
 		}
-		me._thumbnail_menu_1.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._thumbnail_menu_1.ggHorScrollVisible) {
+		me._thumbnail_menu.ggScrollIntoView = function(posX, posY, width, height) {
+			if (me._thumbnail_menu.ggHorScrollVisible) {
 				if (posX < 0) {
-					var diffX = Math.floor(posX * me._thumbnail_menu_1.ggHPercentVisible);
-					me._thumbnail_menu_1.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._thumbnail_menu_1.clientWidth - (me._thumbnail_menu_1.ggVertScrollVisible ? 5 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._thumbnail_menu_1.clientWidth - (me._thumbnail_menu_1.ggVertScrollVisible ? 5 : 0))) * me._thumbnail_menu_1.ggHPercentVisible);
-					me._thumbnail_menu_1.ggScrollByXSmooth(diffX);
+					var diffX = Math.floor(posX * me._thumbnail_menu.ggHPercentVisible);
+					me._thumbnail_menu.ggScrollByXSmooth(diffX);
+				} else if (posX + width > me._thumbnail_menu.clientWidth - (me._thumbnail_menu.ggVertScrollVisible ? 5 : 0)) {
+					var diffX = Math.ceil(((posX + width) - (me._thumbnail_menu.clientWidth - (me._thumbnail_menu.ggVertScrollVisible ? 5 : 0))) * me._thumbnail_menu.ggHPercentVisible);
+					me._thumbnail_menu.ggScrollByXSmooth(diffX);
 				}
 			}
-			if (me._thumbnail_menu_1.ggVertScrollVisible) {
+			if (me._thumbnail_menu.ggVertScrollVisible) {
 				if (posY < 0) {
-					var diffY = Math.floor(posY * me._thumbnail_menu_1.ggVPercentVisible);
-					me._thumbnail_menu_1.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._thumbnail_menu_1.clientHeight - (me._thumbnail_menu_1.ggHorScrollVisible ? 5 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._thumbnail_menu_1.clientHeight - (me._thumbnail_menu_1.ggHorScrollVisible ? 5 : 0))) * me._thumbnail_menu_1.ggVPercentVisible);
-					me._thumbnail_menu_1.ggScrollByYSmooth(diffY);
+					var diffY = Math.floor(posY * me._thumbnail_menu.ggVPercentVisible);
+					me._thumbnail_menu.ggScrollByYSmooth(diffY);
+				} else if (posY + height > me._thumbnail_menu.clientHeight - (me._thumbnail_menu.ggHorScrollVisible ? 5 : 0)) {
+					var diffY = Math.ceil(((posY + height) - (me._thumbnail_menu.clientHeight - (me._thumbnail_menu.ggHorScrollVisible ? 5 : 0))) * me._thumbnail_menu.ggVPercentVisible);
+					me._thumbnail_menu.ggScrollByYSmooth(diffY);
 				}
 			}
 		}
-		me._thumbnail_menu_1__content.mousetouchend = e => {
+		me._thumbnail_menu__content.mousetouchend = e => {
 			let inertiaInterval = setInterval(function() {
-				me._thumbnail_menu_1.ggDragInertiaX *= 0.96;
-				me._thumbnail_menu_1.ggDragInertiaY *= 0.96;
-				me._thumbnail_menu_1.ggScrollByX(me._thumbnail_menu_1.ggDragInertiaX);
-				me._thumbnail_menu_1.ggScrollByY(me._thumbnail_menu_1.ggDragInertiaY);
-				if (Math.abs(me._thumbnail_menu_1.ggDragInertiaX) < 1.0 && Math.abs(me._thumbnail_menu_1.ggDragInertiaY) < 1.0) {
+				me._thumbnail_menu.ggDragInertiaX *= 0.96;
+				me._thumbnail_menu.ggDragInertiaY *= 0.96;
+				me._thumbnail_menu.ggScrollByX(me._thumbnail_menu.ggDragInertiaX);
+				me._thumbnail_menu.ggScrollByY(me._thumbnail_menu.ggDragInertiaY);
+				if (Math.abs(me._thumbnail_menu.ggDragInertiaX) < 1.0 && Math.abs(me._thumbnail_menu.ggDragInertiaY) < 1.0) {
 					clearInterval(inertiaInterval);
 				}
 				}, 10);
-			me._thumbnail_menu_1__content.onmouseup = null;
-			me._thumbnail_menu_1__content.onmousemove = null;
-			me._thumbnail_menu_1__content.ontouchend = null;
-			me._thumbnail_menu_1__content.ontouchmove = null;
-			me._thumbnail_menu_1__content.onpointerup = null;
-			me._thumbnail_menu_1__content.onpointermove = null;
-			setTimeout(function() { me._thumbnail_menu_1.ggIsDragging = false; }, 100);
+			me._thumbnail_menu__content.onmouseup = null;
+			me._thumbnail_menu__content.onmousemove = null;
+			me._thumbnail_menu__content.ontouchend = null;
+			me._thumbnail_menu__content.ontouchmove = null;
+			me._thumbnail_menu__content.onpointerup = null;
+			me._thumbnail_menu__content.onpointermove = null;
+			setTimeout(function() { me._thumbnail_menu.ggIsDragging = false; }, 100);
 		}
-		me._thumbnail_menu_1__content.mousetouchmove = e => {
+		me._thumbnail_menu__content.mousetouchmove = e => {
 			e = e || window.event;
 			e.preventDefault();
 			var t = e.touches;
 			var eventX = t ? t[0].clientX : e.clientX;
 			var eventY = t ? t[0].clientY : e.clientY;
-			if (Math.abs(eventX - me._thumbnail_menu_1.ggDragStartX) > 10 || Math.abs(eventY - me._thumbnail_menu_1.ggDragStartY) > 10) me._thumbnail_menu_1.ggIsDragging = true;
-			var diffX = (eventX - me._thumbnail_menu_1.ggDragLastX) * me._thumbnail_menu_1.ggHPercentVisible;
-			var diffY = (eventY - me._thumbnail_menu_1.ggDragLastY) * me._thumbnail_menu_1.ggVPercentVisible;
-			me._thumbnail_menu_1.ggDragInertiaX = -diffX;
-			me._thumbnail_menu_1.ggDragInertiaY = -diffY;
-			me._thumbnail_menu_1.ggDragLastX = eventX;
-			me._thumbnail_menu_1.ggDragLastY = eventY;
-			me._thumbnail_menu_1.ggScrollByX(-diffX);
-			me._thumbnail_menu_1.ggScrollByY(-diffY);
+			if (Math.abs(eventX - me._thumbnail_menu.ggDragStartX) > 10 || Math.abs(eventY - me._thumbnail_menu.ggDragStartY) > 10) me._thumbnail_menu.ggIsDragging = true;
+			var diffX = (eventX - me._thumbnail_menu.ggDragLastX) * me._thumbnail_menu.ggHPercentVisible;
+			var diffY = (eventY - me._thumbnail_menu.ggDragLastY) * me._thumbnail_menu.ggVPercentVisible;
+			me._thumbnail_menu.ggDragInertiaX = -diffX;
+			me._thumbnail_menu.ggDragInertiaY = -diffY;
+			me._thumbnail_menu.ggDragLastX = eventX;
+			me._thumbnail_menu.ggDragLastY = eventY;
+			me._thumbnail_menu.ggScrollByX(-diffX);
+			me._thumbnail_menu.ggScrollByY(-diffY);
 		}
-		me._thumbnail_menu_1__content.mousetouchstart = e => {
+		me._thumbnail_menu__content.mousetouchstart = e => {
 			e = e || window.event;
 			var t = e.touches;
-			me._thumbnail_menu_1.ggDragLastX = me._thumbnail_menu_1.ggDragStartX = t ? t[0].clientX : e.clientX;
-			me._thumbnail_menu_1.ggDragLastY = me._thumbnail_menu_1.ggDragStartY = t ? t[0].clientY : e.clientY;
-			me._thumbnail_menu_1__content.onmouseup = me._thumbnail_menu_1__content.mousetouchend;
-			me._thumbnail_menu_1__content.ontouchend = me._thumbnail_menu_1__content.mousetouchend;
-			me._thumbnail_menu_1__content.onmousemove = me._thumbnail_menu_1__content.mousetouchmove;
-			me._thumbnail_menu_1__content.ontouchmove = me._thumbnail_menu_1__content.mousetouchmove;
+			me._thumbnail_menu.ggDragLastX = me._thumbnail_menu.ggDragStartX = t ? t[0].clientX : e.clientX;
+			me._thumbnail_menu.ggDragLastY = me._thumbnail_menu.ggDragStartY = t ? t[0].clientY : e.clientY;
+			me._thumbnail_menu__content.onmouseup = me._thumbnail_menu__content.mousetouchend;
+			me._thumbnail_menu__content.ontouchend = me._thumbnail_menu__content.mousetouchend;
+			me._thumbnail_menu__content.onmousemove = me._thumbnail_menu__content.mousetouchmove;
+			me._thumbnail_menu__content.ontouchmove = me._thumbnail_menu__content.mousetouchmove;
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				me._thumbnail_menu_1__content.onpointerup = me._thumbnail_menu_1__content.ontouchend;
-				me._thumbnail_menu_1__content.onpointermove = me._thumbnail_menu_1__content.ontouchmove;
+				me._thumbnail_menu__content.onpointerup = me._thumbnail_menu__content.ontouchend;
+				me._thumbnail_menu__content.onpointermove = me._thumbnail_menu__content.ontouchmove;
 			}
 		}
-		els.onmousedown = me._thumbnail_menu_1__content.mousetouchstart;
-		els.ontouchstart = me._thumbnail_menu_1__content.mousetouchstart;
+		els.onmousedown = me._thumbnail_menu__content.mousetouchstart;
+		els.ontouchstart = me._thumbnail_menu__content.mousetouchstart;
 		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			els.onpointerdown = me._thumbnail_menu_1__content.mousetouchstart;
+			els.onpointerdown = me._thumbnail_menu__content.mousetouchstart;
 		}
-		elHorScrollBg = me._thumbnail_menu_1__horScrollBg = document.createElement('div');
+		elHorScrollBg = me._thumbnail_menu__horScrollBg = document.createElement('div');
 		el.appendChild(elHorScrollBg);
 		elHorScrollBg.setAttribute('style', 'position: absolute; left: 0px; bottom: 0px; visibility: hidden; width: 700px; height: 5px; background-color: rgba(128,128,128,0); pointer-events: auto;');
 		elHorScrollBg.className='ggskin ggskin_scrollarea_hscrollbg';
-		elHorScrollFg = me._thumbnail_menu_1__horScrollFg = document.createElement('div');
+		elHorScrollFg = me._thumbnail_menu__horScrollFg = document.createElement('div');
 		elHorScrollBg.appendChild(elHorScrollFg);
 		elHorScrollFg.className='ggskin ggskin_scrollarea_hscrollfg';
 		elHorScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 700px; height: 5px; background-color: rgba(255,255,255,0.666667); pointer-events: auto;');
-		me._thumbnail_menu_1.ggScrollPosX = 0;
-		me._thumbnail_menu_1.ggScrollPosXPercent = 0.0;
+		me._thumbnail_menu.ggScrollPosX = 0;
+		me._thumbnail_menu.ggScrollPosXPercent = 0.0;
 		elHorScrollFg.onmousedown = function(e) {
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
 			e = e || window.event;
 			e.preventDefault();
 			e.stopPropagation();
-			me._thumbnail_menu_1.ggDragLastX = e.clientX;
+			me._thumbnail_menu.ggDragLastX = e.clientX;
 			document.onmouseup = function() {
 				let inertiaInterval = setInterval(function() {
-					me._thumbnail_menu_1.ggDragInertiaX *= 0.96;
-					me._thumbnail_menu_1.ggScrollByX(me._thumbnail_menu_1.ggDragInertiaX);
-					if (Math.abs(me._thumbnail_menu_1.ggDragInertiaX) < 1.0) {
+					me._thumbnail_menu.ggDragInertiaX *= 0.96;
+					me._thumbnail_menu.ggScrollByX(me._thumbnail_menu.ggDragInertiaX);
+					if (Math.abs(me._thumbnail_menu.ggDragInertiaX) < 1.0) {
 						clearInterval(inertiaInterval);
 					}
 					}, 10);
@@ -18128,10 +17262,10 @@ alert("The current view has been copied.");
 			document.onmousemove = function(e) {
 				e = e || window.event;
 				e.preventDefault();
-				var diffX = e.clientX - me._thumbnail_menu_1.ggDragLastX;
-				me._thumbnail_menu_1.ggDragInertiaX = diffX;
-				me._thumbnail_menu_1.ggDragLastX = e.clientX;
-				me._thumbnail_menu_1.ggScrollByX(diffX);
+				var diffX = e.clientX - me._thumbnail_menu.ggDragLastX;
+				me._thumbnail_menu.ggDragInertiaX = diffX;
+				me._thumbnail_menu.ggDragLastX = e.clientX;
+				me._thumbnail_menu.ggScrollByX(diffX);
 			}
 		}
 		elHorScrollFg.ontouchstart = function(e) {
@@ -18139,12 +17273,12 @@ alert("The current view has been copied.");
 			e.preventDefault();
 			e.stopPropagation();
 			var t = e.touches;
-			me._thumbnail_menu_1.ggDragLastX = t ? t[0].clientX : e.clientX;
+			me._thumbnail_menu.ggDragLastX = t ? t[0].clientX : e.clientX;
 			document.ontouchend = function() {
 				let inertiaInterval = setInterval(function() {
-					me._thumbnail_menu_1.ggDragInertiaX *= 0.96;
-					me._thumbnail_menu_1.ggScrollByX(me._thumbnail_menu_1.ggDragInertiaX);
-					if (Math.abs(me._thumbnail_menu_1.ggDragInertiaX) < 1.0) {
+					me._thumbnail_menu.ggDragInertiaX *= 0.96;
+					me._thumbnail_menu.ggScrollByX(me._thumbnail_menu.ggDragInertiaX);
+					if (Math.abs(me._thumbnail_menu.ggDragInertiaX) < 1.0) {
 						clearInterval(inertiaInterval);
 					}
 					}, 10);
@@ -18160,10 +17294,10 @@ alert("The current view has been copied.");
 				e = e || window.event;
 				e.preventDefault();
 				var t = e.touches;
-				var diffX = (t ? t[0].clientX : e.clientX) - me._thumbnail_menu_1.ggDragLastX;
-				me._thumbnail_menu_1.ggDragInertiaX = diffX;
-				me._thumbnail_menu_1.ggDragLastX = t ? t[0].clientX : e.clientX;
-				me._thumbnail_menu_1.ggScrollByX(diffX);
+				var diffX = (t ? t[0].clientX : e.clientX) - me._thumbnail_menu.ggDragLastX;
+				me._thumbnail_menu.ggDragInertiaX = diffX;
+				me._thumbnail_menu.ggDragLastX = t ? t[0].clientX : e.clientX;
+				me._thumbnail_menu.ggScrollByX(diffX);
 			}
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
 				document.onpointermove = document.ontouchmove;
@@ -18175,34 +17309,34 @@ alert("The current view has been copied.");
 		elHorScrollBg.onmousedown = function(e) {
 			e = e || window.event;
 			e.preventDefault();
-			var diffX = me._thumbnail_menu_1.ggScrollWidth;
-			if (e.offsetX < me._thumbnail_menu_1.ggScrollPosX) {
+			var diffX = me._thumbnail_menu.ggScrollWidth;
+			if (e.offsetX < me._thumbnail_menu.ggScrollPosX) {
 				diffX = diffX * -1;
 			}
-			me._thumbnail_menu_1.ggScrollByXSmooth(diffX);
+			me._thumbnail_menu.ggScrollByXSmooth(diffX);
 		}
 		elHorScrollBg.ontouchstart = function(e) {
 			e = e || window.event;
 			e.preventDefault();
 			e.stopPropagation();
 			var t = e.touches;
-			var rect = me._thumbnail_menu_1__horScrollBg.getBoundingClientRect();
-			var diffX = me._thumbnail_menu_1.ggScrollWidth;
-			if ((t[0].clientX - rect.left) < me._thumbnail_menu_1.ggScrollPosX) {
+			var rect = me._thumbnail_menu__horScrollBg.getBoundingClientRect();
+			var diffX = me._thumbnail_menu.ggScrollWidth;
+			if ((t[0].clientX - rect.left) < me._thumbnail_menu.ggScrollPosX) {
 				diffX = diffX * -1;
 			}
-			me._thumbnail_menu_1.ggScrollByXSmooth(diffX);
+			me._thumbnail_menu.ggScrollByXSmooth(diffX);
 		}
 		el.addEventListener('wheel', function(e) {
 			e.preventDefault();
 			var wheelDelta = Math.sign(e.deltaX);
-			me._thumbnail_menu_1.ggScrollByXSmooth(30 * me._thumbnail_menu_1.ggHPercentVisible * wheelDelta);
+			me._thumbnail_menu.ggScrollByXSmooth(30 * me._thumbnail_menu.ggHPercentVisible * wheelDelta);
 		});
-		elCornerBg = me._thumbnail_menu_1__cornerBg = document.createElement('div');
+		elCornerBg = me._thumbnail_menu__cornerBg = document.createElement('div');
 		el.appendChild(elCornerBg);
 		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 5px; height: 5px; background-color: rgba(255,255,255,1);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
-		el.ggId="thumbnail_menu_1";
+		el.ggId="thumbnail_menu";
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
@@ -18221,16 +17355,16 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._thumbnail_menu_1.ggIsActive=function() {
+		me._thumbnail_menu.ggIsActive=function() {
 			return false;
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
-		me._thumbnail_menu_1.logicBlock_alpha = function() {
+		me._thumbnail_menu.logicBlock_alpha = function() {
 			var newLogicStateAlpha;
 			if (
-				((player.getVariableValue('vis_thumbnails') == true))
+				((player.getVariableValue('vis_thumbnails_1') == true))
 			)
 			{
 				newLogicStateAlpha = 0;
@@ -18238,21 +17372,21 @@ alert("The current view has been copied.");
 			else {
 				newLogicStateAlpha = -1;
 			}
-			if (me._thumbnail_menu_1.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
-				me._thumbnail_menu_1.ggCurrentLogicStateAlpha = newLogicStateAlpha;
-				me._thumbnail_menu_1.style.transition='opacity 300ms ease 0ms';
-				if (me._thumbnail_menu_1.ggCurrentLogicStateAlpha == 0) {
-					me._thumbnail_menu_1.style.visibility=me._thumbnail_menu_1.ggVisible?'inherit':'hidden';
-					me._thumbnail_menu_1.style.opacity=1;
+			if (me._thumbnail_menu.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
+				me._thumbnail_menu.ggCurrentLogicStateAlpha = newLogicStateAlpha;
+				me._thumbnail_menu.style.transition='opacity 300ms ease 0ms';
+				if (me._thumbnail_menu.ggCurrentLogicStateAlpha == 0) {
+					me._thumbnail_menu.style.visibility=me._thumbnail_menu.ggVisible?'inherit':'hidden';
+					me._thumbnail_menu.style.opacity=1;
 				}
 				else {
-					setTimeout(function() { if (me._thumbnail_menu_1.style.opacity == 0.0) { me._thumbnail_menu_1.style.visibility="hidden"; } }, 305);
-					me._thumbnail_menu_1.style.opacity=0;
+					setTimeout(function() { if (me._thumbnail_menu.style.opacity == 0.0) { me._thumbnail_menu.style.visibility="hidden"; } }, 305);
+					me._thumbnail_menu.style.opacity=0;
 				}
 			}
 		}
-		me._thumbnail_menu_1.logicBlock_alpha();
-		me._thumbnail_menu_1.ggUpdatePosition=function (useTransition) {
+		me._thumbnail_menu.logicBlock_alpha();
+		me._thumbnail_menu.ggUpdatePosition=function (useTransition) {
 			{
 				var horScrollWasVisible = this.ggHorScrollVisible;
 				var vertScrollWasVisible = this.ggVertScrollVisible;
@@ -18319,43 +17453,43 @@ alert("The current view has been copied.");
 					this.ggContent.style.marginTop = '0px';
 				}
 				if (contentWidth > Math.ceil(offsetWidthWithScale)) {
-					me._thumbnail_menu_1__horScrollBg.style.visibility = 'inherit';
-					me._thumbnail_menu_1__horScrollFg.style.visibility = 'inherit';
-					me._thumbnail_menu_1.ggHorScrollVisible = true;
+					me._thumbnail_menu__horScrollBg.style.visibility = 'inherit';
+					me._thumbnail_menu__horScrollFg.style.visibility = 'inherit';
+					me._thumbnail_menu.ggHorScrollVisible = true;
 				} else {
-					me._thumbnail_menu_1__horScrollBg.style.visibility = 'hidden';
-					me._thumbnail_menu_1__horScrollFg.style.visibility = 'hidden';
-					me._thumbnail_menu_1.ggHorScrollVisible = false;
+					me._thumbnail_menu__horScrollBg.style.visibility = 'hidden';
+					me._thumbnail_menu__horScrollFg.style.visibility = 'hidden';
+					me._thumbnail_menu.ggHorScrollVisible = false;
 				}
-				if(me._thumbnail_menu_1.ggHorScrollVisible) {
-					me._thumbnail_menu_1.ggAvailableHeight = me._thumbnail_menu_1.clientHeight - 5;
-					if (me._thumbnail_menu_1.ggVertScrollVisible) {
-						me._thumbnail_menu_1.ggAvailableWidth = me._thumbnail_menu_1.clientWidth - 5;
-						me._thumbnail_menu_1.ggAvailableWidthWithScale = me._thumbnail_menu_1.getBoundingClientRect().width - me._thumbnail_menu_1__horScrollBg.getBoundingClientRect().height;
+				if(me._thumbnail_menu.ggHorScrollVisible) {
+					me._thumbnail_menu.ggAvailableHeight = me._thumbnail_menu.clientHeight - 5;
+					if (me._thumbnail_menu.ggVertScrollVisible) {
+						me._thumbnail_menu.ggAvailableWidth = me._thumbnail_menu.clientWidth - 5;
+						me._thumbnail_menu.ggAvailableWidthWithScale = me._thumbnail_menu.getBoundingClientRect().width - me._thumbnail_menu__horScrollBg.getBoundingClientRect().height;
 					} else {
-						me._thumbnail_menu_1.ggAvailableWidth = me._thumbnail_menu_1.clientWidth;
-						me._thumbnail_menu_1.ggAvailableWidthWithScale = me._thumbnail_menu_1.getBoundingClientRect().width;
+						me._thumbnail_menu.ggAvailableWidth = me._thumbnail_menu.clientWidth;
+						me._thumbnail_menu.ggAvailableWidthWithScale = me._thumbnail_menu.getBoundingClientRect().width;
 					}
-					me._thumbnail_menu_1__horScrollBg.style.width = me._thumbnail_menu_1.ggAvailableWidth + 'px';
-					me._thumbnail_menu_1.ggHPercentVisible = contentWidth != 0 ? me._thumbnail_menu_1.ggAvailableWidthWithScale / contentWidth : 0.0;
-					if (me._thumbnail_menu_1.ggHPercentVisible > 1.0) me._thumbnail_menu_1.ggHPercentVisible = 1.0;
-					me._thumbnail_menu_1.ggScrollWidth = Math.round(me._thumbnail_menu_1__horScrollBg.offsetWidth * me._thumbnail_menu_1.ggHPercentVisible);
-					me._thumbnail_menu_1__horScrollFg.style.width = me._thumbnail_menu_1.ggScrollWidth + 'px';
-					me._thumbnail_menu_1.ggScrollPosX = me._thumbnail_menu_1.ggScrollPosXPercent * me._thumbnail_menu_1.ggAvailableWidth;
-					me._thumbnail_menu_1.ggScrollPosX = Math.min(me._thumbnail_menu_1.ggScrollPosX, me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth);
-					me._thumbnail_menu_1__horScrollFg.style.left = me._thumbnail_menu_1.ggScrollPosX + 'px';
-					if (me._thumbnail_menu_1.ggHPercentVisible < 1.0) {
-						let percentScrolled = me._thumbnail_menu_1.ggScrollPosX / (me._thumbnail_menu_1__horScrollBg.offsetWidth - me._thumbnail_menu_1__horScrollFg.offsetWidth);
-						me._thumbnail_menu_1__content.style.left = -(Math.round((me._thumbnail_menu_1.ggContentWidth * (1.0 - me._thumbnail_menu_1.ggHPercentVisible)) * percentScrolled)) + this.ggContentLeftOffset + 'px';
+					me._thumbnail_menu__horScrollBg.style.width = me._thumbnail_menu.ggAvailableWidth + 'px';
+					me._thumbnail_menu.ggHPercentVisible = contentWidth != 0 ? me._thumbnail_menu.ggAvailableWidthWithScale / contentWidth : 0.0;
+					if (me._thumbnail_menu.ggHPercentVisible > 1.0) me._thumbnail_menu.ggHPercentVisible = 1.0;
+					me._thumbnail_menu.ggScrollWidth = Math.round(me._thumbnail_menu__horScrollBg.offsetWidth * me._thumbnail_menu.ggHPercentVisible);
+					me._thumbnail_menu__horScrollFg.style.width = me._thumbnail_menu.ggScrollWidth + 'px';
+					me._thumbnail_menu.ggScrollPosX = me._thumbnail_menu.ggScrollPosXPercent * me._thumbnail_menu.ggAvailableWidth;
+					me._thumbnail_menu.ggScrollPosX = Math.min(me._thumbnail_menu.ggScrollPosX, me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth);
+					me._thumbnail_menu__horScrollFg.style.left = me._thumbnail_menu.ggScrollPosX + 'px';
+					if (me._thumbnail_menu.ggHPercentVisible < 1.0) {
+						let percentScrolled = me._thumbnail_menu.ggScrollPosX / (me._thumbnail_menu__horScrollBg.offsetWidth - me._thumbnail_menu__horScrollFg.offsetWidth);
+						me._thumbnail_menu__content.style.left = -(Math.round((me._thumbnail_menu.ggContentWidth * (1.0 - me._thumbnail_menu.ggHPercentVisible)) * percentScrolled)) + this.ggContentLeftOffset + 'px';
 					}
 				} else {
-					me._thumbnail_menu_1.ggAvailableHeight = me._thumbnail_menu_1.clientHeight;
-					me._thumbnail_menu_1.ggScrollPosX = 0;
-					me._thumbnail_menu_1.ggScrollPosXPercent = 0.0;
+					me._thumbnail_menu.ggAvailableHeight = me._thumbnail_menu.clientHeight;
+					me._thumbnail_menu.ggScrollPosX = 0;
+					me._thumbnail_menu.ggScrollPosXPercent = 0.0;
 				}
-				if(horScrollWasVisible != me._thumbnail_menu_1.ggHorScrollVisible || vertScrollWasVisible != me._thumbnail_menu_1.ggVertScrollVisible) {
-					skin.updateSize(me._thumbnail_menu_1);
-					me._thumbnail_menu_1.ggUpdatePosition();
+				if(horScrollWasVisible != me._thumbnail_menu.ggHorScrollVisible || vertScrollWasVisible != me._thumbnail_menu.ggVertScrollVisible) {
+					skin.updateSize(me._thumbnail_menu);
+					me._thumbnail_menu.ggUpdatePosition();
 				}
 			}
 		}
@@ -18518,8 +17652,8 @@ alert("The current view has been copied.");
 		me._thumbnail_cloner.ggUpdatePosition=function (useTransition) {
 			me._thumbnail_cloner.ggUpdate();
 		}
-		me._thumbnail_menu_1__content.appendChild(me._thumbnail_cloner);
-		me.divSkin.appendChild(me._thumbnail_menu_1);
+		me._thumbnail_menu__content.appendChild(me._thumbnail_cloner);
+		me.divSkin.appendChild(me._thumbnail_menu);
 		el=me._screentint_phone_2=document.createElement('div');
 		el.ggId="screentint_phone_2";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -18550,7 +17684,7 @@ alert("The current view has been copied.");
 		me._screentint_phone_2.logicBlock_alpha = function() {
 			var newLogicStateAlpha;
 			if (
-				((player.getVariableValue('vis_thumbnails_phone') == true))
+				((player.getVariableValue('vis_thumbnails_phone_1') == true))
 			)
 			{
 				newLogicStateAlpha = 0;
@@ -18604,7 +17738,7 @@ alert("The current view has been copied.");
 			return player.getCurrentNode();
 		}
 		me._close_popup_phone.onclick=function (e) {
-			player.setVariableValue('vis_thumbnails_phone', false);
+			player.setVariableValue('vis_thumbnails_phone_1', false);
 		}
 		me._close_popup_phone.onmouseenter=function (e) {
 			me.elementMouseOver['close_popup_phone']=true;
@@ -19265,8 +18399,8 @@ alert("The current view has been copied.");
 		me._thumbnail_scroller_phone__content.appendChild(me._node_cloner_phone);
 		me._screentint_phone_2.appendChild(me._thumbnail_scroller_phone);
 		me.divSkin.appendChild(me._screentint_phone_2);
-		el=me._thumbnail_menu_code_1=document.createElement('div');
-		el.ggId="thumbnail_menu_code_1";
+		el=me._thumbnail_menu_code=document.createElement('div');
+		el.ggId="thumbnail_menu_code";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_code ";
@@ -19281,15 +18415,15 @@ alert("The current view has been copied.");
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._thumbnail_menu_code_1.ggIsActive=function() {
+		me._thumbnail_menu_code.ggIsActive=function() {
 			return false;
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
-		me._thumbnail_menu_code_1.ggUpdatePosition=function (useTransition) {
+		me._thumbnail_menu_code.ggUpdatePosition=function (useTransition) {
 		}
-		me.divSkin.appendChild(me._thumbnail_menu_code_1);
+		me.divSkin.appendChild(me._thumbnail_menu_code);
 		me._button_container.logicBlock_visible();
 		me._btn_thumbnails.logicBlock_visible();
 		me._btn_thumbnails.logicBlock_backgroundcolor();
@@ -20091,9 +19225,9 @@ alert("The current view has been copied.");
 		me._sounds_on_bg.logicBlock_backgroundcolor();
 		me.elementMouseOver['sounds_on_bg']=false;
 		me._screentint_phone.logicBlock_alpha();
-		me.elementMouseOver['btn_close_popup_phone2']=false;
+		me.elementMouseOver['btn_close_popup_phone1']=false;
 		me._info_popup_phone0.logicBlock_visible();
-		me._thumbnail_scroller_phone1.logicBlock_visible();
+		me._thumbnail_scroller_phone0.logicBlock_visible();
 		me._map_el_phone.ggMarkerInstances=[];
 		me._map_el_phone.ggLastNodeId=null;
 		me._map_el_phone.ggMarkerArray=[];
@@ -20781,9 +19915,9 @@ alert("The current view has been copied.");
 		me._ht_image_popup_fs_1.logicBlock_visible();
 		me._ht_pdf_popup_1.logicBlock_visible();
 		me._screentint_phone_1.logicBlock_alpha();
-		me.elementMouseOver['close_popup_phone1']=false;
-		me._btn_close_popup_phone1.logicBlock_visible();
-		me.elementMouseOver['btn_close_popup_phone1']=false;
+		me.elementMouseOver['close_popup_phone0']=false;
+		me._btn_close_popup_phone0.logicBlock_visible();
+		me.elementMouseOver['btn_close_popup_phone0']=false;
 		me._info_popup_phone.logicBlock_visible();
 		me._image_popup_phone.logicBlock_visible();
 		me._pdf_popup_phone.logicBlock_visible();
@@ -20808,22 +19942,15 @@ alert("The current view has been copied.");
 		me.elementMouseOver['video_url_popup_phone_play']=false;
 		el = me._code_element_feather_box_hotspot_component;
 		;
-		me._thumbnail_menu_toggle.logicBlock_alpha();
-		me.elementMouseOver['thumbnail_menu_toggle']=false;
-		me._menu_icon.logicBlock_visible();
-		me._menu_icon_active.logicBlock_visible();
-		me._thumbnail_menu_phone.logicBlock_alpha();
-		me.elementMouseOver['close_popup_phone0']=false;
-		me._btn_close_popup_phone0.logicBlock_visible();
-		me._btn_close_popup_phone_active.logicBlock_visible();
-		el = me._thumbnail_menu_code;
-		;
-		me._thumbnail_menu_1.logicBlock_alpha();
+		me._thumbnails_toggle.logicBlock_visible();
+		me._thumbnails_toggle.logicBlock_backgroundcolor();
+		me.elementMouseOver['thumbnails_toggle']=false;
+		me._thumbnail_menu.logicBlock_alpha();
 		me._screentint_phone_2.logicBlock_alpha();
 		me.elementMouseOver['close_popup_phone']=false;
 		me._btn_close_popup_phone.logicBlock_visible();
 		me.elementMouseOver['btn_close_popup_phone']=false;
-		el = me._thumbnail_menu_code_1;
+		el = me._thumbnail_menu_code;
 		;
 		player.addListener('activehotspotchanged', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_video_youtube')) {
@@ -20900,14 +20027,11 @@ alert("The current view has been copied.");
 			me._btn_info_phone.logicBlock_visible();
 		});
 		player.addListener('changenode', function(event) {
-			for(var i = 0; i < me._node_cloner_phone1.ggInstances.length; i++) {
-				me._node_cloner_phone1.ggInstances[i].ggEvent_changenode(event);
+			for(var i = 0; i < me._node_cloner_phone0.ggInstances.length; i++) {
+				me._node_cloner_phone0.ggInstances[i].ggEvent_changenode(event);
 			}
 			for(var i = 0; i < me._node_cloner_phone.ggInstances.length; i++) {
 				me._node_cloner_phone.ggInstances[i].ggEvent_changenode(event);
-			}
-			for(var i = 0; i < me._node_cloner_phone0.ggInstances.length; i++) {
-				me._node_cloner_phone0.ggInstances[i].ggEvent_changenode(event);
 			}
 			for(var i = 0; i < me._thumbnail_cloner.ggInstances.length; i++) {
 				me._thumbnail_cloner.ggInstances[i].ggEvent_changenode(event);
@@ -21146,8 +20270,8 @@ alert("The current view has been copied.");
 			me._sounds_splashscreen.logicBlock_visible();
 			me._screentint_phone.logicBlock_alpha();
 			me._info_popup_phone0.logicBlock_visible();
-			me._thumbnail_scroller_phone1.logicBlock_visible();
-			me._node_cloner_phone1.ggUpdateConditionNodeChange();
+			me._thumbnail_scroller_phone0.logicBlock_visible();
+			me._node_cloner_phone0.ggUpdateConditionNodeChange();
 			me._map_el_phone.logicBlock_visible();
 			for (var i=0; i < me._map_el_phone.ggMarkerInstances.length; i++) {
 				me._map_el_phone.ggMarkerInstances[i].ggEvent_changenode();
@@ -21240,23 +20364,18 @@ alert("The current view has been copied.");
 			me._video_file_popup_phone_play.logicBlock_visible();
 			me._video_url_popup_phone.logicBlock_visible();
 			me._video_url_popup_phone_play.logicBlock_visible();
-			me._thumbnail_menu_toggle.logicBlock_alpha();
-			me._thumbnail_menu_phone.logicBlock_alpha();
-			me._node_cloner_phone0.ggUpdateConditionNodeChange();
-			me._thumbnail_menu_1.logicBlock_alpha();
+			me._thumbnails_toggle.logicBlock_visible();
+			me._thumbnail_menu.logicBlock_alpha();
 			me._thumbnail_cloner.ggUpdateConditionNodeChange();
 			me._screentint_phone_2.logicBlock_alpha();
 			me._node_cloner_phone.ggUpdateConditionNodeChange();
 		});
 		player.addListener('changevisitednodes', function(event) {
-			for(var i = 0; i < me._node_cloner_phone1.ggInstances.length; i++) {
-				me._node_cloner_phone1.ggInstances[i].ggEvent_changevisitednodes(event);
+			for(var i = 0; i < me._node_cloner_phone0.ggInstances.length; i++) {
+				me._node_cloner_phone0.ggInstances[i].ggEvent_changevisitednodes(event);
 			}
 			for(var i = 0; i < me._node_cloner_phone.ggInstances.length; i++) {
 				me._node_cloner_phone.ggInstances[i].ggEvent_changevisitednodes(event);
-			}
-			for(var i = 0; i < me._node_cloner_phone0.ggInstances.length; i++) {
-				me._node_cloner_phone0.ggInstances[i].ggEvent_changevisitednodes(event);
 			}
 			for(var i = 0; i < me._thumbnail_cloner.ggInstances.length; i++) {
 				me._thumbnail_cloner.ggInstances[i].ggEvent_changevisitednodes(event);
@@ -21484,8 +20603,8 @@ alert("The current view has been copied.");
 			me._sounds_splashscreen.logicBlock_visible();
 			me._screentint_phone.logicBlock_alpha();
 			me._info_popup_phone0.logicBlock_visible();
-			me._thumbnail_scroller_phone1.ggUpdatePosition();
-			me._thumbnail_scroller_phone1.logicBlock_visible();
+			me._thumbnail_scroller_phone0.ggUpdatePosition();
+			me._thumbnail_scroller_phone0.logicBlock_visible();
 			me._map_el_phone.logicBlock_visible();
 			for (var i=0; i < me._map_el_phone.ggMarkerInstances.length; i++) {
 				me._map_el_phone.ggMarkerInstances[i].ggEvent_configloaded();
@@ -21536,11 +20655,9 @@ alert("The current view has been copied.");
 			me._video_file_popup_phone_play.logicBlock_visible();
 			me._video_url_popup_phone.logicBlock_visible();
 			me._video_url_popup_phone_play.logicBlock_visible();
-			me._thumbnail_menu_toggle.logicBlock_alpha();
-			me._thumbnail_menu_phone.logicBlock_alpha();
-			me._thumbnail_scroller_phone0.ggUpdatePosition();
-			me._thumbnail_menu_1.ggUpdatePosition();
-			me._thumbnail_menu_1.logicBlock_alpha();
+			me._thumbnails_toggle.logicBlock_visible();
+			me._thumbnail_menu.ggUpdatePosition();
+			me._thumbnail_menu.logicBlock_alpha();
 			me._screentint_phone_2.logicBlock_alpha();
 			me._thumbnail_scroller_phone.ggUpdatePosition();
 		});
@@ -21681,6 +20798,7 @@ alert("The current view has been copied.");
 			me._variable_resp_tablet.logicBlock();
 			me._variable_resp_phone.logicBlock();
 			me._variable_resp_phone_landscape.logicBlock();
+			me._variable_resp_phone_1.logicBlock();
 		});
 		player.addListener('soundspermittedchanged', function(event) {
 			me._variable_vis_sounds_splashscreen.logicBlock();
@@ -21906,7 +21024,7 @@ alert("The current view has been copied.");
 		player.addListener('varchanged_vis_phone_thumbs', function(event) {
 			me._variable_vis_skin.logicBlock();
 			me._screentint_phone.logicBlock_alpha();
-			me._thumbnail_scroller_phone1.logicBlock_visible();
+			me._thumbnail_scroller_phone0.logicBlock_visible();
 		});
 		player.addListener('varchanged_vis_phone_video_file', function(event) {
 			me._variable_vis_skin.logicBlock();
@@ -22185,15 +21303,14 @@ alert("The current view has been copied.");
 			me._variable_vis_skin.logicBlock();
 			me._sounds_splashscreen.logicBlock_visible();
 		});
-		player.addListener('varchanged_vis_thumbnail_menu_phone', function(event) {
-			me._thumbnail_menu_toggle.logicBlock_alpha();
-			me._thumbnail_menu_phone.logicBlock_alpha();
-		});
 		player.addListener('varchanged_vis_thumbnails', function(event) {
 			me._thumbnail_scroller.logicBlock_alpha();
-			me._thumbnail_menu_1.logicBlock_alpha();
 		});
-		player.addListener('varchanged_vis_thumbnails_phone', function(event) {
+		player.addListener('varchanged_vis_thumbnails_1', function(event) {
+			me._thumbnail_menu.logicBlock_alpha();
+		});
+		player.addListener('varchanged_vis_thumbnails_phone_1', function(event) {
+			me._thumbnails_toggle.logicBlock_visible();
 			me._screentint_phone_2.logicBlock_alpha();
 		});
 		player.addListener('varchanged_vis_url_popup', function(event) {
@@ -22267,7 +21384,6 @@ alert("The current view has been copied.");
 		player.addListener('viewerinit', function(event) {
 			me._thumbnail_cloner0.ggUpdate();
 			me._languages_cloner.ggUpdate();
-			me._node_cloner_phone1.ggUpdate();
 			me._node_cloner_phone0.ggUpdate();
 			me._thumbnail_cloner.ggUpdate();
 			me._node_cloner_phone.ggUpdate();
@@ -22284,7 +21400,7 @@ alert("The current view has been copied.");
 			me._btn_info_phone.logicBlock_position();
 		});
 	};
-	function SkinCloner_node_cloner_phone1_Class(nodeId, parentScope, ggParent, parameter) {
+	function SkinCloner_node_cloner_phone0_Class(nodeId, parentScope, ggParent, parameter) {
 		var me=this;
 		var hs='';
 		me.parentScope=parentScope;
@@ -22672,7 +21788,7 @@ alert("The current view has been copied.");
 		me._thumbnail_image_phone.onclick=function (e) {
 			if (me._thumbnail_image_phone.isDragging()) return;
 			player.openNext("{"+me.ggNodeId+"}","");
-			player.setVariableValue('vis_thumbnails_phone', false);
+			player.setVariableValue('vis_thumbnails_phone_1', false);
 		}
 		me._thumbnail_image_phone.onmouseenter=function (e) {
 			me.elementMouseOver['thumbnail_image_phone']=true;
@@ -22912,300 +22028,6 @@ alert("The current view has been copied.");
 			};
 			me.ggEvent_changevisitednodes=function(event) {
 				me._thumbnail_visited_phone.logicBlock_visible();
-			};
-	};
-	function SkinCloner_node_cloner_phone0_Class(nodeId, parentScope, ggParent, parameter) {
-		var me=this;
-		var hs='';
-		me.parentScope=parentScope;
-		me.ggParent=ggParent;
-		me.findElements=skin.findElements;
-		me.ggIndex=parameter.index;
-		me.ggNodeId=nodeId;
-		me.ggTitle=parameter.title;
-		me.ggUserdata=skin.player.getNodeUserdata(me.ggNodeId);
-		me.ggUserdata.nodeid=me.ggNodeId;
-		me.elementMouseDown={};
-		me.elementMouseOver={};
-			me.__div=document.createElement('div');
-			me.__div.setAttribute('style','visibility: inherit; overflow: visible;');
-			me.__div.style.position='absolute';
-			me.__div.style.left=parameter.left;
-			me.__div.style.top=parameter.top;
-			me.__div.style.width='';
-			me.__div.style.height='';
-			me.__div.style.width=parameter.width;
-			me.__div.style.height=parameter.height;
-			me.__div.ggIsActive = function() {
-				return player.getCurrentNode()==me.ggNodeId;
-			}
-			me.__div.ggElementNodeId=function() {
-				return me.ggNodeId;
-			}
-		el=me._node_thumb_phone=document.createElement('div');
-		el.isDragging = function() {
-			let scrollerParent = me._node_thumb_phone;
-			while ((scrollerParent = scrollerParent.parentNode) != null) {
-				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
-			}
-			return false;
-		}
-		el.ggId="node_thumb_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_container ";
-		el.ggType='container';
-		hs ='';
-		hs+='height : 120px;';
-		hs+='left : 0px;';
-		hs+='position : absolute;';
-		hs+='top : 0px;';
-		hs+='visibility : inherit;';
-		hs+='width : 120px;';
-		hs+='pointer-events:none;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._node_thumb_phone.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._node_thumb_phone.onclick=function (e) {
-			if (me._node_thumb_phone.isDragging()) return;
-			player.openNext("{"+me.ggNodeId+"}","");
-			player.setVariableValue('vis_thumbnail_menu_phone', false);
-		}
-		me._node_thumb_phone.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._thumb_img_phone=document.createElement('div');
-		el.isDragging = function() {
-			let scrollerParent = me._thumb_img_phone;
-			while ((scrollerParent = scrollerParent.parentNode) != null) {
-				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
-			}
-			return false;
-		}
-		els=me._thumb_img_phone__img=document.createElement('img');
-		els.className='ggskin ggskin_nodeimage';
-		if (nodeId) els.setAttribute('src',basePath + "images/thumb_img_phone_" + nodeId + ".webp");
-		el.ggNodeId=nodeId;
-		hs ='';
-		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
-		hs+='border-radius: 50px;';
-		els.setAttribute('style', hs);
-		els.className='ggskin ggskin_nodeimage';
-		els['ondragstart']=function() { return false; };
-		el.appendChild(els);
-		el.ggSubElement = els;
-		el.ggId="thumb_img_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_nodeimage ";
-		el.ggType='nodeimage';
-		hs ='';
-		hs+='cursor : pointer;';
-		hs+='height : 90px;';
-		hs+='left : 15px;';
-		hs+='position : absolute;';
-		hs+='top : 2px;';
-		hs+='visibility : inherit;';
-		hs+='width : 90px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._thumb_img_phone.ggIsActive=function() {
-			return player.getCurrentNode()==this.ggElementNodeId();
-		}
-		el.ggElementNodeId=function() {
-			return this.ggNodeId;
-		}
-		me._thumb_img_phone.onmouseenter=function (e) {
-			me.elementMouseOver['thumb_img_phone']=true;
-			me._thumb_img_border_phone.logicBlock_alpha();
-		}
-		me._thumb_img_phone.onmouseleave=function (e) {
-			me.elementMouseOver['thumb_img_phone']=false;
-			me._thumb_img_border_phone.logicBlock_alpha();
-		}
-		me._thumb_img_phone.ggUpdatePosition=function (useTransition) {
-		}
-		el=me._thumb_img_border_phone=document.createElement('div');
-		el.isDragging = function() {
-			let scrollerParent = me._thumb_img_border_phone;
-			while ((scrollerParent = scrollerParent.parentNode) != null) {
-				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
-			}
-			return false;
-		}
-		el.ggId="thumb_img_border_phone";
-		el.ggDx=0;
-		el.ggDy=0;
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_rectangle ";
-		el.ggType='rectangle';
-		hs ='';
-		hs+='border : 2px solid #ffffff;';
-		hs+='border-radius : 50px;';
-		hs+='cursor : pointer;';
-		hs+='height : 88px;';
-		hs+='left : calc(50% - ((88px + 4px) / 2) + 0px);';
-		hs+='opacity : 0;';
-		hs+='position : absolute;';
-		hs+='top : calc(50% - ((88px + 4px) / 2) + 0px);';
-		hs+='visibility : hidden;';
-		hs+='width : 88px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		me._thumb_img_border_phone.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._thumb_img_border_phone.logicBlock_alpha = function() {
-			var newLogicStateAlpha;
-			if (
-				((me.elementMouseOver['thumb_img_phone'] == true))
-			)
-			{
-				newLogicStateAlpha = 0;
-			}
-			else {
-				newLogicStateAlpha = -1;
-			}
-			if (me._thumb_img_border_phone.ggCurrentLogicStateAlpha != newLogicStateAlpha) {
-				me._thumb_img_border_phone.ggCurrentLogicStateAlpha = newLogicStateAlpha;
-				me._thumb_img_border_phone.style.transition='opacity 200ms ease 0ms';
-				if (me._thumb_img_border_phone.ggCurrentLogicStateAlpha == 0) {
-					me._thumb_img_border_phone.style.visibility=me._thumb_img_border_phone.ggVisible?'inherit':'hidden';
-					me._thumb_img_border_phone.style.opacity=1;
-				}
-				else {
-					setTimeout(function() { if (me._thumb_img_border_phone.style.opacity == 0.0) { me._thumb_img_border_phone.style.visibility="hidden"; } }, 205);
-					me._thumb_img_border_phone.style.opacity=0;
-				}
-			}
-		}
-		me._thumb_img_border_phone.logicBlock_alpha();
-		me._thumb_img_border_phone.ggUpdatePosition=function (useTransition) {
-		}
-		me._thumb_img_phone.appendChild(me._thumb_img_border_phone);
-		me._node_thumb_phone.appendChild(me._thumb_img_phone);
-		el=me._thumb_title_phone=document.createElement('div');
-		el.isDragging = function() {
-			let scrollerParent = me._thumb_title_phone;
-			while ((scrollerParent = scrollerParent.parentNode) != null) {
-				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
-			}
-			return false;
-		}
-		els=me._thumb_title_phone__text=document.createElement('div');
-		el.className='ggskin ggskin_textdiv';
-		el.ggTextDiv=els;
-		el.ggId="thumb_title_phone";
-		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
-		el.className="ggskin ggskin_text montserrat_regular";
-		el.ggType='text';
-		hs ='';
-		hs+='border : 0px solid #000000;';
-		hs+='bottom : 0px;';
-		hs+='color : rgba(255,255,255,1);';
-		hs+='cursor : default;';
-		hs+='height : 24px;';
-		hs+='left : 0px;';
-		hs+='position : absolute;';
-		hs+='visibility : inherit;';
-		hs+='width : 120px;';
-		hs+='pointer-events:auto;';
-		el.setAttribute('style',hs);
-		el.style.transformOrigin='50% 50%';
-		hs ='';
-		hs += 'box-sizing: border-box;';
-		hs+='width: 100%;';
-		hs+='height: 100%;';
-		hs+='text-align: center;';
-		hs+='white-space: nowrap;';
-		hs+='padding: 0px;';
-		hs+='overflow: hidden;';
-		hs+='text-overflow: ellipsis;';
-		els.setAttribute('style',hs);
-		me._thumb_title_phone.ggUpdateText=function() {
-			var params = [];
-			params.push(player._(String(me.ggUserdata.title)));
-			var hs = player._("%1", params);
-			if (hs!=this.ggText) {
-				this.ggText=hs;
-				this.ggTextDiv.innerHTML=hs;
-				if (this.ggUpdatePosition) this.ggUpdatePosition();
-			}
-		}
-		me._thumb_title_phone.ggUpdateText();
-		el.appendChild(els);
-		me._thumb_title_phone.ggIsActive=function() {
-			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
-				return this.parentNode.ggIsActive();
-			}
-			return false;
-		}
-		el.ggElementNodeId=function() {
-			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
-				return this.parentNode.ggElementNodeId();
-			}
-			return player.getCurrentNode();
-		}
-		me._thumb_title_phone.logicBlock_textcolor = function() {
-			var newLogicStateTextColor;
-			if (
-				((player.nodeVisited(me._thumb_title_phone.ggElementNodeId()) == true)) || 
-				((me._thumb_title_phone.ggIsActive() == true))
-			)
-			{
-				newLogicStateTextColor = 0;
-			}
-			else {
-				newLogicStateTextColor = -1;
-			}
-			if (me._thumb_title_phone.ggCurrentLogicStateTextColor != newLogicStateTextColor) {
-				me._thumb_title_phone.ggCurrentLogicStateTextColor = newLogicStateTextColor;
-				me._thumb_title_phone.style.transition='color 0s';
-				if (me._thumb_title_phone.ggCurrentLogicStateTextColor == 0) {
-					me._thumb_title_phone.style.color="rgba(255,255,255,0.588235)";
-				}
-				else {
-					me._thumb_title_phone.style.color="rgba(255,255,255,1)";
-				}
-			}
-		}
-		me._thumb_title_phone.logicBlock_textcolor();
-		me._thumb_title_phone.ggUpdatePosition=function (useTransition) {
-		}
-		me._node_thumb_phone.appendChild(me._thumb_title_phone);
-		me.__div.appendChild(me._node_thumb_phone);
-		me.elementMouseOver['thumb_img_phone']=false;
-		me._thumb_img_border_phone.logicBlock_alpha();
-		me._thumb_title_phone.logicBlock_textcolor();
-			me.ggEvent_changenode=function(event) {
-				me._thumb_title_phone.logicBlock_textcolor();
-				me._thumb_title_phone.logicBlock_textcolor();
-			};
-			me.ggEvent_changevisitednodes=function(event) {
-				me._thumb_title_phone.logicBlock_textcolor();
 			};
 	};
 	function SkinCloner_languages_cloner_Class(item, parentScope, ggParent, parameter) {
@@ -27167,10 +25989,10 @@ me._ht_info_bg.style.transform='';
 					((player.getVariableValue('resp_phone') == false))
 				)
 			) {
-				let pdfInterval_93 = setInterval(() => {
+				let pdfInterval_105 = setInterval(() => {
 					if (skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication && skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication.initialized && skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._ht_pdf_popup_pdf0.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_93);
+						clearInterval(pdfInterval_105);
 					}
 				}, 50);
 			}
@@ -27193,10 +26015,10 @@ me._ht_info_bg.style.transform='';
 					((player.getVariableValue('resp_phone') == true))
 				)
 			) {
-				let pdfInterval_94 = setInterval(() => {
+				let pdfInterval_106 = setInterval(() => {
 					if (skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup_phone0.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_94);
+						clearInterval(pdfInterval_106);
 					}
 				}, 50);
 			}
@@ -33200,10 +32022,10 @@ me._ht_info_bg.style.transform='';
 					((player.getVariableValue('resp_phone') == false))
 				)
 			) {
-				let pdfInterval_95 = setInterval(() => {
+				let pdfInterval_107 = setInterval(() => {
 					if (skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication && skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication.initialized && skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._ht_pdf_popup_pdf0__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._ht_pdf_popup_pdf0.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_95);
+						clearInterval(pdfInterval_107);
 					}
 				}, 50);
 			}
@@ -33226,10 +32048,10 @@ me._ht_info_bg.style.transform='';
 					((player.getVariableValue('resp_phone') == true))
 				)
 			) {
-				let pdfInterval_96 = setInterval(() => {
+				let pdfInterval_108 = setInterval(() => {
 					if (skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication && skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication.initialized && skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication.downloadComplete && skin._pdf_popup_phone0__pdf.contentWindow.PDFViewerApplication.pdfViewer._pageViewsReady) {
 						skin._pdf_popup_phone0.ggSetCurrentPage(Number(player._(me.hotspot.target)));
-						clearInterval(pdfInterval_96);
+						clearInterval(pdfInterval_108);
 					}
 				}, 50);
 			}
@@ -36168,7 +34990,7 @@ me._ht_info_bg.style.transform='';
 	me.addSkin();
 	var style = document.createElement('style');
 	style.type = 'text/css';
-	hs='.ggskin { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: normal; -webkit-text-size-adjust: 100%; } .ggmarkdown a { color: #aaa; } .ggdefaulthotspot { font-family:"Hepta Slab", serif; font-size: 14px; -webkit-filter: drop-shadow( 0px 0px 3px black); filter: drop-shadow( 0px 0px 3px black); } .ggmarkdown p,.ggmarkdown h1,.ggmarkdown h2,.ggmarkdown h3,.ggmarkdown h4 { margin-top: 0px } .ggmarkdown h1,.ggmarkdown h2,.ggmarkdown h3,.ggmarkdown h4 { margin-bottom: 0.2em } .ggmarkdown { white-space: normal; } .hepta_slab { font-family: "Hepta Slab", serif; } .karla { font-family: "Karla", sans-serif; line-height: 1.3 } .glow { -webkit-filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.7)); filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.7)); } .shadow { -webkit-filter: drop-shadow( 0px 0px 3px black); filter: drop-shadow( 0px 0px 3px black); } .shadow_title { -webkit-filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.3)); filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.3)); } .ggskin_text>div::-webkit-scrollbar { width: 5px; } .ggskin_text>div { scrollbar-width: thin; }@font-face { font-family: "Hepta Slab"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/hepta-slab-latin-regular.woff2") format("woff2"); } .hepta_slab { font-family: "Hepta Slab", serif; } @font-face { font-family: "Montserrat"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/montserrat-latin-regular.woff2") format("woff2"); } .montserrat_regular { font-family: "Montserrat", sans-serif; font-weight: 400; } .outer-shadow { -webkit-filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.3)); filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.3)); } @font-face { font-family: "Hepta Slab"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/hepta-slab-latin-regular.woff2") format("woff2"); } @font-face { font-family: "Karla"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/karla-latin-regular.woff2") format("woff2"); } .hepta_slab { font-family: "Hepta Slab", serif; } .karla { font-family: "Karla", sans-serif; line-height: 1.3 } .glow { -webkit-filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.5)); filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.5)); } .shadow { -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.5)); filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.5)); } .shadow_title { -webkit-filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.25)); filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.25)); } .ggskin_text>div::-webkit-scrollbar { width: 5px; } .ggskin_text>div { scrollbar-width: thin; } @font-face { font-family: "Hepta Slab"; font-style: normal; font-weight: 500; src: local(""), url("$(skinbase)fonts/hepta-slab-latin-500.woff2") format("woff2"); } @font-face { font-family: "Karla"; font-style: normal; font-weight: 300; src: local(""), url("$(skinbase)fonts/karla-latin-300.woff2") format("woff2"); } @font-face { font-family: "Karla"; font-style: normal; font-weight: 700; src: local(""), url("$(skinbase)fonts/karla-latin-700.woff2") format("woff2"); }';
+	hs='.ggskin { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: normal; -webkit-text-size-adjust: 100%; } .ggmarkdown a { color: #aaa; } .ggdefaulthotspot { font-family:"Hepta Slab", serif; font-size: 14px; -webkit-filter: drop-shadow( 0px 0px 3px black); filter: drop-shadow( 0px 0px 3px black); } .ggmarkdown p,.ggmarkdown h1,.ggmarkdown h2,.ggmarkdown h3,.ggmarkdown h4 { margin-top: 0px } .ggmarkdown h1,.ggmarkdown h2,.ggmarkdown h3,.ggmarkdown h4 { margin-bottom: 0.2em } .ggmarkdown { white-space: normal; } .hepta_slab { font-family: "Hepta Slab", serif; } .karla { font-family: "Karla", sans-serif; line-height: 1.3 } .glow { -webkit-filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.7)); filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.7)); } .shadow { -webkit-filter: drop-shadow( 0px 0px 3px black); filter: drop-shadow( 0px 0px 3px black); } .shadow_title { -webkit-filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.3)); filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.3)); } .ggskin_text>div::-webkit-scrollbar { width: 5px; } .ggskin_text>div { scrollbar-width: thin; }@font-face { font-family: "Hepta Slab"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/hepta-slab-latin-regular.woff2") format("woff2"); } .hepta_slab { font-family: "Hepta Slab", serif; } @font-face { font-family: "Hepta Slab"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/hepta-slab-latin-regular.woff2") format("woff2"); } @font-face { font-family: "Karla"; font-style: normal; font-weight: 400; src: local(""), url("$(skinbase)fonts/karla-latin-regular.woff2") format("woff2"); } .hepta_slab { font-family: "Hepta Slab", serif; } .karla { font-family: "Karla", sans-serif; line-height: 1.3 } .glow { -webkit-filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.5)); filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.5)); } .shadow { -webkit-filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.5)); filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.5)); } .shadow_title { -webkit-filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.25)); filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 0.25)); } .ggskin_text>div::-webkit-scrollbar { width: 5px; } .ggskin_text>div { scrollbar-width: thin; } @font-face { font-family: "Hepta Slab"; font-style: normal; font-weight: 500; src: local(""), url("$(skinbase)fonts/hepta-slab-latin-500.woff2") format("woff2"); } @font-face { font-family: "Karla"; font-style: normal; font-weight: 300; src: local(""), url("$(skinbase)fonts/karla-latin-300.woff2") format("woff2"); } @font-face { font-family: "Karla"; font-style: normal; font-weight: 700; src: local(""), url("$(skinbase)fonts/karla-latin-700.woff2") format("woff2"); }';
 	hs = hs.replace(/\$\(skinbase\)/g,basePath);
 	style.appendChild(document.createTextNode(hs));
 	document.head.appendChild(style);

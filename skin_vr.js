@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.1.8/20986
 // Filename: custom_feather_vr.ggsk
-// Generated 2025-07-25T17:04:38
+// Generated 2025-07-25T17:48:25
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('node_cloner_vr_hasUp', 2, false, { ignoreInState: 0  });
@@ -200,7 +200,7 @@ function pano2vrVrSkin(player,base) {
 		me._thumbnails.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
-				((player.getIsTour() == true))
+				((player.getIsTour() == false))
 			)
 			{
 				newLogicStateVisible = 0;
@@ -211,8 +211,8 @@ function pano2vrVrSkin(player,base) {
 			if (me._thumbnails.ggCurrentLogicStateVisible != newLogicStateVisible) {
 				me._thumbnails.ggCurrentLogicStateVisible = newLogicStateVisible;
 				if (me._thumbnails.ggCurrentLogicStateVisible == 0) {
-			me._thumbnails.visible=false;
-			me._thumbnails.userData.visible=false;
+			me._thumbnails.visible=((!me._thumbnails.material && Number(me._thumbnails.userData.opacity>0)) || Number(me._thumbnails.material.opacity)>0)?true:false;
+			me._thumbnails.userData.visible=true;
 				}
 				else {
 			me._thumbnails.visible=((!me._thumbnails.material && Number(me._thumbnails.userData.opacity>0)) || Number(me._thumbnails.material.opacity)>0)?true:false;

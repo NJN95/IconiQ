@@ -581,6 +581,7 @@
       <label backgroundcolor="0xffffff" wordwrap="1" borderalpha="1" borderradius="1" backgroundalpha="1" textcolor="0x000000" enabled="1" width="180" height="20" bordercolor="0x000000" background="1" border="1" textalpha="1"/>
       <polystyle backgroundcolor="0x0000ff" mode="0" borderalpha="1" bordercolor="0x0000ff" backgroundalpha="0.25098" handcursor="1"/>
       <hotspot pan="-178.81" url="{node25}" target="" title="IconiQ Front View" tilt="-0.12" id="Point01" skinid="ht_node" description=""/>
+      <hotspot pan="-296.59" url="{node47}" target="" title="Main Lobby" tilt="-3.07" id="Point02" skinid="ht_node" description=""/>
     </hotspots>
     <media>
       <sound pan="-1.000" level="1.000" tiltsize="10.000" field="90.000" nodechangekeep="1" startmutedmobile="0" mode="0" tilt="-1.000" id="_background" loop="1" pansize="10.000" ambientlevel="0.000">

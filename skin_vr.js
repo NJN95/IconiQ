@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.1.8/20986
 // Filename: custom_feather_vr.ggsk
-// Generated 2025-07-24T12:20:14
+// Generated 2025-07-25T15:14:56
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('node_cloner_vr_hasUp', 2, false, { ignoreInState: 0  });
@@ -135,8 +135,8 @@ function pano2vrVrSkin(player,base) {
 		this.skinGroup=player.getSkinGroup();
 		el = new THREE.Group();
 		el.userData.setOpacityInternal = function(v) {};
-		el.translateX(0.08);
-		el.translateY(-1.73);
+		el.translateX(0.07);
+		el.translateY(-1.76);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 640;
 		el.userData.height = 115;
@@ -144,8 +144,8 @@ function pano2vrVrSkin(player,base) {
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'thumbnails';
-		el.userData.x = 0.08;
-		el.userData.y = -1.73;
+		el.userData.x = 0.07;
+		el.userData.y = -1.76;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
 		el.translateZ(0.010);
@@ -286,28 +286,12 @@ function pano2vrVrSkin(player,base) {
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
 		me._node_cloner_vr = el;
-		el.userData.ggNumRepeat = 100;
-		el.userData.ggCloneOffset = 0;
+		el.userData.ggNumRepeat = 1;
 		el.userData.ggNumRows = 0;
 		el.userData.ggNumCols = 0;
 		el.userData.ggUpdating = false;
 		el.userData.ggFilter = [];
 		el.userData.ggInstances = [];
-		el.userData.ggGoUp = function() {
-			if (me._node_cloner_vr.userData.ggCloneOffset + me._node_cloner_vr.userData.ggNumCols <= me._node_cloner_vr.userData.ggNumFilterPassed) {
-				me._node_cloner_vr.userData.ggCloneOffset += me._node_cloner_vr.userData.ggNumCols;
-				me._node_cloner_vr.userData.ggCloneOffsetChanged = true;
-				me._node_cloner_vr.userData.ggUpdate();
-			}
-		}
-		el.userData.ggGoDown = function() {
-			if (me._node_cloner_vr.userData.ggCloneOffset > 0) {
-				me._node_cloner_vr.userData.ggCloneOffset -= me._node_cloner_vr.userData.ggNumCols;
-				me._node_cloner_vr.userData.ggCloneOffset = Math.max(me._node_cloner_vr.userData.ggCloneOffset, 0);
-				me._node_cloner_vr.userData.ggCloneOffsetChanged = true;
-				me._node_cloner_vr.userData.ggUpdate();
-			}
-		}
 		el.getFilteredNodes = function(tourNodes, filter) {
 			var filteredNodes = [];
 			for (var i = 0; i < tourNodes.length; i++) {
@@ -329,11 +313,9 @@ function pano2vrVrSkin(player,base) {
 			if(me._node_cloner_vr.userData.ggUpdating == true) return;
 			me._node_cloner_vr.userData.ggUpdating = true;
 			var el=me._node_cloner_vr;
-			var curNumCols = 0;
-			var parentWidth = me._node_cloner_vr.parent.userData.width;
-			me._node_cloner_vr.userData.offsetLeft = (me._node_cloner_vr.parent.userData.width / 200.0) + me._node_cloner_vr.userData.x - (me._node_cloner_vr.userData.width / 200.0);
-			curNumCols = Math.floor(((parentWidth - me._node_cloner_vr.userData.offsetLeft) * me._node_cloner_vr.userData.ggNumRepeat / 100.0) / me._node_cloner_vr.userData.width);
-			if (curNumCols < 1) curNumCols = 1;
+			var curNumRows = 0;
+			curNumRows = me._node_cloner_vr.userData.ggNumRepeat;
+			if (curNumRows < 1) curNumRows = 1;
 			if (typeof filter=='object') {
 				el.userData.ggFilter = filter;
 			} else {
@@ -341,15 +323,14 @@ function pano2vrVrSkin(player,base) {
 			};
 			if (me.ggTag) filter.push(me.ggTag);
 			filter=filter.sort();
-			if ((el.userData.ggNumCols == curNumCols) && (el.userData.ggInstances.length > 0) && (filter.length === el.userData.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.userData.ggCurrentFilter[index] }) ) && false) {
+			if ((el.userData.ggNumRows == curNumRows) && (el.userData.ggInstances.length > 0) && (filter.length === el.userData.ggCurrentFilter.length) && (filter.every(function(value, index) { return value === el.userData.ggCurrentFilter[index] }) )) {
 				me._node_cloner_vr.userData.ggUpdating = false;
 				return;
 			} else {
-				el.userData.ggNumRows = 1;
-				el.userData.ggNumCols = curNumCols;
+				el.userData.ggNumCols = 1;
+				el.userData.ggNumRows = curNumRows;
 			var centerOffsetHor = 0;
 			var centerOffsetVert = 0;
-			centerOffsetHor = ((parentWidth - (me._node_cloner_vr.userData.offsetLeft * 100.0)) % me._node_cloner_vr.userData.width) / 2;
 				me._node_cloner_vr.userData.ggCloneOffsetChanged = false;
 			}
 			el.userData.ggCurrentFilter = filter;
@@ -361,39 +342,65 @@ function pano2vrVrSkin(player,base) {
 			var currentIndex = 0;
 			var keepCloning = true;
 			me._node_cloner_vr.userData.ggNumFilterPassed = 0;
-			numNodes = me._node_cloner_vr.getFilteredNodes(tourNodes, filter).length;
-			if ((parentWidth - (me._node_cloner_vr.userData.offsetLeft * 100.0)) > (me._node_cloner_vr.userData.width * numNodes)) {
-				centerOffsetHor = ((parentWidth - (me._node_cloner_vr.userData.offsetLeft * 100.0)) - (me._node_cloner_vr.userData.width * numNodes)) / 2;
-			}
-			tourNodes = me._node_cloner_vr.getFilteredNodes(tourNodes, filter);
-			me._node_cloner_vr.userData.ggNumFilterPassed = tourNodes.length;
-			for (var i = 0; i < tourNodes.length; i++) {
-				var nodeId = tourNodes[i];
-				var nodeData = player.getNodeUserdata(nodeId);
+			var firstNode;
+			for (var i = 0; i < el.userData.ggTagTable.length; i++) {
+				var cItem = el.userData.ggTagTable[i];
+				firstNode = '';
+				cItem.nodecount = 0;
+				for (var j=0; j < tourNodes.length; j++) {
+					var nodeData = player.getNodeUserdata(tourNodes[j]);
+					if ((nodeData['tags'].indexOf(cItem.tag) != -1) || (cItem.tag=='')) {
+						var passed = true;
+						if (filter.length > 0) {
+							for (var k=0; k < filter.length; k++) {
+								if (nodeData['tags'].indexOf(filter[k].trim()) == -1) passed = false;
+							}
+						}
+						if (passed) {
+							cItem.nodecount++;
+							if (firstNode == '') firstNode = tourNodes[j];
+						}
+					}
+				}
+				cItem.firstnode=firstNode;
+				if (cItem.nodecount == 0) continue;
+				me._node_cloner_vr.userData.ggNumFilterPassed++;
+				var nodeId = {};
+				nodeId['tag'] = cItem.tag;
+				nodeId['title'] = cItem.title;
+				nodeId['description'] = cItem.description;
+				nodeId['nodecount'] = cItem.nodecount;
+				nodeId['firstnode'] = cItem.firstnode;
 				if (!keepCloning || i < me._node_cloner_vr.userData.ggCloneOffset) continue;
 				var parameter={};
 				parameter.top = -(centerOffsetVert / 100.0) - (row * me._node_cloner_vr.userData.height) / 100.0;
 				parameter.left = (centerOffsetHor / 100.0) + (column * me._node_cloner_vr.userData.width) / 100.0;
 				parameter.index=currentIndex;
-				parameter.title=nodeData['title'];
 				var inst = new SkinCloner_node_cloner_vr_Class(nodeId, me, el, parameter);
 				currentIndex++;
 				el.userData.ggInstances.push(inst);
 				var bbox = new THREE.Box3().setFromObject(inst.__obj);
 				var clonerPosInSkin = skin.posInSkin(me._node_cloner_vr, me.ggParent);
 				if (bbox.min.x + clonerPosInSkin.x >= -4 && bbox.max.x + clonerPosInSkin.x <= 4 && bbox.min.y + clonerPosInSkin.y >= -3 && bbox.max.y + clonerPosInSkin.y <= 3) el.add(inst.__obj);
-				column++;
-				if (column >= el.userData.ggNumCols) {
-					keepCloning = false;
+				row++;
+				if (row >= el.userData.ggNumRows) {
+					row = 0;
+					column++;
+					el.userData.ggNumCols++;
 				}
 			}
-			player.setVariableValue('node_cloner_vr_hasDown', me._node_cloner_vr.userData.ggCloneOffset > 0);
-			player.setVariableValue('node_cloner_vr_hasUp', me._node_cloner_vr.userData.ggCloneOffset + me._node_cloner_vr.userData.ggNumCols < me._node_cloner_vr.userData.ggNumFilterPassed);
 			me._node_cloner_vr.userData.ggNodeCount = me._node_cloner_vr.userData.ggNumFilterPassed;
 			me._node_cloner_vr.userData.ggUpdating = false;
 			player.triggerEvent('clonerchanged');
 		}
 		el.userData.ggFilter = [];
+		el.userData.ggTagTable = [
+			{tag:"GF_Thumb",title:"Ground Floor",description:""},
+			{tag:"apartment_thumb",title:"Apartment Floor",description:""},
+			{tag:"12th_thumb",title:"12th Floor",description:""},
+			{tag:"Roof_Floor_thumb",title:"Pool",description:""},
+			{tag:"Theatre_thumb",title:"Mini theatre",description:""},
+			];
 		el.userData.ggId="node_cloner_vr";
 		me._node_cloner_vr.userData.ggUpdatePosition=function (useTransition) {
 		}
@@ -629,14 +636,14 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.42, 0.42, 5, 5 );
 		geometry.name = 'page_up_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABdklEQVR4nO3bIW4CURSF4b+d7gFZzTKwNTV1JOypWyDBYTC1aFaArmQRL6kYGvCQ3HNuzq8mY97Nl8wzNwMppZRSSimllFJKKaWUUkrteik7ebd7Z4xPpunAev1bNseTey07eYwf4JsxTmy3y7I5nlwd6K0FcOyCWgn6BVyuz21Q6+5Q4Ap4ZAaFGXjFZnOuG+qxakGhHWo9KLRC1QCFNqg6oNACVQsU7FH1QMEaVRMUbFF1QcESVRsU7FD1QcEK1QMUbFB9QMEC1QsU5FH9QEEa1RMUZFF9QUES1RsU5FAVdkqPNcOt7t4sgH3RNA1AxfIHvX3y/12YF4Aled+hYvcnOIMKYoIrqCgmOIIKY4IbqDgmOIEaYIILqAkmOIAaYYI6qBkmKIMaYoIqqC'+
-	'kmKIIaY4IaqDkmKIE2wAQV0CaYoADaCBOqQZthQiVoQ0yoXYHsaYYJGjulNpgAb2UnT9NHx59nU0oppZRSSimllFJKKaWUGvYHt2vYklAmbJoAAAAASUVORK5CYII=');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABcklEQVR4nO3bMYoCQRRF0TvSezAUDBpmdmFqYjLLNHEFrkIGOhAmdA8GE7Ti5Db89z7vhp3U59BVSVGQUkoppZRSSimllFJKKaXUro+yla/XDff7gWE4sd3+ls2xcHWg03QBvoAbsGMcf8pmWbBV9QDAGjgzTZ/VgyxRJeg3898JjVDrtjzwADwzg0KD7V8LCu1Q60GhFaoGKLRB1QGFFqhaoGCPqgcK1qiaoGCLqgsKlqjaoGCHqg8KVqgeoGCD6gMKFqheoCCP6gcK0qieoCCL6gsKkqjeoCCHqnCn9F4z3O7flzVwLJqmAahY/qCvLf/sxnwBWJL3GSp2foIzqCAmuIKKYoIjqDAmuIGKY4ITqAEmuICaYIIDqBEmqIOaYYIyqCEmqIKaYoIiqD'+
+	'EmqIGaY4ISaANMUAFtggkKoI0woRq0GSbUPvxqhwm1VyBHmmGCxp1SG0yAoW7lYd/x8WxKKaWUUkoppZRSSimllFLD/gAnv9WwdCN4EQAAAABJRU5ErkJggg==');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'page_up_material';
 		el = new THREE.Mesh( geometry, material );
 		el.userData.materialNormal = material;
-		el.translateX(0);
+		el.translateX(-0.01);
 		el.translateY(0);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 42;
@@ -645,7 +652,7 @@ function pano2vrVrSkin(player,base) {
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'page_up';
-		el.userData.x = 0;
+		el.userData.x = -0.01;
 		el.userData.y = 0;
 		el.userData.hanchor = 1;
 		el.userData.vanchor = 1;
@@ -933,8 +940,8 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.42, 0.42, 5, 5 );
 		geometry.name = 'page_down_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABeklEQVR4nO3ZMUoDURSF4V+fe0hpHVyAdVobm3SBtJbuaSCdjSvIMqwtXcSAxSgiphy551zOv4F3+WDePLiQUkoppZRSSimllFJKKaXUrqvqAVbtdLplnh8Z45XD4b1ihJuKQ/+ladoyz2dgwzw/AXcVY1xXHLp607QFFszi/EH/Yn4A+6pxvO/Qy5g7jse3qpF8QQUxwRVUFBMcQYUxwQ1UHBOcQA0wwQXUBBMcQI0wQR3UDBOUQQ0xQRXUFBMUQY0xQQ3UHBOUQBtgggpoE0xQAG2ECdWgzTChErQhJtSuQF74vQOyx4QOOyWxKkH3LJ/5d+eva8C6/JRWLs+mlasHhVaoGqDQBlUHFFqgaoGCPaoeKFijaoKCLaouKFiiaoOCHao+KFiheoCCDa'+
-	'oPKFigeoGCPKofKEijeoKCLKovKEiieoOCHKr/TmmB2/GzTtmwLABL8geFS6hl9QCFBXWMe+CZMR6qx0kppZRSSimllFJKKaWUUmrUJ0NC1ZKFM2gYAAAAAElFTkSuQmCC');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABaUlEQVR4nO3bMUoDURhF4aNkDymFFAPiKrICmyzTxhVkFwopApbuIYVFFA2mDLx7H+dsYH4+eDMPfgbMzMzMzMzMzMzMzMym6270ADfteHzgdHpmtXpls/kYMcI8oIfDI7AH1sAby/I0Yoz7EQ+9eZeYQ+sH/Y/5CexGjdN95K9jblmW91Ej9YIGYkIraCgmNIIGY0IbaDgmNIEWYEILaAkmNIAWYUI6aBkmJIMWYkIqaCkmJIIWY0IaaDkmJIFOgAkpoJNgQgLoRJgwGnQyTBgJOiEmjF2BvHC5A6rHhBl2SmGNBN1xPuY/7b9fA9X5UbpxXptu3HhQmAo1AxSmQc0BhSlQs0ChHjUPFKpRM0GhFjUXFCpRs0GhDjUfFKpQO0ChBrUHFCpQu0AhHr'+
+	'UPFKJRO0EhFrUXFCJRu0EhDrV/p3SG2/K7TllzXgAOqR8UrqEOq//I/y3g51kzMzMzMzMzMzMzM7MJ+wIQ7NY29+tQMAAAAABJRU5ErkJggg==');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'page_down_material';
@@ -1281,11 +1288,11 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.37, 0.37, 5, 5 );
 		geometry.name = 'exit_vr_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,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');
+		texture = loader.load('data:image/png;base64,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');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'exit_vr_icon_material';
@@ -1564,8 +1571,8 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.44, 0.44, 5, 5 );
 		geometry.name = 'close_skin_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAACDElEQVR4nO3cPU7DMByG8Seoxwi5CFOOQYeycSMYupUBjuGJizgcoxIMbaSCUsSH//EbeH8jQqnzNAQa24CZmZmZmZmZmZmZmZmZRWqKHzGlFTnfAtB1W/p+X/w1Sgoe76rkwQDI+ZamuQNgGK5I6UY2ckorhmFH06wByBngvuRLXJQ82IQ1w7AjpfJv5G+NcWEd+TLlA3fdFng8+Ype5Om4j8exF1X+HgznT+Dysv7tYuaxxQQGzcgVxhQXGLQiVxpLbGDQiFxxDPGBoW7kym/wPIGhzokK/PTMFxjmPWGBuDB3YJjnxEXiQo3AEBtAKC7UCgwxIcTiQs3AUDaIYFyoHRjKhBGNCwqB4XeBhOOCSmD4WSjxuKAUGL4XbAFxQS0wfC3cQuKCYmD4PC'+
-	'CwlLigGhimIzfNEwCvr9cn3ykbF5QDw1fmzaTjgnpgOER+eXn4cNUerua23SjHhfhZ5X9P+wr2LSLQH/klp3mLOPdnWttuaNsN6usuTuhdwf6gEcgflQP5YU8gP64M5AfugTxlFMiTnoE8bR/IC08CeelUIC/+C+Tlq4EErqK/uwBbIW7lsXgTzCI3wSjGHS1+G5dy3NGMYyw/o3HYWK0bF6Dv98dFLO9nRsZN4QVFTxnpxR1NRy6u/DxW122Pu9b1/51B3+9J6YacnwEi9iqbmZmZmZmZmZmZmZmZWaw3UwFZvWJvYA4AAAAASUVORK5CYII=');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAACDElEQVR4nO3bQU7CQBiG4VfDLdrL9BiwwJ0Lj8ROE/QYs/ISdNvegkQXtooEDOr8na/6PYnRsIDpa63QmQEzMzMzMzMzMzMzMzMzi3SV/RlTWlDXtwB03Yam2Wd/jZzmNl7a9o7d7mX42pLSovSQzkppwW63fR9v297lfonr3E94ZEVV3UtGTmlBVd0Dq8iXyR+46zbA48EjepFPx30cxp5V/mswnD+Avr8pfo2beGwxgUEzcoExxQUGrciFxhIbGDQiFxxDfGAoG7nwL3iawFDmQAX+eqYLDNMesEBcmDowTHPgInGhRGCIDSAUF0oFhpgQYnGhZGDIG0QwLpQODHnCiMYFhcDwu0DCcUElMPwslHhcUAoM3ws2g7igFhguCzeTuKAYGL4OCMwlLq'+
+	'gGhnORn4bvy4PHZOOCcmC4ZN5MOi6oB4Yx8gOfz1qAJ/p+rRwX4meV/z3twB+XiOOzF2ApN1t9gu4l4o/8k9M8g8+/TVvT92vU110c0DuD/UEjkD8qB/LNnkC+XRnIN9wDecookCc9A3naPpAXngTy0qlAXvwXyMtXAwmcRX93AbZC3MJj8SaYWW6CUYw7mv02LuW4ownHmH9G421jtW5cgKbZD4tYPs+MjJvCM4qeMtKLOzodObv881hdt6GuP35WjDtqmj0p3VDXzwARe5XNzMzMzMzMzMzMzMzMLNYrJj5btLoCV6EAAAAASUVORK5CYII=');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'close_skin_icon_material';
@@ -1911,9 +1918,9 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.44, 0.44, 5, 5 );
 		geometry.name = 'open_skin_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAADFElEQVR4nO3XT2tcVRjH8e+TpigZXBSdZFFscWEo4io7oYW6t7SbFmvn3lubNLMugitfgaDdFcYklHsnEUxXzVuo0BfgQkgXglIXicWF5M9iMo+Le+7cWEZ0zk1X/X1gYOY59z7nnOfOnHMGREREREREREREREREREREREREREREREREROT1ZieSJc/PAm8zGPzC4uJfJ5LzZZubp9jbex+AVusZN24cvZJ+1tbeYnr6PeAFWfa8abpmBV5f/4DhcBX4KEQGmH2H+5ek6V7TwQHgbhTFLcy+AWZDdAf3L0jTDcz8RPopihZmX+O+DEyH6FNgkTT9OTZtfIHz/CpmPwBvjGndBi6RpjvR+aEsbr/fA+7+yxUrJEm3cZGLYhZ4AsyPaT3E/VOy7HFM6q'+
-	'moAeX5WcweUhd3H/gVqCY6D6zi3uwXUhS3+Gdxd8Orcpf19c8a9VGOcY26uE45l/3w+U3MHoZlcGJxBTb7CjgTBrjFwUGbND2P+wXqAlyhKC5H5YdyzS2XhcoySTJHkswBy6Oo+7dsbp6K7qff/xj4JHzaxf0CaXqeg4M27lshfibMeWJxBYaLdYap+3S75dPOsm3MHo3azC5F5idsaNWau0uSrGLmmDlJskr9IGdHm1+cei5mj8iybQC63X2mpu6PvW4CsQWW/ym2wD+O3g2H9+j1ZgDI83ncr4/a3J9Ej6zVegZUm2Sbfn8Jdwsb3xLQDm074dpY9Vzcr5Pn5Vrc680wHN4be90E4jahcpP7iWodLjeEP4B3Rzndt0jTa412+DzvYNY/FqmWhfYoYtYhSTai+ygf2GPgShUBfgPeAWZC7E9On/6Qmzd/nzR93Dc4'+
-	'y57j/jlwGCIzwDnqB7bN0dFS4+NTmm4AK8cibY4XF1bodL5v1Ec5xiXKoyWUczhHXdxDzG7HFBearMHluXCB8jBeGWD2AFjgzp3d8TdOoNzQuph1qJcLgJ3wzW1+BgbCeX0hjH1wrOUpsECSbI2/8b/pr/LLTvivsoiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi87v4GQ4Pxv2pdxEsAAAAASUVORK5CYII=');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAADHUlEQVR4nO3XwYsbZRjH8e+zK7hs8FA020PQIsy8m5VCYW9CC/Vu0UtBdA8Vt9tzETz5FwjaW6HdlR6kQump+y+00HPxkGYmRVDiYbfiQQw5bPL0MDPJWFts30lP/X0gMPO8k+ed98nkfd8BEREREREREREREREREREREREREREREREREXm92UKy9Psd3N8GfqXb/XshOZ/mvkyWpQCEkGM2eSX9PHz4FvA+Zn+yvj5smq5ZgfP8A9z3gA/LyBHu1xmPv+HUqX+a3hwA7sZg8AXu3wNrZfQAs69JkpuY+UL6efCgxcrKd5jtAG+U0fvAV4TQi00bX+A8/wT3W8Cb/81qGWZnSJKD6PxQFfca7hef2W62S5JcalzkwWAN97u4h2e0jjH7jDS9E5N6Ke'+
+	'qGiinhBvPijoDfgGKg7oHpdA/3Zv+Q4smtF/ew/FD2c5HB4PNGfbgb0+mPteI6xVhG5fkK7jfo9zsx6eMKbPYtcKw826fVahPCCSaTLvMCnOPRo7NR+aGYc4tpoTrfIU2Pk6bHcd+pxX/AfTm6n37/I+Dj8uyQyaRLCCdotdrAfhk/Vo75pcUVGE7Pjsyu0OkUv/bGRob77Vmb+5nI/JQLWjXnHhLCHmaOmRPCHvMfcm22+MVYXp6Pxf02GxsZAJ3OCLMrtStPEyG2wPKCYgt8b3bkfpnhcBWAXi9gdn7WZnY3+s5CyIFqkWyTZdu4G+5Glm0D7bLtoLw2zmQyH4vZeXq9Yi4eDldxv1y78h4R4hahfr+D2S/M5+ER8Bh4t5ZznzT9tNEKn+dbuP9Ui1TTQnsWMdsiTW9G9+Fu5Pkd4FwVAX4H3gFWy9hfTKcn6Xb/'+
+	'eNn0cU/w+voQsy+BcRlZBd6jKm6xTdtuvH0q9rm7tUibfxd3lyT5uVEfZs7S0jZmWRWhGEtV3DFmF2KKC03m4GJfuEmxGa8c4X6V0WiTND18zjdfnJmX+9wt5tMFFC8aWwvZAwMkyQGj0SbuV4GjWst9YJM03X/ON/+XXpWftuBXZRERERERERERERERERERERERERERERERERF53T0BJ3sLsLQlCvEAAAAASUVORK5CYII=');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'open_skin_icon_material';
@@ -2156,14 +2163,17 @@ function pano2vrVrSkin(player,base) {
 	};
 	this.removeSkin=function() {
 	};
-	function SkinCloner_node_cloner_vr_Class(nodeId, parentScope, ggParent, parameter) {
+	function SkinCloner_node_cloner_vr_Class(item, parentScope, ggParent, parameter) {
 		var me=this;
 		me.parentScope=parentScope;
 		me.ggParent=ggParent;
 		me.findElements=skin.findElements;
 		me.ggIndex=parameter.index;
-		me.ggNodeId=nodeId;
-		me.ggTitle=parameter.title;
+		me.ggTag = item['tag'];
+		me.ggTitle = item['title'];
+		me.ggDescription = item['description'];
+		me.ggNodeCount = item['nodecount'];
+		me.ggNodeId=item['firstnode'];
 		me.ggUserdata=skin.player.getNodeUserdata(me.ggNodeId);
 		me.ggUserdata.nodeId=me.ggNodeId;
 		me.elementMouseDown={};
@@ -2173,7 +2183,12 @@ function pano2vrVrSkin(player,base) {
 			me.__obj.position.x = parameter.left;
 			me.__obj.position.y = parameter.top;
 			me.__obj.userData.ggIsActive = function() {
-				return player.getCurrentNode()==me.userData.ggNodeId;
+				var tags = player.userdata.tags;
+				if (tags.indexOf(me.ggTag) == -1) return false;
+				for(var i=0;i<me.parent.userData.ggCurrentFilter.length;i++) {
+					if (tags.indexOf(me.parent.userData.ggCurrentFilter[i])==-1) return false;
+				}
+				return true;
 			}
 			me.__obj.userData.ggElementNodeId=function() {
 				return me.userData.ggNodeId;
@@ -2490,7 +2505,7 @@ function pano2vrVrSkin(player,base) {
 		me._node_title = el;
 		el.userData.textLines = [];
 		el.userData.backgroundColor = new THREE.Color(0, 0, 0).convertSRGBToLinear();
-		el.userData.textColor = new THREE.Color(0, 0.635294, 0.635294).convertSRGBToLinear();
+		el.userData.textColor = new THREE.Color(0, 0.854902, 0.854902).convertSRGBToLinear();
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
 		canvas.width = 300;
@@ -3106,10 +3121,10 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.36, 0.36, 5, 5 );
 		geometry.name = 'ht_video_url_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAD+UlEQVR4nO2bQYgbVRjHf++tC4HCgh5aJF7K0i0I7qEebD1JwZNQsfQiJDNbXd27lIXWQ1iQliIFr7tau3kbehEtSm/C9tj1YA9bENrSFg9B6qHCQmEh5H0eZiaZZJOYTnZidub9Lpn38ma+L3/e/PPy8g04HA6Hw+FwOBwOh8MxYaiB7xpzGGuPMTU1PaZ8+tNsNtD6EZ739zjD9hZoY+MMIpeAd8aZzJD8hlKXKZd/GUewToFWV6cpFFZR6vw4go+EyA12d5dYWmqkGeaVjlanOHVgHZH7aP0szSSGwtojKPUWsAAUUeo8hQLAJ2mGbc+g4Lb6OWz9gNaLlEo7aQZPRK02g8h1RM4BoNSHad5uunUUeA5AfWLFASiVdlDqU4IZDtZeTDNcIJAxh2'+
-	'kb8vrEihNRKu0gUgVAqZNh/vuDMUcx5mjUDASy9lhrgMj9fQuWLtuto3j+SalUNMYsAw+AB5FIgUlPTU0jEgycBEMeBq2ftXIedZ1Wq72BtVXgdKtPqXeBp7rvSXnBmLNYu01cnIA6dH/N5wljDiHyDbAY630IzMWH5VOg9fW3gZsoFYnxHJFFtP4HkTvxofm6xSIj1vou7Zmyicg8vn+r1yn5mUF7jbiByJc8eXKNlRXb77R8CBQY8XfAq2HPQ5T6GM+791+nZlug3ka8BnxBufximEtkV6B+RtzHa/qRPYEqFc3s7AXgKyBaQG4i4uH79Ze9XLYESmjEg8iOQCMY8SCysQ4SuQD8SFucNeAE5fJI4kB2ZtAH4WsiIx7EQRbo9a72HUTKSYx4ENm4xQIG/4WVkIMs0F9d7fdQaptq9aP9DHKQBYpzO3x9DaV+wpg1'+
-	'jDm0HxfOhkBKXUPkLPA87PkMuBeupkciGwIB+P4tROaBzbBnDq3vYswylUriz5kdgQB8v87jx+8jsgw0CH5qXGV29leq1WKSS2ZLIICVFYvvf421pwi2UAFOJzXw7AkUsbDwO3AC+DbsSWTg2RUIwPNe4Hmfj2Lg2RYoYgQDz4dAkNjA8yMQJDLwfAkU0c/ArV3rHppPgaC3gSu1pwgivwJF7DXwDgKBms12nZ+1R8aS2KjE84znn4S9Bt5A5E+IBNL6UWtwUAd4EJhvHcXzT0pk4M3mHHAcz3sK8U0mY7YIqszqaP3mRFeZ1WozWPsHUERkC98/lVaotgcpdTk8KiJynVptJq2gIxEVcUKwdtH6SprhOrcpq9XvO8qAgzrA7YmoOgs8Zx6lfCJxRG7g+6mWAXdu2u/uLlEoEIpURKlLYSJp5jAcqmvLOSokTztsz9'+
-	'6NjTNYexGlTqadwEsjsoXWV/6fRxG6cQ+zOBwOh8PhcDgcDofDMXn8C3Yri8kq9C+BAAAAAElFTkSuQmCC');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAD6UlEQVR4nO2bwYsbVRzHP7/Z5LILAT10kfVSyCRFcAttwdaTFDwJisWLB9HV1f4DstB6bylS8OrW2u7Fi2hRvBXaY1eohWxBNjMD4iGIHioE3Mtu3s/Dy2Rns5sYJpmYnXmf03svb+b3y5f3vnlMfgMOh8PhcDgcDofD4XDMGDL00yg6wd6ez9xceUr5DKbT2aVUCqlW/5pm2KMFCsM3Ub0KvDLNZEbkZ0Su4fs/TiPYQYEePy5TqXwJrEwj+Jjcod2+zLlzu1kGKR3oHRSnBdxF9Sme92eWSYyEMYuIvAx8ACwBK1QqAB9mGXZ/Bdlt9QMAqt/ieav4fjvL4KkIwwqqt4F3ABB5K8vt5vVa1nMAWjMrDoDvtxH5CLvCQfVKluGsQFF0gn1Dvjuz4s'+
+	'RYkTa6vfPd/CfD9vZJtrdPxl0r0N6e35ug+nRiwbLEmK1eO5l/WlQ9gmANz2viec1YJCtQ8pwzC4Y8Csk8xz2nheGLRNF94AZQBsrMzb0KSQ8qKkFwCdUtVC/2fdKC/p/5ItFoLDA//wWqq70xkQDVWnJaMQWKorOofpMQ4xmqq4j8DTxMTi3WFouN2JhHPXFEHqC6TL1+76hLirOCrBFvALHX7AKfUa3eRMQMuqwYAlkj/gp4DrBeA+/i+0/+69J8b7FGY4EwvAV8RywOrLOzc2YUcSDPK2iQEQ/wmkHkbwWlMOJh5GsFpTTiYeRHoDGMeBj52GIinzKGEQ8jHyvImDe6rVRGPIzjK5DqC339h8B71OutSYbJxxYDEBn+F1ZKjq9AIn/0jbyGyBbN5tuTDHN8BUoi8lO39Twi3xOG6zQaC5O4dT4EgpuoXgKeAaD6'+
+	'MfPzT4iis+PeOC8CQb1+D9VlRB4AoFrDmEcEwRqqqb9nfgQCqNdbVKuvA2vYU3QZuEEU3afZXEpzy3wJBCBiqNU+x/MudE/ToHoxrYHnT6CYavUXdnbOIHKrO5LKwPMrEMDp0//g+5+MY+D5FihmDAMvhkCQ2sCLIxCkMvBiCRQzyMBV1/unFlMgONrA4VARRHEFiuk38D6sQJ3Ofp2fMYvTyWxMknkm80/DYQPfpdP5HWKBSqWwN9nWAc4+nrfcayfzT0ts4J1ODWPqnDr1GyRrFINgE1tl1kLkpZmuMrN1ir9iizk3qdUuZBVq34NErnVbS6jeJgwrWQUdi/0iTnt2EbmeZbiDjymD4GuSZcAiGxizNRNVZ8Ys4nnLqL5PLA7coVbLtAz44EP7dvtyt/Z4BbuSriICqlnmMBqH87CF5FmHPXLU1kxfAc5nnUAKNh'+
+	'G5/v+8itCPe5nF4XA4HA6Hw+FwOByO2eNfIXOgcXFaAdkAAAAASUVORK5CYII=');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'ht_video_url_icon_material';
@@ -3265,7 +3280,7 @@ function pano2vrVrSkin(player,base) {
 		me._ht_video_url_title = el;
 		el.userData.textLines = [];
 		el.userData.backgroundColor = new THREE.Color(1, 1, 1).convertSRGBToLinear();
-		el.userData.textColor = new THREE.Color(0, 0.635294, 0.635294).convertSRGBToLinear();
+		el.userData.textColor = new THREE.Color(0, 0.854902, 0.854902).convertSRGBToLinear();
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
 		canvas.width = 200;
@@ -3935,8 +3950,8 @@ function pano2vrVrSkin(player,base) {
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
 		me._ht_video_url_popup_close = el;
-		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3b61XCQBBA4Rs7w0KwDigA60gKwdLwB+ATfM3s7nC830+PJ5m9KsRsAEmSJEmSJEmSbs88r5jn1egxrmow313akeZ5xTTtmaY9y7JJO26WZdm8zJcYMS/ge7tSEY+z7FocOi/gw8MTsH3zlRoRP8fbnmZNMWUd6MWlgdfrx/TzFJklPyDUiNhphjYBYWzEjuduFxDGROx8zrYBoe+CBvzA2geEPgsb9JLRJyC0XeDA19t+AaHNQge/4/cNCLkLLnC51D8g5Cy8QDwYFRBiAYrEg5EB4W8hCsWD0QHhd0GKxYMKAeFnYQrGgyoB4etAReNBpYBwOdRRyXhQLSB8d/e4VDyoGBCuRSwXD9rtifwb9X4D/RMO8E0kwMuYAC+kA/xXLsCbCQ'+
-	'HezgrwhmqAt/QD3FQKcFszwI31AB/tCPDhogAfbwsocHlxuw9YVojXcZbcgJXinTWeKS/g+XMir8bHO/sY8XC4z3pSv9WeSJ14wGmW7bffN9w//KiXJEmSJEmSJEl9PAM2bD5Ln4lQkQAAAABJRU5ErkJggg==');
+		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3bTW6DMBBA4SHqUZByDnIrcoD0Vsk5HPks0EVkmlLI39h4wO+TukgWaPyUqo0NIgAAAAAAAAAArI/3jXjf5B5jVoL5dtGu5H0jXXeWrjuLc22068biXDvMFzFivID3qupkKqJzrVTVKcWl4wWs64v0/XF4bSXiOF7fH6WuLxknesK5Vq7XfvjJGdHSLG+xMLiFGVRyLmD18YIcC9lMvGDJBW0uXrDEwjYbL0i5wM3HC1IstJh4QcwFFxcviLHwYuMFmgDFxws+CUG8kXeCEG/GK2GI98SjQIbjVbkH+GNq705E/r23338vPtsMWwFFHu8eG4snYjGgyHREg/FEUp2JFMTeJ5BfYYUV/hH5yj3AYCpeCOXcb8TbaZ9Yipgf/0gr8FVOgc'+
+	'0EBbazFNhQVWBLX4FDJQWONRU4WFfg1g4Fbi5S4PY2BQsLsDDDRywNbmmWl1gcOPFM8TZUw3MigaWNz/Fe4253iHWnfpozEUvxRG6br/ePYJhV4KNeAAAAAAAAAAAs4wf6cWDrkP66yAAAAABJRU5ErkJggg==');
 		textureOver.colorSpace = player.getVRTextureColorSpace();
 		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
 		el.userData.materialOver.name = 'ht_video_url_popup_close_materialOver';
@@ -4556,10 +4571,10 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.36, 0.36, 5, 5 );
 		geometry.name = 'ht_video_file_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAD+UlEQVR4nO2bQYgbVRjHf++tC4HCgh5aJF7K0i0I7qEebD1JwZNQsfQiJDNbXd27lIXWQ1iQliIFr7tau3kbehEtSm/C9tj1YA9bENrSFg9B6qHCQmEh5H0eZiaZZJOYTnZidub9Lpn38ma+L3/e/PPy8g04HA6Hw+FwOBwOh8MxYaiB7xpzGGuPMTU1PaZ8+tNsNtD6EZ739zjD9hZoY+MMIpeAd8aZzJD8hlKXKZd/GUewToFWV6cpFFZR6vw4go+EyA12d5dYWmqkGeaVjlanOHVgHZH7aP0szSSGwtojKPUWsAAUUeo8hQLAJ2mGbc+g4Lb6OWz9gNaLlEo7aQZPRK02g8h1RM4BoNSHad5uunUUeA5AfWLFASiVdlDqU4IZDtZeTDNcIJAxh2'+
-	'kb8vrEihNRKu0gUgVAqZNh/vuDMUcx5mjUDASy9lhrgMj9fQuWLtuto3j+SalUNMYsAw+AB5FIgUlPTU0jEgycBEMeBq2ftXIedZ1Wq72BtVXgdKtPqXeBp7rvSXnBmLNYu01cnIA6dH/N5wljDiHyDbAY630IzMWH5VOg9fW3gZsoFYnxHJFFtP4HkTvxofm6xSIj1vou7Zmyicg8vn+r1yn5mUF7jbiByJc8eXKNlRXb77R8CBQY8XfAq2HPQ5T6GM+791+nZlug3ka8BnxBufximEtkV6B+RtzHa/qRPYEqFc3s7AXgKyBaQG4i4uH79Ze9XLYESmjEg8iOQCMY8SCysQ4SuQD8SFucNeAE5fJI4kB2ZtAH4WsiIx7EQRbo9a72HUTKSYx4ENm4xQIG/4WVkIMs0F9d7fdQaptq9aP9DHKQBYpzO3x9DaV+wpg1'+
-	'jDm0HxfOhkBKXUPkLPA87PkMuBeupkciGwIB+P4tROaBzbBnDq3vYswylUriz5kdgQB8v87jx+8jsgw0CH5qXGV29leq1WKSS2ZLIICVFYvvf421pwi2UAFOJzXw7AkUsbDwO3AC+DbsSWTg2RUIwPNe4Hmfj2Lg2RYoYgQDz4dAkNjA8yMQJDLwfAkU0c/ArV3rHppPgaC3gSu1pwgivwJF7DXwDgKBms12nZ+1R8aS2KjE84znn4S9Bt5A5E+IBNL6UWtwUAd4EJhvHcXzT0pk4M3mHHAcz3sK8U0mY7YIqszqaP3mRFeZ1WozWPsHUERkC98/lVaotgcpdTk8KiJynVptJq2gIxEVcUKwdtH6SprhOrcpq9XvO8qAgzrA7YmoOgs8Zx6lfCJxRG7g+6mWAXdu2u/uLlEoEIpURKlLYSJp5jAcqmvLOSokTztsz9'+
-	'6NjTNYexGlTqadwEsjsoXWV/6fRxG6cQ+zOBwOh8PhcDgcDofDMXn8C3Yri8kq9C+BAAAAAElFTkSuQmCC');
+		texture = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAD6UlEQVR4nO2bwYsbVRzHP7/Z5LILAT10kfVSyCRFcAttwdaTFDwJisWLB9HV1f4DstB6bylS8OrW2u7Fi2hRvBXaY1eohWxBNjMD4iGIHioE3Mtu3s/Dy2Rns5sYJpmYnXmf03svb+b3y5f3vnlMfgMOh8PhcDgcDofD4XDMGDL00yg6wd6ez9xceUr5DKbT2aVUCqlW/5pm2KMFCsM3Ub0KvDLNZEbkZ0Su4fs/TiPYQYEePy5TqXwJrEwj+Jjcod2+zLlzu1kGKR3oHRSnBdxF9Sme92eWSYyEMYuIvAx8ACwBK1QqAB9mGXZ/Bdlt9QMAqt/ieav4fjvL4KkIwwqqt4F3ABB5K8vt5vVa1nMAWjMrDoDvtxH5CLvCQfVKluGsQFF0gn1Dvjuz4s'+
+	'RYkTa6vfPd/CfD9vZJtrdPxl0r0N6e35ug+nRiwbLEmK1eO5l/WlQ9gmANz2viec1YJCtQ8pwzC4Y8Csk8xz2nheGLRNF94AZQBsrMzb0KSQ8qKkFwCdUtVC/2fdKC/p/5ItFoLDA//wWqq70xkQDVWnJaMQWKorOofpMQ4xmqq4j8DTxMTi3WFouN2JhHPXFEHqC6TL1+76hLirOCrBFvALHX7AKfUa3eRMQMuqwYAlkj/gp4DrBeA+/i+0/+69J8b7FGY4EwvAV8RywOrLOzc2YUcSDPK2iQEQ/wmkHkbwWlMOJh5GsFpTTiYeRHoDGMeBj52GIinzKGEQ8jHyvImDe6rVRGPIzjK5DqC339h8B71OutSYbJxxYDEBn+F1ZKjq9AIn/0jbyGyBbN5tuTDHN8BUoi8lO39Twi3xOG6zQaC5O4dT4EgpuoXgKeAaD6'+
+	'MfPzT4iis+PeOC8CQb1+D9VlRB4AoFrDmEcEwRqqqb9nfgQCqNdbVKuvA2vYU3QZuEEU3afZXEpzy3wJBCBiqNU+x/MudE/ToHoxrYHnT6CYavUXdnbOIHKrO5LKwPMrEMDp0//g+5+MY+D5FihmDAMvhkCQ2sCLIxCkMvBiCRQzyMBV1/unFlMgONrA4VARRHEFiuk38D6sQJ3Ofp2fMYvTyWxMknkm80/DYQPfpdP5HWKBSqWwN9nWAc4+nrfcayfzT0ts4J1ODWPqnDr1GyRrFINgE1tl1kLkpZmuMrN1ir9iizk3qdUuZBVq34NErnVbS6jeJgwrWQUdi/0iTnt2EbmeZbiDjymD4GuSZcAiGxizNRNVZ8Ys4nnLqL5PLA7coVbLtAz44EP7dvtyt/Z4BbuSriICqlnmMBqH87CF5FmHPXLU1kxfAc5nnUAKNh'+
+	'G5/v+8itCPe5nF4XA4HA6Hw+FwOByO2eNfIXOgcXFaAdkAAAAASUVORK5CYII=');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'ht_video_file_icon_material';
@@ -4715,7 +4730,7 @@ function pano2vrVrSkin(player,base) {
 		me._ht_video_file_title = el;
 		el.userData.textLines = [];
 		el.userData.backgroundColor = new THREE.Color(1, 1, 1).convertSRGBToLinear();
-		el.userData.textColor = new THREE.Color(0, 0.635294, 0.635294).convertSRGBToLinear();
+		el.userData.textColor = new THREE.Color(0, 0.854902, 0.854902).convertSRGBToLinear();
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
 		canvas.width = 200;
@@ -5388,8 +5403,8 @@ function pano2vrVrSkin(player,base) {
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
 		me._ht_video_file_popup_close = el;
-		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3b61XCQBBA4Rs7w0KwDigA60gKwdLwB+ATfM3s7nC830+PJ5m9KsRsAEmSJEmSJEmSbs88r5jn1egxrmow313akeZ5xTTtmaY9y7JJO26WZdm8zJcYMS/ge7tSEY+z7FocOi/gw8MTsH3zlRoRP8fbnmZNMWUd6MWlgdfrx/TzFJklPyDUiNhphjYBYWzEjuduFxDGROx8zrYBoe+CBvzA2geEPgsb9JLRJyC0XeDA19t+AaHNQge/4/cNCLkLLnC51D8g5Cy8QDwYFRBiAYrEg5EB4W8hCsWD0QHhd0GKxYMKAeFnYQrGgyoB4etAReNBpYBwOdRRyXhQLSB8d/e4VDyoGBCuRSwXD9rtifwb9X4D/RMO8E0kwMuYAC+kA/xXLsCbCQ'+
-	'HezgrwhmqAt/QD3FQKcFszwI31AB/tCPDhogAfbwsocHlxuw9YVojXcZbcgJXinTWeKS/g+XMir8bHO/sY8XC4z3pSv9WeSJ14wGmW7bffN9w//KiXJEmSJEmSJEl9PAM2bD5Ln4lQkQAAAABJRU5ErkJggg==');
+		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3bTW6DMBBA4SHqUZByDnIrcoD0Vsk5HPks0EVkmlLI39h4wO+TukgWaPyUqo0NIgAAAAAAAAAArI/3jXjf5B5jVoL5dtGu5H0jXXeWrjuLc22068biXDvMFzFivID3qupkKqJzrVTVKcWl4wWs64v0/XF4bSXiOF7fH6WuLxknesK5Vq7XfvjJGdHSLG+xMLiFGVRyLmD18YIcC9lMvGDJBW0uXrDEwjYbL0i5wM3HC1IstJh4QcwFFxcviLHwYuMFmgDFxws+CUG8kXeCEG/GK2GI98SjQIbjVbkH+GNq705E/r23338vPtsMWwFFHu8eG4snYjGgyHREg/FEUp2JFMTeJ5BfYYUV/hH5yj3AYCpeCOXcb8TbaZ9Yipgf/0gr8FVOgc'+
+	'0EBbazFNhQVWBLX4FDJQWONRU4WFfg1g4Fbi5S4PY2BQsLsDDDRywNbmmWl1gcOPFM8TZUw3MigaWNz/Fe4253iHWnfpozEUvxRG6br/ePYJhV4KNeAAAAAAAAAAAs4wf6cWDrkP66yAAAAABJRU5ErkJggg==');
 		textureOver.colorSpace = player.getVRTextureColorSpace();
 		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
 		el.userData.materialOver.name = 'ht_video_file_popup_close_materialOver';
@@ -6008,13 +6023,13 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.36, 0.36, 5, 5 );
 		geometry.name = 'ht_info_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,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');
+		texture = loader.load('data:image/png;base64,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');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'ht_info_icon_material';
@@ -6170,7 +6185,7 @@ function pano2vrVrSkin(player,base) {
 		me._ht_info_title = el;
 		el.userData.textLines = [];
 		el.userData.backgroundColor = new THREE.Color(1, 1, 1).convertSRGBToLinear();
-		el.userData.textColor = new THREE.Color(0, 0.635294, 0.635294).convertSRGBToLinear();
+		el.userData.textColor = new THREE.Color(0, 0.854902, 0.854902).convertSRGBToLinear();
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
 		canvas.width = 200;
@@ -6992,8 +7007,8 @@ function pano2vrVrSkin(player,base) {
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
 		me._ht_info_popup_close = el;
-		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3b61XCQBBA4Rs7w0KwDigA60gKwdLwB+ATfM3s7nC830+PJ5m9KsRsAEmSJEmSJEmSbs88r5jn1egxrmow313akeZ5xTTtmaY9y7JJO26WZdm8zJcYMS/ge7tSEY+z7FocOi/gw8MTsH3zlRoRP8fbnmZNMWUd6MWlgdfrx/TzFJklPyDUiNhphjYBYWzEjuduFxDGROx8zrYBoe+CBvzA2geEPgsb9JLRJyC0XeDA19t+AaHNQge/4/cNCLkLLnC51D8g5Cy8QDwYFRBiAYrEg5EB4W8hCsWD0QHhd0GKxYMKAeFnYQrGgyoB4etAReNBpYBwOdRRyXhQLSB8d/e4VDyoGBCuRSwXD9rtifwb9X4D/RMO8E0kwMuYAC+kA/xXLsCbCQ'+
-	'HezgrwhmqAt/QD3FQKcFszwI31AB/tCPDhogAfbwsocHlxuw9YVojXcZbcgJXinTWeKS/g+XMir8bHO/sY8XC4z3pSv9WeSJ14wGmW7bffN9w//KiXJEmSJEmSJEl9PAM2bD5Ln4lQkQAAAABJRU5ErkJggg==');
+		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3bTW6DMBBA4SHqUZByDnIrcoD0Vsk5HPks0EVkmlLI39h4wO+TukgWaPyUqo0NIgAAAAAAAAAArI/3jXjf5B5jVoL5dtGu5H0jXXeWrjuLc22068biXDvMFzFivID3qupkKqJzrVTVKcWl4wWs64v0/XF4bSXiOF7fH6WuLxknesK5Vq7XfvjJGdHSLG+xMLiFGVRyLmD18YIcC9lMvGDJBW0uXrDEwjYbL0i5wM3HC1IstJh4QcwFFxcviLHwYuMFmgDFxws+CUG8kXeCEG/GK2GI98SjQIbjVbkH+GNq705E/r23338vPtsMWwFFHu8eG4snYjGgyHREg/FEUp2JFMTeJ5BfYYUV/hH5yj3AYCpeCOXcb8TbaZ9Yipgf/0gr8FVOgc'+
+	'0EBbazFNhQVWBLX4FDJQWONRU4WFfg1g4Fbi5S4PY2BQsLsDDDRywNbmmWl1gcOPFM8TZUw3MigaWNz/Fe4253iHWnfpozEUvxRG6br/ePYJhV4KNeAAAAAAAAAAAs4wf6cWDrkP66yAAAAABJRU5ErkJggg==');
 		textureOver.colorSpace = player.getVRTextureColorSpace();
 		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
 		el.userData.materialOver.name = 'ht_info_popup_close_materialOver';
@@ -7608,12 +7623,11 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.36, 0.36, 5, 5 );
 		geometry.name = 'ht_image_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,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');
+		texture = loader.load('data:image/png;base64,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');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'ht_image_icon_material';
@@ -7769,7 +7783,7 @@ function pano2vrVrSkin(player,base) {
 		me._ht_image_title = el;
 		el.userData.textLines = [];
 		el.userData.backgroundColor = new THREE.Color(1, 1, 1).convertSRGBToLinear();
-		el.userData.textColor = new THREE.Color(0, 0.635294, 0.635294).convertSRGBToLinear();
+		el.userData.textColor = new THREE.Color(0, 0.854902, 0.854902).convertSRGBToLinear();
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
 		canvas.width = 200;
@@ -8507,8 +8521,8 @@ function pano2vrVrSkin(player,base) {
 		el.userData.parentOpacity = 1.0;
 		el.userData.transitions = [];
 		me._ht_image_popup_close = el;
-		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3b61XCQBBA4Rs7w0KwDigA60gKwdLwB+ATfM3s7nC830+PJ5m9KsRsAEmSJEmSJEmSbs88r5jn1egxrmow313akeZ5xTTtmaY9y7JJO26WZdm8zJcYMS/ge7tSEY+z7FocOi/gw8MTsH3zlRoRP8fbnmZNMWUd6MWlgdfrx/TzFJklPyDUiNhphjYBYWzEjuduFxDGROx8zrYBoe+CBvzA2geEPgsb9JLRJyC0XeDA19t+AaHNQge/4/cNCLkLLnC51D8g5Cy8QDwYFRBiAYrEg5EB4W8hCsWD0QHhd0GKxYMKAeFnYQrGgyoB4etAReNBpYBwOdRRyXhQLSB8d/e4VDyoGBCuRSwXD9rtifwb9X4D/RMO8E0kwMuYAC+kA/xXLsCbCQ'+
-	'HezgrwhmqAt/QD3FQKcFszwI31AB/tCPDhogAfbwsocHlxuw9YVojXcZbcgJXinTWeKS/g+XMir8bHO/sY8XC4z3pSv9WeSJ14wGmW7bffN9w//KiXJEmSJEmSJEl9PAM2bD5Ln4lQkQAAAABJRU5ErkJggg==');
+		textureOver = loader.load('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABjUlEQVR4nO3bTW6DMBBA4SHqUZByDnIrcoD0Vsk5HPks0EVkmlLI39h4wO+TukgWaPyUqo0NIgAAAAAAAAAArI/3jXjf5B5jVoL5dtGu5H0jXXeWrjuLc22068biXDvMFzFivID3qupkKqJzrVTVKcWl4wWs64v0/XF4bSXiOF7fH6WuLxknesK5Vq7XfvjJGdHSLG+xMLiFGVRyLmD18YIcC9lMvGDJBW0uXrDEwjYbL0i5wM3HC1IstJh4QcwFFxcviLHwYuMFmgDFxws+CUG8kXeCEG/GK2GI98SjQIbjVbkH+GNq705E/r23338vPtsMWwFFHu8eG4snYjGgyHREg/FEUp2JFMTeJ5BfYYUV/hH5yj3AYCpeCOXcb8TbaZ9Yipgf/0gr8FVOgc'+
+	'0EBbazFNhQVWBLX4FDJQWONRU4WFfg1g4Fbi5S4PY2BQsLsDDDRywNbmmWl1gcOPFM8TZUw3MigaWNz/Fe4253iHWnfpozEUvxRG6br/ePYJhV4KNeAAAAAAAAAAAs4wf6cWDrkP66yAAAAABJRU5ErkJggg==');
 		textureOver.colorSpace = player.getVRTextureColorSpace();
 		el.userData.materialOver = new THREE.MeshBasicMaterial( {map: textureOver, side: THREE.DoubleSide, transparent: true} );
 		el.userData.materialOver.name = 'ht_image_popup_close_materialOver';
@@ -8963,16 +8977,16 @@ function pano2vrVrSkin(player,base) {
 		geometry = new THREE.PlaneGeometry(0.36, 0.36, 5, 5 );
 		geometry.name = 'ht_node_icon_geometry';
 		loader = new THREE.TextureLoader();
-		texture = loader.load('data:image/png;base64,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');
+		texture = loader.load('data:image/png;base64,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');
 		texture.colorSpace = player.getVRTextureColorSpace();
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true} );
 		material.name = 'ht_node_icon_material';
@@ -9412,7 +9426,7 @@ function pano2vrVrSkin(player,base) {
 		me._ht_node_title = el;
 		el.userData.textLines = [];
 		el.userData.backgroundColor = new THREE.Color(0, 0, 0).convertSRGBToLinear();
-		el.userData.textColor = new THREE.Color(0, 0.635294, 0.635294).convertSRGBToLinear();
+		el.userData.textColor = new THREE.Color(0, 0.854902, 0.854902).convertSRGBToLinear();
 		el.userData.textColorAlpha = 1;
 		var canvas = document.createElement('canvas');
 		canvas.width = 300;

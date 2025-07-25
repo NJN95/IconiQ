@@ -24,7 +24,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node3">
@@ -56,7 +56,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node4">
@@ -89,7 +89,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node5">
@@ -119,7 +119,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node6">
@@ -150,7 +150,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node7">
@@ -181,7 +181,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node8">
@@ -212,7 +212,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node9">
@@ -246,7 +246,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node10">
@@ -276,7 +276,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node11">
@@ -309,7 +309,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node12">
@@ -341,7 +341,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node13">
@@ -377,7 +377,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node14">
@@ -404,7 +404,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node15">
@@ -434,7 +434,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node16">
@@ -465,7 +465,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node17">
@@ -498,7 +498,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node18">
@@ -530,7 +530,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node22">
@@ -562,7 +562,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node24">
@@ -590,7 +590,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node25">
@@ -617,7 +617,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node29">
@@ -644,7 +644,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node30">
@@ -673,7 +673,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node32">
@@ -702,7 +702,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node33">
@@ -729,7 +729,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node36">
@@ -758,7 +758,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node37">
@@ -785,7 +785,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node43">
@@ -817,7 +817,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node44">
@@ -847,7 +847,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node45">
@@ -877,7 +877,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node46">
@@ -904,7 +904,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node47">
@@ -934,7 +934,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node48">
@@ -962,7 +962,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node49">
@@ -991,7 +991,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <panorama id="node50">
@@ -1018,7 +1018,7 @@
     </media>
     <transition type="crossdissolve" delay="none" zoomafteroutfov="40" zoomfov="40" zoomafterinfov="140" zoomout="0" blendtime="1" enabled="1" zoomoutpause="1" zoomin="0" softedge="0" zoomspeed="2" blendcolor="0x000000"/>
     <animation clipsrandom="0" animsequence="Animation01" useinautorotation="0" syncanimationwithvideo="0"/>
-    <control sensitivity="11" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
+    <control sensitivity="14" lockedwheel="0" simulatemass="1" zoomcentercursor="1" rubberband="0" invertcontrol="1" contextvr="1" speedwheel="1" dblclickfullscreen="0" hideabout="0" lockedmouse="0" lockedkeyboard="0" contextprojections="0" lockedkeyboardzoom="0" contextfullscreen="1" invertwheel="0"/>
     <vr skinbuttonposition="1" toggleskinbutton="1" defaulthsscale="50"/>
   </panorama>
   <masternode>

@@ -1,7 +1,7 @@
 // Garden Gnome Software - VR - Skin
 // Pano2VR 7.1.8/20986
 // Filename: custom_feather_vr.ggsk
-// Generated 2025-07-25T16:39:40
+// Generated 2025-07-25T16:57:42
 
 function pano2vrVrSkin(player,base) {
 	player.addVariable('node_cloner_vr_hasUp', 2, false, { ignoreInState: 0  });
@@ -2023,7 +2023,7 @@ function pano2vrVrSkin(player,base) {
 		material = new THREE.MeshBasicMaterial( {map: texture, side: THREE.DoubleSide, transparent: true, } );
 		material.name = 'Image 1_material';
 		el = new THREE.Mesh( geometry, material );
-		el.translateX(2.935);
+		el.translateX(3.195);
 		el.translateY(2.29);
 		el.scale.set(1.00, 1.00, 1.0);
 		el.userData.width = 239;
@@ -2032,9 +2032,9 @@ function pano2vrVrSkin(player,base) {
 		el.userData.curScaleOffX = 0;
 		el.userData.curScaleOffY = 0;
 		el.name = 'Image 1';
-		el.userData.x = 2.935;
+		el.userData.x = 3.195;
 		el.userData.y = 2.29;
-		el.userData.hanchor = 0;
+		el.userData.hanchor = 2;
 		el.userData.vanchor = 0;
 		el.translateZ(0.050);
 		el.renderOrder = 5;
